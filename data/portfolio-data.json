@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "title": "Samantha J. Brown | Fullstack Developer",
+    "description": "Portfolio website showcasing fullstack development work and UX design skills"
+  },
+  "personal": {
+    "name": "Samantha J. Brown",
+    "title": "Fullstack Developer",
+    "location": "Oswego, NY",
+    "avatar": "/confident-professional.png",
+    "email": "SamanthaJeanneb@gmail.com",
+    "phone": "(315) 725-2868",
+    "workingHours": "Monday - Friday, 9am - 5pm PST",
+    "availableForWork": true,
+    "badges": ["Fullstack Development", "UX Design", "Java"],
+    "social": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/SamanthaJeanneb",
+        "icon": "Github"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/SamanthaJeanneb",
+        "icon": "Linkedin"
+      }
+    ]
+  },
+  "about": {
+    "bio": "I am a fullstack developer with expertise in Java, JavaScript, React, and UX design. I have experience collaborating with cross-functional teams to optimize user experiences and develop interactive applications. Currently pursuing a dual major in Interaction Design and Computer Science with a 3.80 GPA.",
+    "focus": [
+      "Developing fullstack web applications with modern technologies",
+      "Creating intuitive user experiences through UX design principles",
+      "Leading design and development projects in academic and professional settings"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Native",
+        "level": 100,
+        "flag": "🇺🇸"
+      }
+    ],
+    "interests": ["Fullstack Development", "UX Design", "Computer Vision", "Hackathons", "Graphic Design"]
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Education",
+      "href": "#credentials"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    }
+  ],
+  "experience": [
+    {
+      "title": "User Experience Designer",
+      "company": "Pioneer",
+      "period": "Mar 2023 – Oct 2023",
+      "description": "Collaborated with software developers and marketers to optimize the app's user experience. Led UX design efforts, creating application prototypes and developing interactive webpages. Additionally, contributed to branding and investor presentations.",
+      "achievements": [
+        "Led UX design efforts for mobile application optimization",
+        "Created application prototypes and interactive webpages",
+        "Contributed to branding and investor presentations",
+        "Collaborated effectively with cross-functional teams"
+      ],
+      "technologies": ["UX Design", "Prototyping", "Wireframing", "Branding"]
+    },
+    {
+      "title": "Campus Organizations Leadership",
+      "company": "SUNY Oswego",
+      "period": "Nov 2022 – present",
+      "description": "Human Computer Interaction President, Computer Science Association Vice President, and Vega Honor Society PR. Organized workshops and events focused on UX/UI design, Computer Science and graphic design skills. Creator and lead Graphic Designer of SUNY Oswego's annual Hackathon: LakerHacks.",
+      "achievements": [
+        "Organized workshops and events for UX/UI design and Computer Science",
+        "Created and led graphic design for LakerHacks annual hackathon",
+        "Served in leadership roles across multiple organizations",
+        "Developed strong organizational and event management skills"
+      ],
+      "technologies": ["Event Management", "Graphic Design", "UX/UI Design", "Leadership"]
+    },
+    {
+      "title": "Admissions Representative",
+      "company": "State University of New York at Oswego",
+      "period": "Feb 2023 – present",
+      "description": "Strengthened communication and public speaking skills by leading tours and presenting at events; handled office tasks including scheduling, data entry, and phone support.",
+      "achievements": [
+        "Led campus tours and presented at recruitment events",
+        "Developed strong communication and public speaking skills",
+        "Managed office tasks including scheduling and data entry",
+        "Provided excellent phone support to prospective students"
+      ],
+      "technologies": ["Public Speaking", "Communication", "Data Entry", "Customer Service"]
+    }
+  ],
+  "credentials": {
+    "certifications": [],
+    "education": [
+      {
+        "degree": "B.S. in Interaction Design and Computer Science (Dual Major)",
+        "institution": "State University of New York at Oswego",
+        "year": "Aug 2022 – May 2025",
+        "gpa": "3.80 GPA",
+        "description": "Gained hands-on experience in UX/UI design, front-end development, and human-computer interaction, developing skills in wireframing, prototyping, and coding. Worked on team projects to design user interfaces and implement functional applications while maintaining a high GPA. Actively participated in clubs focused on design and development projects. Early graduate.",
+        "logo": "/generic-art-school-logo.png"
+      },
+      {
+        "degree": "General Studies (Associates Equivalent)",
+        "institution": "Mohawk Valley Community College",
+        "year": "Sep 2018 – Jun 2022",
+        "gpa": "4.0 GPA",
+        "description": "Earned the equivalent of an Associates Degree through High School Dual Credit and Summer classes, including digital design based courses.",
+        "logo": "/calarts-logo.png"
+      }
+    ],
+    "skills": [
+      "Fullstack Development",
+      "Java",
+      "JavaScript",
+      "React",
+      "MongoDB",
+      "SQL",
+      "Springboot",
+      "REST API",
+      "UX Design",
+      "Wireframing",
+      "Python",
+      "C",
+      "C++",
+      "Functional Programming",
+      "OpenCV",
+      "Docker"
+    ]
+  },
+  "technicalSkills": {
+    "design": ["UX Design", "Wireframing", "Prototyping", "Graphic Design", "Branding"],
+    "development": [
+      "Java",
+      "JavaScript",
+      "React",
+      "Springboot",
+      "MongoDB",
+      "SQL",
+      "REST API",
+      "Python",
+      "C",
+      "C++",
+      "Docker"
+    ],
+    "uxMethods": ["Wireframing", "Prototyping", "User Research", "Information Architecture"],
+    "softSkills": ["Leadership", "Event Management", "Public Speaking", "Communication", "Team Collaboration"]
+  }
+}
