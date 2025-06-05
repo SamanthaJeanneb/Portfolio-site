@@ -284,33 +284,6 @@ const projects: Project[] = [
     role: "Data Analyst & Developer",
     githubUrl: "https://github.com/SamanthaJeanneb/VAERSData-Sorting",
   },
-  {
-    id: 10,
-    slug: "string-pattern-matching",
-    title: "String Pattern Matching",
-    category: "Algorithm Implementation",
-    shortDescription:
-      "Scala implementation of string pattern matching algorithms demonstrating functional programming principles.",
-    description: [
-      "Scala implementation of string pattern matching algorithms demonstrating functional programming principles.",
-      "Explores various pattern matching techniques and their applications in text processing and analysis.",
-      "Showcases the power of functional programming paradigms in solving computational problems efficiently.",
-    ],
-    features: [
-      "Multiple pattern matching algorithms",
-      "Functional programming implementation",
-      "Efficient text processing capabilities",
-      "Scala language features utilization",
-      "Algorithm performance comparison",
-      "Clean functional code architecture",
-    ],
-    technologies: ["Scala", "Functional Programming", "Algorithms", "Pattern Matching"],
-    coverImage: "/pattern-matching-cover.png",
-    thumbnailImage: "/pattern-matching-thumb.png",
-    timeline: "Academic Project (February 2024)",
-    role: "Algorithm Developer",
-    githubUrl: "https://github.com/SamanthaJeanneb/String-Pattern-Matching",
-  },
 ]
 
 export { projects }

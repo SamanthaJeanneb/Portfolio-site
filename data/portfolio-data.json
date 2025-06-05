@@ -10,7 +10,6 @@
     "avatar": "/confident-professional.png",
     "email": "SamanthaJeanneb@gmail.com",
     "phone": "(315) 725-2868",
-    "workingHours": "Monday - Friday, 9am - 5pm PST",
     "availableForWork": true,
     "badges": ["Fullstack Development", "UX Design", "Java"],
     "social": [
@@ -122,8 +121,8 @@
         "institution": "Mohawk Valley Community College",
         "year": "Sep 2018 – Jun 2022",
         "gpa": "4.0 GPA",
-        "description": "Earned the equivalent of an Associates Degree through High School Dual Credit and Summer classes, including digital design based courses.",
-        "logo": "/calarts-logo.png"
+        "description": "Earned the credit hour equivalent of an Associates Degree through High School Dual Credit and Summer classes, including digital design based courses.",
+        "logo": "/mvcc.png"
       }
     ],
     "skills": [
