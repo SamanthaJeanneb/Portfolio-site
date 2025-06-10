@@ -116,6 +116,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                           </a>
                         </Button>
                       )}
+                      {project.figmaUrl && (
+                        <Button asChild variant="outline" size="sm" className="text-xs sm:text-sm">
+                          <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                            View Figma Design
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </AnimatedSection>
                 </CardContent>

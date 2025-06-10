@@ -27,6 +27,7 @@ export interface Project {
   role: string
   liveUrl?: string
   githubUrl?: string
+  figmaUrl?: string
   relatedProjects?: RelatedProject[]
 }
 
@@ -256,6 +257,7 @@ const projects: Project[] = [
     timeline: "Academic Project (2024)",
     role: "Fullstack Developer",
     githubUrl: "https://github.com/SamanthaJeanneb/FamilyTree",
+    figmaUrl: "https://www.figma.com/design/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=546rtRhLwgYTbDdO-1",
   },
   {
     id: 9,
