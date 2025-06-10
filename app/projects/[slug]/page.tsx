@@ -9,6 +9,7 @@ import { notFound } from "next/navigation"
 import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator"
 import { AnimatedSection } from "@/components/animated-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
+import { ProjectProcess } from "@/components/project-process"
 
 interface ProjectPageProps {
   params: {
@@ -129,6 +130,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </CardContent>
               </Card>
             </AnimatedSection>
+
+            {/* Project Process Section */}
+            {project.process && project.process.length > 0 && (
+              <AnimatedSection animation="fade-up" delay={150}>
+                <ProjectProcess steps={project.process} />
+              </AnimatedSection>
+            )}
 
             {/* Project Gallery */}
             {project.gallery && project.gallery.length > 0 && (
