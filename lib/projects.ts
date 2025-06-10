@@ -185,6 +185,15 @@ const projects: Project[] = [
     role: "Graphic Designer & Web Developer",
     liveUrl: "http://cs.oswego.edu/lakerhacks/",
     githubUrl: "https://github.com/SamanthaJeanneb/lakerhacks-site",
+        process: [
+      {
+        id: "step1",
+        type: "image",
+        title: "Hackathon Brainstorming",
+        description: "Initial brainstorming session at BitCamp 2025, where we conceptualized the AirWaves game.",
+        content: "/airwaves-process-1.png",
+      },
+    ]
   },
   {
     id: 4,
@@ -325,6 +334,15 @@ const projects: Project[] = [
     timeline: "Academic Project (2024)",
     role: "Fullstack Developer",
     githubUrl: "https://github.com/SamanthaJeanneb/FamilyTree",
+    process: [
+      {
+        id: "step1",
+        type: "figma",
+        title: "Figma Prototype",
+        description: "Interactive Figma prototype for the Family Tree Web Application.",
+        content: "https://www.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=YWunwyF9yHEN7X65-1",
+      },
+    ],
     figmaUrl: "https://www.figma.com/design/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=546rtRhLwgYTbDdO-1",
   },
   {
