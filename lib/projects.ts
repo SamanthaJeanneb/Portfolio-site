@@ -10,6 +10,15 @@ export interface RelatedProject {
   image: string
 }
 
+export interface ProcessStep {
+  id: string
+  type: "image" | "video" | "figma" | "text"
+  title?: string
+  description?: string
+  content: string // URL for images/videos, embed URL for Figma, text content for text
+  thumbnail?: string // Optional thumbnail for videos
+}
+
 export interface Project {
   id: number
   slug: string
@@ -27,6 +36,9 @@ export interface Project {
   role: string
   liveUrl?: string
   githubUrl?: string
+  videoUrl?: string
+  accessNote?: string
+  process?: ProcessStep[] // New field for project process steps
   relatedProjects?: RelatedProject[]
 }
 
@@ -60,6 +72,38 @@ const projects: Project[] = [
     role: "Fullstack Developer & Artist",
     liveUrl: "https://soundsketch-six.vercel.app/",
     githubUrl: "https://github.com/SamanthaJeanneb/soundsketch",
+    process: [
+      {
+        id: "step1",
+        type: "image",
+        title: "Initial Concept Sketches",
+        description: "Early sketches exploring the visual interface and user flow for the SoundSketch application.",
+        content: "/soundsketch-process-1.png",
+      },
+      {
+        id: "step2",
+        type: "image",
+        title: "UI Wireframes",
+        description: "Low-fidelity wireframes mapping out the core functionality and layout of the application.",
+        content: "/soundsketch-process-2.png",
+      },
+      {
+        id: "step3",
+        type: "figma",
+        title: "Interactive Prototype",
+        description: "High-fidelity prototype demonstrating the user experience and visual design.",
+        content:
+          "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FexampleID%2FSoundSketch",
+      },
+      {
+        id: "step4",
+        type: "video",
+        title: "Development Progress",
+        description: "A walkthrough of the application during development, showing the integration with Spotify API.",
+        content: "https://www.youtube.com/embed/k7Vkkg7CYp4",
+        thumbnail: "/soundsketch-video-thumb.png",
+      },
+    ],
   },
   {
     id: 2,
@@ -88,6 +132,30 @@ const projects: Project[] = [
     role: "Lead Developer",
     liveUrl: "http://cs.oswego.edu/~efereira/airwaves/",
     githubUrl: "https://github.com/SamanthaJeanneb/BitCamp2025-AirWaves",
+    process: [
+      {
+        id: "step1",
+        type: "image",
+        title: "Hackathon Brainstorming",
+        description: "Initial brainstorming session at BitCamp 2025, where we conceptualized the AirWaves game.",
+        content: "/airwaves-process-1.png",
+      },
+      {
+        id: "step2",
+        type: "image",
+        title: "Hand Tracking Prototype",
+        description: "Early prototype testing the hand tracking capabilities using OpenCV and TensorFlow.js.",
+        content: "/airwaves-process-2.png",
+      },
+      {
+        id: "step3",
+        type: "video",
+        title: "Gameplay Testing",
+        description: "Testing the rhythm mechanics and hand tracking accuracy during development.",
+        content: "https://www.youtube.com/embed/exampleID",
+        thumbnail: "/airwaves-video-thumb.png",
+      },
+    ],
   },
   {
     id: 3,
