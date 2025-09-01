@@ -8,18 +8,21 @@ interface SocialLink {
 
 interface SocialLinksProps {
   socialLinks: SocialLink[]
+  showResume?: boolean
 }
 
-export function SocialLinks({ socialLinks }: SocialLinksProps) {
+export function SocialLinks({ socialLinks, showResume = true }: SocialLinksProps) {
   return (
     <div className="flex justify-center gap-2 sm:gap-3 my-2 sm:my-3">
       {socialLinks.map((link, index) => {
-        const IconComponent = LucideIcons[link.icon as keyof typeof LucideIcons]
+        const IconComponent = LucideIcons[link.icon as keyof typeof LucideIcons] as React.ComponentType<{ className?: string }>
 
         return (
           <a
             key={index}
             href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
             aria-label={link.platform}
           >
@@ -27,6 +30,18 @@ export function SocialLinks({ socialLinks }: SocialLinksProps) {
           </a>
         )
       })}
+      
+      {showResume && (
+        <a
+          href="/Samantha-J.-Brown-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
+          aria-label="Download Resume"
+        >
+          <LucideIcons.FileText className="w-3 h-3 sm:w-4 sm:h-4" />
+        </a>
+      )}
     </div>
   )
 }

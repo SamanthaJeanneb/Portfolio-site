@@ -48,12 +48,12 @@ const projects: Project[] = [
   {
     id: 1,
     slug: "echochambers",
-    title: "Echo Chambers",
+    title: "Echochambers",
     category: "Web-based Game",
     shortDescription:
       "Web-based video game where players navigate fake online communities and try to persuade users without getting banned by moderators.",
     description: [
-      "Echo Chamber is a web-based video game where players are placed into fake online communities where all members of the community have a certain belief.",
+      "Echochambers is a web-based video game where players are placed into fake online communities where all members of the community have a certain belief.",
       "Your goal is to try and persuade as many users on the selected echo chamber as possible without getting flat out banned by the moderators of the community.",
       "This interactive experience explores social dynamics and persuasion tactics in online environments while highlighting the challenges of echo chambers in digital communities.",
     ],
@@ -123,8 +123,7 @@ const projects: Project[] = [
         type: "figma",
         title: "Interactive Prototype",
         description: "High-fidelity prototype demonstrating the user experience and visual design.",
-        content:
-         "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=11-1415&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=113%3A324",
+ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=11-1415&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=113%3A324"
        }, {
         id: "step4",
         type: "video",
