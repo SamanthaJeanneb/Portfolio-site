@@ -3,7 +3,7 @@ import { GlobeIcon, CodeIcon, BriefcaseIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ProjectCard } from "@/components/project-card"
-import { getAllProjects } from "@/lib/data"
+import { getAllProjects, getAllMultimediaProjects } from "@/lib/data"
 import { ExperienceCard } from "@/components/experience-card"
 import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator"
 import { AnimatedSection } from "@/components/animated-section"
@@ -18,6 +18,7 @@ const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
 
 export default function Home() {
   const projects = getAllProjects()
+  const multimediaProjects = getAllMultimediaProjects()
   const experienceInfo = getExperienceInfo()
   const technicalSkills = getTechnicalSkillsInfo()
 
@@ -45,7 +46,7 @@ export default function Home() {
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-6">
-                    <BriefcaseIcon className="w-5 h-5 mr-2 text-cyan-400" />
+                    <BriefcaseIcon className="w-5 h-5 mr-2 text-purple-400" />
                     <h3 className="text-lg font-medium">Experience</h3>
                   </div>
 
@@ -77,7 +78,7 @@ export default function Home() {
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4">
-                    <CodeIcon className="w-5 h-5 mr-2 text-cyan-400" />
+                    <CodeIcon className="w-5 h-5 mr-2 text-purple-400" />
                     <h3 className="text-lg font-medium">Technical Skills</h3>
                   </div>
 
@@ -136,7 +137,7 @@ export default function Home() {
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className="flex items-center">
-                      <GlobeIcon className="w-5 h-5 mr-2 text-cyan-400" />
+                      <GlobeIcon className="w-5 h-5 mr-2 text-purple-400" />
                       <h3 className="text-lg font-medium">Recent Projects</h3>
                     </div>
                     <Button variant="ghost" size="sm" className="text-xs sm:text-sm px-2 sm:px-3">
@@ -152,6 +153,33 @@ export default function Home() {
                           category={project.category}
                           image={project.thumbnailImage}
                           slug={project.slug}
+                        />
+                      </AnimatedSection>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* Multimedia Projects Section */}
+            <AnimatedSection animation="fade-up" id="multimedia">
+              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-center justify-between mb-4 sm:mb-6">
+                    <div className="flex items-center">
+                      <GlobeIcon className="w-5 h-5 mr-2 text-purple-400" />
+                      <h3 className="text-lg font-medium">Multimedia Projects</h3>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                    {multimediaProjects.map((project, index) => (
+                      <AnimatedSection key={project.id} animation="zoom-in" delay={100 * (index + 1)}>
+                        <ProjectCard
+                          title={project.title}
+                          category={project.category}
+                          image={project.thumbnailImage}
+                          slug={`multimedia/${project.slug}`}
                         />
                       </AnimatedSection>
                     ))}

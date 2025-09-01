@@ -249,7 +249,7 @@ const projects: Project[] = [
     timeline: "Personal Project (2025)",
     role: "Fullstack Developer",
     liveUrl: "http://moxie.cs.oswego.edu:48080/",
-    githubUrl: "https://github.com/SamanthaJeanneb/Quotable",
+    githubUrl: "https://github.com/Paul-Austin-Oswego-CSC480-HCI521/OZ-CSC-480-HCI-521-Spring-2025",
   },
   {
     id: 6,
@@ -280,7 +280,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SamanthaJeanneb/Interactive-Project-Map",
   },
   {
-    id: 7,
+    id: 8,
     slug: "getter-done-task-manager",
     title: "HenHacks2025-GetterDone",
     category: "Task Management App",
@@ -309,7 +309,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SamanthaJeanneb/HenHacks2025-GetterDone",
   },
   {
-    id: 8,
+    id: 9,
     slug: "escape-utica-game",
     title: "Escape Utica National",
     category: "Java Game",
@@ -338,7 +338,7 @@ const projects: Project[] = [
   },
   // Projects without live links
   {
-    id: 9,
+    id: 10,
     slug: "family-tree-web-app",
     title: "FamilyTree",
     category: "Fullstack Web Application",
@@ -376,7 +376,7 @@ const projects: Project[] = [
     figmaUrl: "https://www.figma.com/design/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=546rtRhLwgYTbDdO-1",
   },
   {
-    id: 10,
+    id: 11,
     slug: "vaers-data-sorting",
     title: "VAERSData-Sorting",
     category: "Data Analysis",
@@ -401,6 +401,66 @@ const projects: Project[] = [
     timeline: "Academic Project (April 2024)",
     role: "Data Analyst & Developer",
     githubUrl: "https://github.com/SamanthaJeanneb/VAERSData-Sorting",
+  },
+  {
+    id: 12,
+    slug: "beardsley-office-hub",
+    title: "Beardsley Office Hub",
+    category: "Office Management App",
+    shortDescription:
+      "Office seating chart application for Beardsley Architects and Engineers with GitHub integration to update seating chart and employee information.",
+    description: [
+      "Office seating chart application developed for Beardsley Architects and Engineers to manage workspace organization and employee seating arrangements.",
+      "Features GitHub integration that allows for automated updates to seating charts and employee information through version control workflows.",
+      "Designed to streamline office management processes and provide real-time visibility into workspace utilization and employee locations.",
+    ],
+    features: [
+      "Interactive office seating chart visualization",
+      "GitHub integration for automated updates",
+      "Employee information management system",
+      "Real-time seating chart updates",
+      "Workspace utilization tracking",
+      "Professional office management interface",
+      "Version control integration for data management",
+    ],
+    technologies: ["JavaScript", "React", "GitHub API", "Web Development", "Office Management"],
+    coverImage: "/beardsley-office-cover.png",
+    thumbnailImage: "/beardsley-office-thumb.png",
+    timeline: "Client Project (2024)",
+    role: "Frontend Developer",
+    client: "Beardsley Architects and Engineers",
+    liveUrl: "https://beardsley-office-hub.vercel.app/",
+    githubUrl: "https://github.com/SamanthaJeanneb/Beardsley-Office-Hub",
+  },
+  {
+    id: 13,
+    slug: "beardsley-map-application",
+    title: "Beardsley Map Application",
+    category: "Interactive Map Portfolio",
+    shortDescription:
+      "Interactive, map-based portfolio for presenting architectural and engineering projects with project filtering, administrative controls, and CSV import/export.",
+    description: [
+      "Beardsley Map Application is an interactive, map-based portfolio used to present architectural and engineering projects from Beardsley Architects + Engineers.",
+      "The application provides a comprehensive project showcase with advanced filtering capabilities and administrative management tools.",
+      "Features CSV import/export functionality for efficient project data management and seamless integration with existing workflows.",
+    ],
+    features: [
+      "Interactive map-based project visualization",
+      "Advanced project filtering and search capabilities",
+      "Administrative controls for project management",
+      "CSV import/export functionality",
+      "Professional project portfolio presentation",
+      "Real-time project data updates",
+      "Responsive design for all devices",
+    ],
+    technologies: ["JavaScript", "React", "Interactive Maps", "CSV Processing", "Admin Dashboard"],
+    coverImage: "/beardsley-map-cover.png",
+    thumbnailImage: "/beardsley-map-thumb.png",
+    timeline: "Client Project (2024)",
+    role: "Frontend Developer",
+    client: "Beardsley Architects + Engineers",
+    liveUrl: "https://beardsley-project-map.netlify.app",
+    githubUrl: "https://github.com/SamanthaJeanneb/Beardsley-Map-Application",
   },
 ]
 

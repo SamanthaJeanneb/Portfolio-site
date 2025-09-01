@@ -44,3 +44,48 @@ export function getTechnicalSkillsInfo() {
 export function getMetaInfo() {
   return data.meta
 }
+
+export interface MultimediaProject {
+  id: number
+  slug: string
+  title: string
+  category: string
+  shortDescription: string
+  description: string[]
+  thumbnailImage: string
+  posterImage?: string
+  videoUrl?: string
+  youtubeUrl?: string
+  timeline: string
+  role: string
+  software?: string[]
+}
+
+const multimediaProjects: MultimediaProject[] = [
+  {
+    id: 1,
+    slug: "fighting-animation",
+    title: "Fighting Animation",
+    category: "Animation",
+    shortDescription: "Dynamic fighting sequence animation showcasing character movement and action choreography.",
+    description: [
+      "A dynamic fighting sequence animation that demonstrates character movement, action choreography, and storytelling through motion.",
+      "Created to explore animation principles including timing, spacing, and character expression in action sequences.",
+      "Showcases skills in digital animation and visual storytelling techniques."
+    ],
+    thumbnailImage: "/fighting-animation-thumb.png",
+    posterImage: "/fighting-animation-poster.png",
+    youtubeUrl: "https://www.youtube.com/watch?v=YxOD7qQTczo&ab_channel=JeanneBrown",
+    timeline: "Personal Project",
+    role: "Animator & Director",
+    software: ["Animation Software", "Digital Art"]
+  }
+]
+
+export function getAllMultimediaProjects(): MultimediaProject[] {
+  return multimediaProjects
+}
+
+export function getMultimediaProjectBySlug(slug: string): MultimediaProject | undefined {
+  return multimediaProjects.find((project) => project.slug === slug)
+}

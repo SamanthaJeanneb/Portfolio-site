@@ -57,7 +57,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4 sm:p-6">
-                  <div className="text-xs sm:text-sm text-cyan-400 mb-1 sm:mb-2">{project.category}</div>
+                  <div className="text-xs sm:text-sm text-purple-400 mb-1 sm:mb-2">{project.category}</div>
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-bold">{project.title}</h1>
                   <p className="text-sm text-zinc-400 mt-1 sm:mt-2 max-w-2xl">{project.shortDescription}</p>
                 </div>
@@ -101,7 +101,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                         <Button
                           asChild
                           size="sm"
-                          className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-xs sm:text-sm"
+                          className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-xs sm:text-sm"
                         >
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
@@ -211,7 +211,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                                 />
                               </div>
                               <div>
-                                <h3 className="text-sm sm:text-base font-medium group-hover:text-cyan-400 transition-colors">
+                                <h3 className="text-sm sm:text-base font-medium group-hover:text-purple-400 transition-colors">
                                   {related.title}
                                 </h3>
                                 <p className="text-xs text-zinc-400">{related.category}</p>

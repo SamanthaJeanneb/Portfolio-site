@@ -125,7 +125,7 @@ export function ProjectProcess({ steps }: ProjectProcessProps) {
               key={step.id}
               onClick={() => setActiveStep(index)}
               className={`w-2 h-2 rounded-full transition-all ${
-                activeStep === index ? "bg-cyan-400 w-4" : "bg-zinc-600 hover:bg-zinc-500"
+                activeStep === index ? "bg-purple-400 w-4" : "bg-zinc-600 hover:bg-zinc-500"
               }`}
               aria-label={`Go to step ${index + 1}`}
             />
