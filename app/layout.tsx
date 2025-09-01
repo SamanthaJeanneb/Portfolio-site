@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   title: metaInfo.title,
   description: metaInfo.description,
   icons: {
-    icon: '/icon.png',
-    apple: '/icon.png',
+    icon: '/icon.jpg',
+    apple: '/icon.jpg',
   }
 }
 
