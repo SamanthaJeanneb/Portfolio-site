@@ -124,9 +124,8 @@ const projects: Project[] = [
         title: "Interactive Prototype",
         description: "High-fidelity prototype demonstrating the user experience and visual design.",
         content:
-          "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FexampleID%2FSoundSketch",
-      },
-      {
+         "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=11-1415&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=113%3A324",
+       }, {
         id: "step4",
         type: "video",
         title: "Development Progress",
@@ -370,7 +369,7 @@ const projects: Project[] = [
         type: "figma",
         title: "Figma Prototype",
         description: "Interactive Figma prototype for the Family Tree Web Application.",
-        content: "https://www.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=YWunwyF9yHEN7X65-1",
+        content: "https://embed.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=11-1415&scaling=full-screen&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=113%3A324&embed-host=share",
       },
     ],
     figmaUrl: "https://www.figma.com/design/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=546rtRhLwgYTbDdO-1",
