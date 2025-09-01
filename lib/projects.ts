@@ -47,6 +47,36 @@ const projects: Project[] = [
   // Projects with live links first
   {
     id: 1,
+    slug: "echochambers",
+    title: "Echo Chambers",
+    category: "Web-based Game",
+    shortDescription:
+      "Web-based video game where players navigate fake online communities and try to persuade users without getting banned by moderators.",
+    description: [
+      "Echo Chamber is a web-based video game where players are placed into fake online communities where all members of the community have a certain belief.",
+      "Your goal is to try and persuade as many users on the selected echo chamber as possible without getting flat out banned by the moderators of the community.",
+      "This interactive experience explores social dynamics and persuasion tactics in online environments while highlighting the challenges of echo chambers in digital communities.",
+    ],
+    features: [
+      "Multiple fake online community environments",
+      "Dynamic user interaction system",
+      "Moderator AI with banning mechanics",
+      "Persuasion scoring and tracking",
+      "Multiple echo chamber scenarios",
+      "Social dynamics simulation",
+      "Interactive dialogue system",
+    ],
+    technologies: ["JavaScript", "React", "Web Development", "Game Development", "Social Simulation"],
+    coverImage: "/echochambers-cover.png",
+    thumbnailImage: "/echochambers-thumb.png",
+    timeline: "Hackathon Project (2025)",
+    role: "Game Developer",
+    liveUrl: "https://echochambers-theta.vercel.app/",
+    githubUrl: "https://github.com/SamanthaJeanneb/echochambers",
+    accessNote: "Submitted for World's Largest Hackathon",
+  },
+  {
+    id: 2,
     slug: "soundsketch",
     title: "SoundSketch",
     category: "Interactive Spotify App",
@@ -107,7 +137,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     slug: "airwaves-rhythm-game",
     title: "BitCamp2025-AirWaves",
     category: "Browser Game",
@@ -159,7 +189,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     slug: "lakerhacks-website",
     title: "LakerHacks Website",
     category: "Event Website",
@@ -196,7 +226,7 @@ const projects: Project[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     slug: "quotable",
     title: "Quotable",
     category: "Fullstack Web App",
@@ -222,7 +252,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SamanthaJeanneb/Quotable",
   },
   {
-    id: 5,
+    id: 6,
     slug: "interactive-project-map",
     title: "Interactive Project Map",
     category: "Web Prototype",
@@ -250,7 +280,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SamanthaJeanneb/Interactive-Project-Map",
   },
   {
-    id: 6,
+    id: 7,
     slug: "getter-done-task-manager",
     title: "HenHacks2025-GetterDone",
     category: "Task Management App",
@@ -279,7 +309,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SamanthaJeanneb/HenHacks2025-GetterDone",
   },
   {
-    id: 7,
+    id: 8,
     slug: "escape-utica-game",
     title: "Escape Utica National",
     category: "Java Game",
@@ -308,7 +338,7 @@ const projects: Project[] = [
   },
   // Projects without live links
   {
-    id: 8,
+    id: 9,
     slug: "family-tree-web-app",
     title: "FamilyTree",
     category: "Fullstack Web Application",
@@ -346,7 +376,7 @@ const projects: Project[] = [
     figmaUrl: "https://www.figma.com/design/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=546rtRhLwgYTbDdO-1",
   },
   {
-    id: 9,
+    id: 10,
     slug: "vaers-data-sorting",
     title: "VAERSData-Sorting",
     category: "Data Analysis",

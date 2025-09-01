@@ -66,6 +66,19 @@
   ],
   "experience": [
     {
+      "title": "Software Developer Intern (Front-end)",
+      "company": "Sicura",
+      "period": "Jun 2025 – present",
+      "description": "Designed and implemented front-end features in Angular for the Sicura Console, improving usability of compliance automation tools for CIS Benchmarks, DISA STIGs, and NIST controls. Collaborated with developers and engineers to modernize/improve UI components, integrating with backend APIs.",
+      "achievements": [
+        "Designed and implemented front-end features in Angular for Sicura Console",
+        "Improved usability of compliance automation tools",
+        "Collaborated with cross-functional development teams",
+        "Modernized UI components and integrated with backend APIs"
+      ],
+      "technologies": ["Angular", "Angular Material", "TypeScript", "UX Design", "API Integration"]
+    },
+    {
       "title": "User Experience Designer",
       "company": "Pioneer",
       "period": "Mar 2023 – Oct 2023",
