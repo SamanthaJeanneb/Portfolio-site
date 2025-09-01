@@ -368,7 +368,7 @@ const projects: Project[] = [
         type: "figma",
         title: "Figma Prototype",
         description: "Interactive Figma prototype for the Family Tree Web Application.",
-        content: "https://embed.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=11-1415&scaling=full-screen&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=113%3A324&embed-host=share",
+content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=11-1415&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=113%3A324"
       },
     ],
     figmaUrl: "https://www.figma.com/design/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=546rtRhLwgYTbDdO-1",
