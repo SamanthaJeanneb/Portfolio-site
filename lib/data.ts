@@ -73,7 +73,7 @@ const multimediaProjects: MultimediaProject[] = [
       "Created to explore animation principles including timing, spacing, and character expression in action sequences.",
       "Showcases skills in digital animation and visual storytelling techniques."
     ],
-    thumbnailImage: "/fighting-animation-thumb.png",
+    thumbnailImage: "/fighting-animation-cover.png",
     posterImage: "/fighting-animation-poster.png",
     youtubeUrl: "https://www.youtube.com/watch?v=YxOD7qQTczo&ab_channel=JeanneBrown",
     timeline: "Personal Project",
