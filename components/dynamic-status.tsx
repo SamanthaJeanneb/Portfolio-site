@@ -60,9 +60,7 @@ export function DynamicStatus() {
   }
 
   return (
-    <div className="bg-zinc-800/30 rounded-lg p-3 mb-4 space-y-2">
-      <p className="text-sm font-medium">Hi, I'm Samantha.</p>
-      
+    <div className="bg-zinc-800/30 rounded-lg p-3 mb-4 space-y-2">      
       {/* Availability Status */}
       <div className="flex items-center text-sm">
         {status.currentActivity ? (

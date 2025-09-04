@@ -462,6 +462,143 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
   },
 ]
 
+// Branding Projects Section
+export interface BrandingProject {
+  id: number
+  slug: string
+  title: string
+  category: string
+  shortDescription: string
+  description: string[]
+  features: string[]
+  coverImage: string
+  thumbnailImage: string
+  timeline: string
+  role: string
+  figmaUrl?: string
+  process?: ProcessStep[]
+}
+
+const brandingProjects: BrandingProject[] = [
+  {
+    id: 1,
+    slug: "reach-campus-connection",
+    title: "Reach - Campus Connection App",
+    category: "Branding / UI Design",
+    shortDescription: "End-to-end branding system and UI/UX design for a campus networking & resource discovery platform.",
+    description: [
+      "Reach is a conceptual platform that helps college students discover organizations, events, study groups, mentorship opportunities, and campus resources through a personalized feed and structured discovery flows.",
+      "I created a full branding system: logo suite (primary, wordmark, glyph), color architecture (core, semantic, neutrals), typography scale, iconography style, spacing grid, and motion guidelines.",
+      "The UI design includes onboarding flows, adaptive dashboard/feed, event & organization detail pages, tag-driven discovery, messaging previews, and notification system wires elevated to high-fidelity interactive components.",
+      "All components were built in a scalable design system in Figma (atoms → molecules → layouts), with documentation for states, accessibility contrast, and reusable interaction patterns." 
+    ],
+    features: [
+      "Comprehensive visual identity system",
+      "Figma component library w/ variants", 
+      "Onboarding + personalization flow",
+      "Tag & interest-based discovery model",
+      "Organization + event detail layouts",
+      "Messaging & notification UI patterns",
+      "Accessibility-aware color system",
+      "Scalable design tokens structure"
+    ],
+    coverImage: "/reach-branding-cover.png",
+    thumbnailImage: "/reach-branding-thumb.png",
+    timeline: "Personal Project (2025)",
+    role: "Brand & UI/UX Designer",
+    figmaUrl: "https://www.figma.com/",
+    process: [
+      {
+        id: "logo",
+        type: "image",
+        title: "Logo Exploration",
+        description: "Iterations exploring symbol + wordmark balance and scalable glyph usage.",
+        content: "/reach-process-logo.png"
+      },
+      {
+        id: "tokens",
+        type: "image", 
+        title: "Design Tokens",
+        description: "Color, typography, spacing and elevation tokens defined early for consistency.",
+        content: "/reach-process-tokens.png"
+      },
+      {
+        id: "prototype",
+        type: "figma",
+        title: "Interactive Prototype", 
+        description: "High-fidelity prototype demonstrating feed, discovery, and event flows.",
+        content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/placeholder-reach-prototype"
+      },
+      {
+        id: "components",
+        type: "image",
+        title: "Component Library",
+        description: "Systemized atomic components scaled into complex UI layouts.",
+        content: "/reach-process-components.png"
+      }
+    ]
+  },
+  {
+    id: 2,
+    slug: "lakerhacks-branding",
+    title: "LakerHacks Visual Identity",
+    category: "Event Branding",
+    shortDescription: "Complete brand identity system for SUNY Oswego's annual hackathon including logo, graphics, and promotional materials.",
+    description: [
+      "As the creator and lead Graphic Designer of LakerHacks, I developed the complete visual identity for SUNY Oswego's annual hackathon event.",
+      "The branding system encompasses logo design, color palette, typography, promotional graphics, and digital assets used across all event touchpoints.",
+      "Created a cohesive brand experience that reflects the innovative and collaborative spirit of the hackathon while maintaining accessibility and visual impact across various media formats.",
+      "The identity system was designed to be scalable and adaptable for future iterations of the event."
+    ],
+    features: [
+      "Logo design and brand mark development",
+      "Event poster and promotional graphics",
+      "Digital asset library for social media",
+      "Typography and color system definition",
+      "Merchandise and swag design",
+      "Website visual elements integration",
+      "Signage and environmental graphics",
+      "Brand guidelines documentation"
+    ],
+    coverImage: "/lakerhacks-branding-cover.png",
+    thumbnailImage: "/lakerhacks-branding-thumb.png",
+    timeline: "Event Project (2024)",
+    role: "Lead Graphic Designer & Brand Creator",
+    figmaUrl: "https://www.figma.com/",
+    process: [
+      {
+        id: "research",
+        type: "image",
+        title: "Brand Research",
+        description: "Initial research and mood boarding to establish the visual direction for LakerHacks.",
+        content: "/lakerhacks-process-research.png"
+      },
+      {
+        id: "logo-concepts",
+        type: "image",
+        title: "Logo Concepts",
+        description: "Multiple logo iterations exploring different approaches to represent the hackathon spirit.",
+        content: "/lakerhacks-process-logos.png"
+      },
+      {
+        id: "final-brand",
+        type: "image",
+        title: "Final Brand System",
+        description: "Complete brand system with logo, colors, typography, and application examples.",
+        content: "/lakerhacks-process-final.png"
+      }
+    ]
+  }
+]
+
+export function getAllBrandingProjects(): BrandingProject[] {
+  return brandingProjects
+}
+
+export function getBrandingProjectBySlug(slug: string): BrandingProject | undefined {
+  return brandingProjects.find((p) => p.slug === slug)
+}
+
 export { projects }
 
 // Add these functions after the projects array export

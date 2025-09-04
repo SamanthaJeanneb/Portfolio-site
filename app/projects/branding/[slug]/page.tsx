@@ -1,32 +1,27 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, ExternalLink, Youtube } from "lucide-react"
+import { ArrowLeft, ExternalLink, Figma } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { SkillTag } from "@/components/skill-tag"
-import { getMultimediaProjectBySlug } from "@/lib/data"
+import { getAllBrandingProjects, getBrandingProjectBySlug } from "@/lib/projects"
 import { notFound } from "next/navigation"
 import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator"
 import { AnimatedSection } from "@/components/animated-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
 import { ProjectProcess } from "@/components/project-process"
 
-interface MultimediaProjectPageProps {
+interface BrandingProjectPageProps {
   params: {
     slug: string
   }
 }
 
-export default function MultimediaProjectPage({ params }: MultimediaProjectPageProps) {
-  const project = getMultimediaProjectBySlug(params.slug)
+export default function BrandingProjectPage({ params }: BrandingProjectPageProps) {
+  const project = getBrandingProjectBySlug(params.slug)
 
   if (!project) {
     notFound()
-  }
-
-  const getYouTubeEmbedUrl = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1]
-    return videoId ? `https://www.youtube.com/embed/${videoId}` : url
   }
 
   return (
@@ -72,72 +67,65 @@ export default function MultimediaProjectPage({ params }: MultimediaProjectPageP
 
           {/* Project Content */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-            {/* Video Embed Section */}
-            {project.youtubeUrl && (
-              <AnimatedSection animation="fade-up" delay={50}>
-                <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
-                  <CardContent className="p-4 sm:p-6">
-                    <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
-                      <iframe
-                        src={getYouTubeEmbedUrl(project.youtubeUrl)}
-                        title={project.title}
-                        className="w-full h-full"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            )}
-
             <AnimatedSection animation="fade-up" delay={100}>
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Overview</h2>
                   <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-zinc-300">
-                    {project.description.map((paragraph, index) => (
+                    {project.description.map((paragraph: string, index: number) => (
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
-
-                  {project.software && (
-                    <AnimatedSection animation="fade-up" delay={300}>
-                      <h3 className="text-base sm:text-lg font-bold mt-6 sm:mt-8 mb-2 sm:mb-3">Software Used</h3>
-                      <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
-                        {project.software.map((tech, index) => (
-                          <SkillTag key={index}>{tech}</SkillTag>
-                        ))}
-                      </div>
-                    </AnimatedSection>
-                  )}
-
-                  <AnimatedSection animation="fade-up" delay={400}>
-                    <div className="flex flex-wrap gap-2 sm:gap-3 mt-6 sm:mt-8">
-                      {project.youtubeUrl && (
-                        <Button
-                          asChild
-                          size="sm"
-                          className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-xs sm:text-sm"
-                        >
-                          <a href={project.youtubeUrl} target="_blank" rel="noopener noreferrer">
-                            <Youtube className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                            Watch on YouTube
-                          </a>
-                        </Button>
-                      )}
-                    </div>
-                  </AnimatedSection>
                 </CardContent>
               </Card>
             </AnimatedSection>
 
-            {/* Process Section */}
+            {/* Features Section */}
+            <AnimatedSection animation="fade-up" delay={200}>
+              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+                <CardContent className="p-4 sm:p-6">
+                  <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Key Deliverables</h2>
+                  <div className="grid gap-2 sm:gap-3">
+                    {project.features.map((feature: string, index: number) => (
+                      <div key={index} className="flex items-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 mr-3 flex-shrink-0"></div>
+                        <p className="text-sm sm:text-base text-zinc-300">{feature}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* Design Process Section */}
             {project.process && project.process.length > 0 && (
-              <AnimatedSection animation="fade-up" delay={200}>
-                <ProjectProcess steps={project.process} />
+              <AnimatedSection animation="fade-up" delay={300}>
+                <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+                  <CardContent className="p-4 sm:p-6">
+                    <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Design Process</h2>
+                    <ProjectProcess steps={project.process} />
+                  </CardContent>
+                </Card>
               </AnimatedSection>
             )}
+
+            {/* Action Buttons */}
+            <AnimatedSection animation="fade-up" delay={400}>
+              <div className="flex flex-wrap gap-2 sm:gap-3">
+                {project.figmaUrl && (
+                  <Button
+                    asChild
+                    size="sm"
+                    className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-xs sm:text-sm"
+                  >
+                    <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+                      <Figma className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                      View in Figma
+                    </a>
+                  </Button>
+                )}
+              </div>
+            </AnimatedSection>
           </div>
 
           {/* Project Sidebar */}
@@ -162,24 +150,23 @@ export default function MultimediaProjectPage({ params }: MultimediaProjectPageP
               </Card>
             </AnimatedSection>
 
-            {/* Movie Poster Section */}
-            {project.posterImage && (
-              <AnimatedSection animation="slide-left" delay={200}>
-                <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
-                  <CardContent className="p-4 sm:p-6">
-                    <div className="relative w-full">
-                      <Image
-                        src={project.posterImage}
-                        alt={`${project.title} Movie Poster`}
-                        width={400}
-                        height={600}
-                        className="w-full h-auto rounded-lg border border-zinc-800"
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            )}
+            {/* Cover Image */}
+            <AnimatedSection animation="slide-left" delay={200}>
+              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+                <CardContent className="p-4 sm:p-6">
+                  <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Brand Identity</h2>
+                  <div className="relative w-full">
+                    <Image
+                      src={project.coverImage}
+                      alt={`${project.title} Brand Identity`}
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg border border-zinc-800"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           </div>
         </div>
 

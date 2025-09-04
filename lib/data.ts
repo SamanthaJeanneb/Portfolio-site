@@ -1,11 +1,11 @@
 import portfolioData from "@/data/portfolio-data.json"
-import { projects, getAllProjects, getProjectBySlug, getRelatedProjects } from "@/lib/projects"
+import { projects, getAllProjects, getProjectBySlug, getRelatedProjects, getAllBrandingProjects, getBrandingProjectBySlug, ProcessStep } from "@/lib/projects"
 
 // Export the portfolio data
 export const data = portfolioData
 
 // Export the projects data
-export { projects, getAllProjects, getProjectBySlug, getRelatedProjects }
+export { projects, getAllProjects, getProjectBySlug, getRelatedProjects, getAllBrandingProjects, getBrandingProjectBySlug }
 
 // Type definitions for the portfolio data
 export type PortfolioData = typeof portfolioData
@@ -59,6 +59,7 @@ export interface MultimediaProject {
   timeline: string
   role: string
   software?: string[]
+  process?: ProcessStep[]
 }
 
 const multimediaProjects: MultimediaProject[] = [
@@ -78,7 +79,17 @@ const multimediaProjects: MultimediaProject[] = [
     youtubeUrl: "https://www.youtube.com/watch?v=YxOD7qQTczo&ab_channel=JeanneBrown",
     timeline: "Personal Project",
     role: "Animator & Director",
-    software: ["Animation Software", "Digital Art"]
+    software: ["Animation Software", "Digital Art"],
+    process: [
+      {
+        id: "final-battle",
+        type: "video",
+        title: "Final Battle Animation",
+        description: "The climactic final battle sequence showcasing advanced combat choreography and character animation techniques.",
+        content: "https://www.youtube.com/embed/BttYdZOKIyY",
+        thumbnail: "/fighting-animation-final-battle-thumb.png"
+      }
+    ]
   }
 ]
 
