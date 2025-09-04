@@ -76,6 +76,22 @@ export default function BrandingProjectPage({ params }: BrandingProjectPageProps
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
+                  
+                  {/* Action Buttons */}
+                  {project.figmaUrl && (
+                    <div className="flex flex-wrap gap-2 sm:gap-3 mt-6 sm:mt-8">
+                      <Button
+                        asChild
+                        size="sm"
+                        className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-xs sm:text-sm"
+                      >
+                        <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+                          <Figma className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                          View in Figma
+                        </a>
+                      </Button>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </AnimatedSection>
@@ -100,32 +116,9 @@ export default function BrandingProjectPage({ params }: BrandingProjectPageProps
             {/* Design Process Section */}
             {project.process && project.process.length > 0 && (
               <AnimatedSection animation="fade-up" delay={300}>
-                <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
-                  <CardContent className="p-4 sm:p-6">
-                    <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Design Process</h2>
-                    <ProjectProcess steps={project.process} />
-                  </CardContent>
-                </Card>
+                <ProjectProcess steps={project.process} />
               </AnimatedSection>
             )}
-
-            {/* Action Buttons */}
-            <AnimatedSection animation="fade-up" delay={400}>
-              <div className="flex flex-wrap gap-2 sm:gap-3">
-                {project.figmaUrl && (
-                  <Button
-                    asChild
-                    size="sm"
-                    className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-xs sm:text-sm"
-                  >
-                    <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
-                      <Figma className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                      View in Figma
-                    </a>
-                  </Button>
-                )}
-              </div>
-            </AnimatedSection>
           </div>
 
           {/* Project Sidebar */}

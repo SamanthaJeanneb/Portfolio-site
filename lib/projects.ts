@@ -506,7 +506,7 @@ const brandingProjects: BrandingProject[] = [
     thumbnailImage: "/reach-branding-thumb.png",
     timeline: "Personal Project (2025)",
     role: "Brand & UI/UX Designer",
-    figmaUrl: "https://www.figma.com/",
+    figmaUrl: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/HjaH7a6lu0J1OY2gyFsgwe/Reach-Design-System?node-id=33525-595&p=f&scaling=contain&content-scaling=fixed&page-id=33525%3A578&embed-host=share",
     process: [
       {
         id: "logo",
@@ -527,8 +527,16 @@ const brandingProjects: BrandingProject[] = [
         type: "figma",
         title: "Interactive Prototype", 
         description: "High-fidelity prototype demonstrating feed, discovery, and event flows.",
-        content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/placeholder-reach-prototype"
+        content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/HjaH7a6lu0J1OY2gyFsgwe/Reach-Design-System?node-id=33525-595&scaling=scale-down-width&content-scaling=fixed&embed-host=share"
       },
+      {
+                id: "prototype",
+        type: "figma",
+        title: "Interactive Prototype", 
+        description: "High-fidelity prototype demonstrating feed, discovery, and event flows.",
+        content: "https://embed.figma.com/proto/irUmymGEXqgT40J64JUOGj/Pienee--Reach--r-prototype?node-id=3-3&starting-point-node-id=3%3A3&content-scaling=fixed&embed-host=share",
+      },
+    
       {
         id: "components",
         type: "image",
@@ -564,7 +572,7 @@ const brandingProjects: BrandingProject[] = [
     thumbnailImage: "/lakerhacks-branding-thumb.png",
     timeline: "Event Project (2024)",
     role: "Lead Graphic Designer & Brand Creator",
-    figmaUrl: "https://www.figma.com/",
+    figmaUrl: "https://embed.figma.com/proto/lkvhPVFdDW691fjhuAsBev/Brainstorming---Wireframes?node-id=195-13&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share",
     process: [
       {
         id: "research",
@@ -579,6 +587,13 @@ const brandingProjects: BrandingProject[] = [
         title: "Logo Concepts",
         description: "Multiple logo iterations exploring different approaches to represent the hackathon spirit.",
         content: "/lakerhacks-process-logos.png"
+      },
+      {
+        id: "figma-design",
+        type: "figma",
+        title: "Design System Development",
+        description: "Interactive Figma workspace showing the complete brand system development and component library.",
+        content: "https://embed.figma.com/proto/lkvhPVFdDW691fjhuAsBev/Brainstorming---Wireframes?node-id=195-13&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share"
       },
       {
         id: "final-brand",
