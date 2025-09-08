@@ -143,20 +143,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SamanthaJeanneb/BitCamp2025-AirWaves",
     process: [
       {
-        id: "step1",
-        type: "image",
-        title: "Hackathon Brainstorming",
-        description: "Initial brainstorming session at BitCamp 2025, where we conceptualized the AirWaves game.",
-        content: "/airwaves-process-1.png",
-      },
-      {
-        id: "step2",
-        type: "image",
-        title: "Hand Tracking Prototype",
-        description: "Early prototype testing the hand tracking capabilities using OpenCV and TensorFlow.js.",
-        content: "/airwaves-process-2.png",
-      },
-      {
         id: "step3",
         type: "video",
         title: "Gameplay Testing",
