@@ -193,15 +193,6 @@ const projects: Project[] = [
     role: "Graphic Designer & Web Developer",
     liveUrl: "http://cs.oswego.edu/lakerhacks/",
     githubUrl: "https://github.com/SamanthaJeanneb/lakerhacks-site",
-        process: [
-      {
-        id: "step1",
-        type: "image",
-        title: "Hackathon Brainstorming",
-        description: "Initial brainstorming session at BitCamp 2025, where we conceptualized the AirWaves game.",
-        content: "/airwaves-process-1.png",
-      },
-    ]
   },
   {
     id: 5,
