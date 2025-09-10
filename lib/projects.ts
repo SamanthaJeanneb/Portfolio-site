@@ -105,26 +105,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SamanthaJeanneb/soundsketch",
     process: [
       {
-        id: "step1",
-        type: "image",
-        title: "Initial Concept Sketches",
-        description: "Early sketches exploring the visual interface and user flow for the SoundSketch application.",
-        content: "/soundsketch-process-1.png",
-      },
-      {
-        id: "step2",
-        type: "image",
-        title: "UI Wireframes",
-        description: "Low-fidelity wireframes mapping out the core functionality and layout of the application.",
-        content: "/soundsketch-process-2.png",
-      },
-      {
-        id: "step3",
-        type: "figma",
-        title: "Interactive Prototype",
-        description: "High-fidelity prototype demonstrating the user experience and visual design.",
- content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=11-1415&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=113%3A324"
-       }, {
         id: "step4",
         type: "video",
         title: "Development Progress",
@@ -163,20 +143,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SamanthaJeanneb/BitCamp2025-AirWaves",
     process: [
       {
-        id: "step1",
-        type: "image",
-        title: "Hackathon Brainstorming",
-        description: "Initial brainstorming session at BitCamp 2025, where we conceptualized the AirWaves game.",
-        content: "/airwaves-process-1.png",
-      },
-      {
-        id: "step2",
-        type: "image",
-        title: "Hand Tracking Prototype",
-        description: "Early prototype testing the hand tracking capabilities using OpenCV and TensorFlow.js.",
-        content: "/airwaves-process-2.png",
-      },
-      {
         id: "step3",
         type: "video",
         title: "Gameplay Testing",
@@ -213,15 +179,6 @@ const projects: Project[] = [
     role: "Graphic Designer & Web Developer",
     liveUrl: "http://cs.oswego.edu/lakerhacks/",
     githubUrl: "https://github.com/SamanthaJeanneb/lakerhacks-site",
-        process: [
-      {
-        id: "step1",
-        type: "image",
-        title: "Hackathon Brainstorming",
-        description: "Initial brainstorming session at BitCamp 2025, where we conceptualized the AirWaves game.",
-        content: "/airwaves-process-1.png",
-      },
-    ]
   },
   {
     id: 5,
