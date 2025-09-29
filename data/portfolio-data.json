@@ -48,8 +48,8 @@
       "href": "/"
     },
     {
-      "label": "Experience",
-      "href": "#experience"
+      "label": "Projects",
+      "href": "#projects"
     },
     {
       "label": "Education",
@@ -60,8 +60,12 @@
       "href": "#skills"
     },
     {
-      "label": "Projects",
-      "href": "#projects"
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Creative Work",
+      "href": "#creative"
     }
   ],
   "experience": [

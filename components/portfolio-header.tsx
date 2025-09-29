@@ -15,20 +15,22 @@ export function PortfolioHeader() {
   const personalInfo = getPersonalInfo()
 
   useEffect(() => {
-    const handleScroll = () => {
+      const handleScroll = () => {
       setScrolled(window.scrollY > 20)
 
       // Determine active section based on scroll position
       const sections = navItems.filter((item) => item.href.startsWith("#")).map((item) => item.href.substring(1))
 
-      // Find the current section in view
+      // Find the current section in view (use a larger threshold but require the section
+      // to still have visible area so sections above don't steal the highlight)
+      const HEADER_THRESHOLD = 220
       for (const section of sections.reverse()) {
-        // Check from bottom to top
         const element = document.getElementById(section)
         if (element) {
           const rect = element.getBoundingClientRect()
-          if (rect.top <= 150) {
-            // If section is at or above 150px from viewport top
+          // rect.top <= HEADER_THRESHOLD means the element has moved into the header zone
+          // rect.bottom > 60 ensures the element still has visible content below the top
+          if (rect.top <= HEADER_THRESHOLD && rect.bottom > 20) {
             setActiveSection(section)
             break
           }
@@ -36,7 +38,7 @@ export function PortfolioHeader() {
       }
 
       // If scrolled to top, set Home as active
-      if (window.scrollY < 100) {
+      if (window.scrollY < 120) {
         setActiveSection("")
       }
     }
@@ -72,11 +74,20 @@ export function PortfolioHeader() {
         <nav className="hidden md:flex items-center space-x-1">
           {navItems.map((item) => {
             const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
+            const target = item.href.startsWith("#") ? item.href.substring(1) : ""
 
             return (
               <Link
                 key={item.label}
                 href={item.href}
+                onClick={() => {
+                  if (target) {
+                    // immediately set active section to avoid incorrect highlight while scrolling
+                    setActiveSection(target)
+                  } else {
+                    setActiveSection("")
+                  }
+                }}
                 className={cn(
                   "px-3 py-2 text-sm relative group transition-all duration-300",
                   isActive ? "text-purple-400" : "text-zinc-400 hover:text-white",
@@ -120,6 +131,7 @@ export function PortfolioHeader() {
         <nav className="flex flex-col space-y-4">
           {navItems.map((item, index) => {
             const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
+            const target = item.href.startsWith("#") ? item.href.substring(1) : ""
 
             return (
               <Link
@@ -129,7 +141,11 @@ export function PortfolioHeader() {
                   "px-3 py-4 text-lg border-b border-zinc-800 relative group transition-all duration-300",
                   isActive ? "text-purple-400 border-purple-400/30" : "text-zinc-300 hover:text-white hover:pl-5",
                 )}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  if (target) setActiveSection(target)
+                  else setActiveSection("")
+                }}
                 style={{
                   transitionDelay: `${index * 50}ms`,
                   transform: mobileMenuOpen ? "translateX(0)" : "translateX(20px)",

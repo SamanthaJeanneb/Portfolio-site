@@ -79,7 +79,9 @@ export default function Home() {
             </AnimatedSection>
 
             {/* Skills Section */}
-            <AnimatedSection animation="fade-up" id="skills">
+            {/* Anchor for Skills to offset fixed header */}
+            <div id="skills" className="-mt-8 pt-8" />
+            <AnimatedSection animation="fade-up">
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4">
@@ -138,7 +140,9 @@ export default function Home() {
 
 
             {/* Experience Section - Expanded */}
-            <AnimatedSection animation="fade-up" id="experience">
+            {/* Anchor and spacing for Experience */}
+            <div id="experience" className="-mt-12 pt-12" />
+            <AnimatedSection animation="fade-up">
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-6">
@@ -165,6 +169,8 @@ export default function Home() {
             </AnimatedSection>
 
             {/* Branding / Design Projects Section */}
+            {/* Anchor for Creative Work (branding + multimedia) */}
+            <div id="creative" className="-mt-8 pt-8" />
             <AnimatedSection animation="fade-up" id="branding">
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
