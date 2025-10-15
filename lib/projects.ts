@@ -38,6 +38,7 @@ export interface Project {
   technologies: string[]
   coverImage: string
   thumbnailImage: string
+  order?: number
   gallery?: ProjectGalleryImage[]
   client?: string
   timeline: string
@@ -53,6 +54,84 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 100,
+    slug: "bearly-running",
+    title: "Bearly Running",
+    category: "Rhythm Game",
+    shortDescription:
+      "Web-based rhythm game with AI-generated charts and gesture controls (Big Red Hacks Winner).",
+    description: [
+      "Bearly Running is a web-based rhythm game where players keep the beat to help a bear escape from a pursuer.",
+      "Features AI-powered chart generation from MP3s (Gemini API) and gesture controls via OpenCV/MediaPipe.",
+      "Built with a modern React + Vite frontend and real-time processing.",
+    ],
+    features: [
+      "AI chart generation from MP3s",
+      "Gesture controls with webcam",
+      "Real-time Socket.IO processing",
+      "Modern React interface",
+    ],
+    technologies: ["React", "TypeScript", "Vite", "Socket.IO", "OpenCV", "MediaPipe", "Gemini API"],
+    coverImage: "/bearly-running/title.png",
+    thumbnailImage: "/bearly-running/title.png",
+    timeline: "Hackathon Project (2025)",
+    role: "Lead Developer",
+    liveUrl: "https://bearly-running.vercel.app/",
+    githubUrl: "https://github.com/SamanthaJeanneb/guitar",
+    process: [
+      {
+        id: "screens",
+        type: "slideshow",
+        title: "Screenshots",
+        description: "Gameplay and UI screenshots",
+        content: [
+          "/bearly-running/Screenshot From 2025-09-21 08-26-04.png",
+          "/bearly-running/Screenshot From 2025-09-21 08-26-15.png",
+          "/bearly-running/Screenshot From 2025-09-21 08-26-23.png",
+          "/bearly-running/title.png"
+        ]
+      }
+    ],
+    order: 1,
+  },
+  {
+    id: 7,
+    slug: "beat-boxing",
+    title: "Beat Boxing",
+    category: "Multiplayer Rhythm Game",
+    shortDescription: "Web-based boxing rhythm game with webcam hand-tracking and uploadable songs.",
+    description: [
+      "Multiplayer rhythm boxing game playable in the browser.",
+      "Four distinct hand-tracking motions and infinitely uploadable songs.",
+    ],
+    features: [
+      "Webcam hand-tracking (OpenCV)",
+      "Multiplayer capable",
+      "Song uploads",
+    ],
+    technologies: ["TypeScript", "React", "Vite", "OpenCV", "Socket.IO"],
+    coverImage: "/beatboxing/title.png",
+    thumbnailImage: "/beatboxing/title.png",
+    timeline: "Hackathon Project (2025)",
+    role: "Developer",
+    githubUrl: "https://github.com/SamanthaJeanneb/Beat-Boxing-HopHacks2025",
+    process: [
+      {
+        id: "screens",
+        type: "slideshow",
+        title: "Screenshots",
+        description: "Gameplay and UI screenshots",
+        content: [
+          "/beatboxing/Screenshot From 2025-10-06 14-44-46.png",
+          "/beatboxing/Screenshot From 2025-10-06 14-44-58.png",
+          "/beatboxing/Screenshot From 2025-10-06 14-45-22.png",
+          "/beatboxing/title.png"
+        ]
+      }
+    ],
+    order: 5,
+  },
   // Projects with live links first
   {
     id: 1,
@@ -147,7 +226,8 @@ const projects: Project[] = [
         category: "Browser Game",
         image: "/airwaves-thumb.png"
       }
-    ]
+    ],
+    order: 3,
   },
   {
     id: 3,
@@ -176,16 +256,8 @@ const projects: Project[] = [
     role: "Lead Developer",
     liveUrl: "http://cs.oswego.edu/~efereira/airwaves/",
     githubUrl: "https://github.com/SamanthaJeanneb/BitCamp2025-AirWaves",
-    process: [
-      {
-        id: "step3",
-        type: "video",
-        title: "Gameplay Testing",
-        description: "Testing the rhythm mechanics and hand tracking accuracy during development.",
-        content: "https://www.youtube.com/embed/exampleID",
-        thumbnail: "/airwaves-video-thumb.png",
-      },
-    ],
+    process: [],
+    order: 6,
     relatedProjects: [
       {
         slug: "soundsketch",
@@ -322,6 +394,7 @@ const projects: Project[] = [
       showFeatures: true,
       customOrder: ['process', 'description', 'features', 'technologies']
     },
+    order: 4,
     relatedProjects: [
       {
         slug: "soundsketch",
@@ -337,34 +410,7 @@ const projects: Project[] = [
       }
     ]
   },
-  {
-    id: 6,
-    slug: "interactive-project-map",
-    title: "Interactive Project Map",
-    category: "Web Prototype",
-    shortDescription: "Interactive map prototype for Beardsley Architects + Engineers' Higher Education landing page.",
-    description: [
-      "This project showcases an interactive map prototype designed for Beardsley Architects + Engineers' Higher Education landing page.",
-      "The interactive map allows users to explore various educational projects and locations in an engaging, visual format.",
-      "Built with modern JavaScript technologies to provide smooth interactions and responsive design across devices.",
-    ],
-    features: [
-      "Interactive map interface with smooth navigation",
-      "Project location markers with detailed information",
-      "Responsive design for all device types",
-      "Smooth animations and transitions",
-      "Educational project showcase integration",
-      "Professional client-ready prototype",
-    ],
-    technologies: ["JavaScript", "HTML5", "CSS3", "Interactive Design"],
-    coverImage: "/interactive-map-cover.png",
-    thumbnailImage: "/interactive-map-thumb.png",
-    timeline: "Client Project (2024)",
-    role: "Frontend Developer",
-    client: "Beardsley Architects + Engineers",
-    liveUrl: "https://higher-education-map.vercel.app/",
-    githubUrl: "https://github.com/SamanthaJeanneb/Interactive-Project-Map",
-  },
+  
   {
     id: 8,
     slug: "getter-done-task-manager",
@@ -390,9 +436,9 @@ const projects: Project[] = [
     thumbnailImage: "/getter-done-thumb.png",
     timeline: "Hackathon Project (March 2025)",
     role: "Fullstack Developer",
-    liveUrl:
-      "https://devpost.com/software/getterdone?_gl=1*1hmdhgq*_gcl_au*NjMwODI4ODQuMTc0OTA2ODM0Mg..*_ga*MTkyMzMyNzc1OC4xNzQ5MDY4MzQy*_ga_0YHJK3Y10M*czE3NDkwNjgzNDIkbzEkZzEkdDE3NDkwNjgzNDgkajU0JGwwJGgw",
+    liveUrl: "https://getterdone-7ab42de2c63d.herokuapp.com/",
     githubUrl: "https://github.com/SamanthaJeanneb/HenHacks2025-GetterDone",
+    order: 2,
   },
   {
     id: 9,
@@ -476,33 +522,6 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     ]
   },
   {
-    id: 11,
-    slug: "vaers-data-sorting",
-    title: "VAERSData-Sorting",
-    category: "Data Analysis",
-    shortDescription:
-      "Java application for sorting and analyzing VAERS (Vaccine Adverse Event Reporting System) data with efficient algorithms.",
-    description: [
-      "Java application designed for sorting and analyzing VAERS (Vaccine Adverse Event Reporting System) data.",
-      "Implements efficient sorting algorithms to process large datasets of vaccine adverse event reports.",
-      "Provides data analysis capabilities to help researchers and healthcare professionals understand patterns in adverse event reporting.",
-    ],
-    features: [
-      "Efficient data sorting algorithms",
-      "Large dataset processing capabilities",
-      "VAERS data format compatibility",
-      "Performance optimization for big data",
-      "Data analysis and reporting tools",
-      "Clean, maintainable code architecture",
-    ],
-    technologies: ["Java", "Data Structures", "Algorithms", "Data Analysis"],
-    coverImage: "/vaers-data-cover.png",
-    thumbnailImage: "/vaers-data-thumb.png",
-    timeline: "Academic Project (April 2024)",
-    role: "Data Analyst & Developer",
-    githubUrl: "https://github.com/SamanthaJeanneb/VAERSData-Sorting",
-  },
-  {
     id: 12,
     slug: "beardsley-office-hub",
     title: "Beardsley Office Hub",
@@ -544,7 +563,8 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
         category: "Web Prototype",
         image: "/interactive-map-thumb.png"
       }
-    ]
+    ],
+    order: 7,
   },
   {
     id: 13,
@@ -575,6 +595,7 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     client: "Beardsley Architects + Engineers",
     liveUrl: "https://beardsley-project-map.netlify.app",
     githubUrl: "https://github.com/SamanthaJeanneb/Beardsley-Map-Application",
+    order: 8,
   },
 ]
 
@@ -736,6 +757,13 @@ export { projects }
 
 export function getAllProjects(): Project[] {
   return projects
+    .map((p) => ({ ...p }))
+    .sort((a, b) => {
+      const ao = a.order ?? Number.MAX_SAFE_INTEGER
+      const bo = b.order ?? Number.MAX_SAFE_INTEGER
+      if (ao !== bo) return ao - bo
+      return a.title.localeCompare(b.title)
+    })
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {
