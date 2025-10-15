@@ -12,11 +12,19 @@ export interface RelatedProject {
 
 export interface ProcessStep {
   id: string
-  type: "image" | "video" | "figma" | "text"
+  type: "image" | "video" | "figma" | "text" | "slideshow"
   title?: string
   description?: string
-  content: string // URL for images/videos, embed URL for Figma, text content for text
+  content: string | string[] // URL for images/videos, embed URL for Figma, text content for text, array of image URLs for slideshow
   thumbnail?: string // Optional thumbnail for videos
+}
+
+export interface ProjectLayout {
+  showProcessFirst?: boolean
+  showGallery?: boolean
+  showTechnologies?: boolean
+  showFeatures?: boolean
+  customOrder?: string[] // Array of section IDs in desired order
 }
 
 export interface Project {
@@ -41,6 +49,7 @@ export interface Project {
   accessNote?: string
   process?: ProcessStep[]
   relatedProjects?: RelatedProject[]
+  layout?: ProjectLayout
 }
 
 const projects: Project[] = [
@@ -112,7 +121,33 @@ const projects: Project[] = [
         content: "https://www.youtube.com/embed/k7Vkkg7CYp4",
         thumbnail: "/soundsketch-video-thumb.png",
       },
+      {
+        id: "ui-screenshots",
+        type: "slideshow",
+        title: "UI Screenshots",
+        description: "Various screenshots showing the application interface and user experience.",
+        content: [
+          "/soundsketch-cover.png",
+          "/soundsketch-thumb.png",
+          "/modern-apparel-storefront.png",
+          "/modern-finance-app.png"
+        ]
+      },
     ],
+    relatedProjects: [
+      {
+        slug: "quotable",
+        title: "Quotable",
+        category: "Fullstack Web App",
+        image: "/quotable-thumb.png"
+      },
+      {
+        slug: "airwaves-rhythm-game",
+        title: "BitCamp2025-AirWaves",
+        category: "Browser Game",
+        image: "/airwaves-thumb.png"
+      }
+    ]
   },
   {
     id: 3,
@@ -151,6 +186,20 @@ const projects: Project[] = [
         thumbnail: "/airwaves-video-thumb.png",
       },
     ],
+    relatedProjects: [
+      {
+        slug: "soundsketch",
+        title: "SoundSketch",
+        category: "Interactive Spotify App",
+        image: "/soundsketch-thumb.png"
+      },
+      {
+        slug: "escape-utica-game",
+        title: "Escape Utica National",
+        category: "Java Game",
+        image: "/escape-utica-thumb.png"
+      }
+    ]
   },
   {
     id: 4,
@@ -205,6 +254,88 @@ const projects: Project[] = [
     role: "Fullstack Developer",
     liveUrl: "http://moxie.cs.oswego.edu:48080/",
     githubUrl: "https://github.com/Paul-Austin-Oswego-CSC480-HCI521/OZ-CSC-480-HCI-521-Spring-2025",
+    process: [
+      {
+        id: "figma-prototype",
+        type: "figma",
+        title: "Figma Prototype",
+        description: "Interactive Figma prototype for the Quotable application design.",
+        content: "https://embed.figma.com/proto/hyl3PKGhSoGDiGxFTX5C3X/Draft-Med--Fi?node-id=1165-758&scaling=scale-down-width&content-scaling=fixed&page-id=1165%3A756&starting-point-node-id=1165%3A758&embed-host=share"
+      },
+      {
+        id: "development-process",
+        type: "slideshow",
+        title: "Development Process",
+        description: "Step-by-step screenshots showing the development and design process of the Quotable application.",
+        content: [
+          "/quotable/Quotable-1.png",
+          "/quotable/Quotable-2.png",
+          "/quotable/Quotable-3.png",
+          "/quotable/Quotable-4.png",
+          "/quotable/Quotable-5.png",
+          "/quotable/Quotable-6.png",
+          "/quotable/Quotable-7.png",
+          "/quotable/Quotable-8.png",
+          "/quotable/Quotable-9.png",
+          "/quotable/Quotable-10.png",
+          "/quotable/Quotable-11.png",
+          "/quotable/Quotable-12.png",
+          "/quotable/Quotable-13.png",
+          "/quotable/Quotable-14.png",
+          "/quotable/Quotable-15.png",
+          "/quotable/Quotable-16.png",
+          "/quotable/Quotable-17.png",
+          "/quotable/Quotable-18.png",
+          "/quotable/Quotable-19.png",
+          "/quotable/Quotable-20.png",
+          "/quotable/Quotable-21.png",
+          "/quotable/Quotable-22.png",
+          "/quotable/Quotable-23.png",
+          "/quotable/Quotable-24.png",
+          "/quotable/Quotable-25.png",
+          "/quotable/Quotable-26.png",
+          "/quotable/Quotable-27.png",
+          "/quotable/Quotable-28.png",
+          "/quotable/Quotable-29.png",
+          "/quotable/Quotable-30.png",
+          "/quotable/Quotable-31.png",
+          "/quotable/Quotable-32.png",
+          "/quotable/Quotable-33.png",
+          "/quotable/Quotable-34.png",
+          "/quotable/Quotable-35.png",
+          "/quotable/Quotable-36.png",
+          "/quotable/Quotable-37.png",
+          "/quotable/Quotable-38.png",
+          "/quotable/Quotable-39.png",
+          "/quotable/Quotable-40.png",
+          "/quotable/Quotable-41.png",
+          "/quotable/Quotable-42.png",
+          "/quotable/Quotable-43.png",
+          "/quotable/Quotable-44.png"
+        ]
+      },
+    ],
+    layout: {
+      showProcessFirst: true,
+      showGallery: false,
+      showTechnologies: true,
+      showFeatures: true,
+      customOrder: ['process', 'description', 'features', 'technologies']
+    },
+    relatedProjects: [
+      {
+        slug: "soundsketch",
+        title: "SoundSketch",
+        category: "Interactive Spotify App",
+        image: "/soundsketch-thumb.png"
+      },
+      {
+        slug: "getter-done-task-manager",
+        title: "HenHacks2025-GetterDone",
+        category: "Task Management App",
+        image: "/getter-done-thumb.png"
+      }
+    ]
   },
   {
     id: 6,
@@ -329,6 +460,20 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
       },
     ],
     figmaUrl: "https://www.figma.com/design/WY8wFLQpycygkNHo1oqA5z/Family-Tree-Web-Application?node-id=10-279&t=546rtRhLwgYTbDdO-1",
+    relatedProjects: [
+      {
+        slug: "quotable",
+        title: "Quotable",
+        category: "Fullstack Web App",
+        image: "/quotable-thumb.png"
+      },
+      {
+        slug: "beardsley-office-hub",
+        title: "Beardsley Office Hub",
+        category: "Office Management App",
+        image: "/beardsley-office-thumb.png"
+      }
+    ]
   },
   {
     id: 11,
@@ -386,6 +531,20 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     client: "Beardsley Architects and Engineers",
     liveUrl: "https://beardsley-office-hub.vercel.app/",
     githubUrl: "https://github.com/SamanthaJeanneb/Beardsley-Office-Hub",
+    relatedProjects: [
+      {
+        slug: "beardsley-map-application",
+        title: "Beardsley Map Application",
+        category: "Interactive Map Portfolio",
+        image: "/beardsley-map-thumb.png"
+      },
+      {
+        slug: "interactive-project-map",
+        title: "Interactive Project Map",
+        category: "Web Prototype",
+        image: "/interactive-map-thumb.png"
+      }
+    ]
   },
   {
     id: 13,
@@ -583,20 +742,30 @@ export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug)
 }
 
-export function getRelatedProjects(currentSlug: string, limit = 2): RelatedProject[] {
+export function getRelatedProjects(currentSlug: string, limit = 3): RelatedProject[] {
   const currentProject = getProjectBySlug(currentSlug)
-  if (!currentProject || !currentProject.relatedProjects) {
-    // If no related projects defined, return random projects
-    return projects
-      .filter((project) => project.slug !== currentSlug)
-      .slice(0, limit)
-      .map((project) => ({
-        slug: project.slug,
-        title: project.title,
-        category: project.category,
-        image: project.thumbnailImage,
-      }))
-  }
 
-  return currentProject.relatedProjects.slice(0, limit)
+  // Start with explicitly-related projects if provided
+  const initial: RelatedProject[] = currentProject?.relatedProjects
+    ? [...currentProject.relatedProjects]
+    : []
+
+  // Build a pool of candidates excluding the current project and any already included
+  const alreadyIncluded = new Set<string>([
+    currentSlug,
+    ...initial.map((p) => p.slug),
+  ])
+
+  const candidates: RelatedProject[] = projects
+    .filter((p) => !alreadyIncluded.has(p.slug))
+    .map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      category: p.category,
+      image: p.thumbnailImage,
+    }))
+
+  // Combine and cap to the desired limit
+  const combined = [...initial, ...candidates]
+  return combined.slice(0, limit)
 }

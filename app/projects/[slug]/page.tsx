@@ -4,7 +4,8 @@ import { ArrowLeft, ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { SkillTag } from "@/components/skill-tag"
-import { getProjectBySlug } from "@/lib/data"
+import { getProjectBySlug, getRelatedProjects } from "@/lib/data"
+import type { RelatedProject } from "@/lib/projects"
 import { notFound } from "next/navigation"
 import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator"
 import { AnimatedSection } from "@/components/animated-section"
@@ -23,6 +24,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   if (!project) {
     notFound()
   }
+
+  // Simplified layout: single description card, process toggled above/below
+  const showProcessFirst = project.layout?.showProcessFirst === true
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -56,47 +60,16 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-4 sm:p-6">
-                  <div className="text-xs sm:text-sm text-purple-400 mb-1 sm:mb-2">{project.category}</div>
-                  <h1 className="text-xl sm:text-3xl md:text-4xl font-bold">{project.title}</h1>
-                  <p className="text-sm text-zinc-400 mt-1 sm:mt-2 max-w-2xl">{project.shortDescription}</p>
-                </div>
-              </div>
-            </Card>
-          </AnimatedSection>
-
-          {/* Project Content */}
-          <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-            <AnimatedSection animation="fade-up" delay={100}>
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
-                <CardContent className="p-4 sm:p-6">
-                  <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Overview</h2>
-                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-zinc-300">
-                    {project.description.map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
-                  </div>
-
-                  <AnimatedSection animation="fade-up" delay={200}>
-                    <h3 className="text-base sm:text-lg font-bold mt-6 sm:mt-8 mb-2 sm:mb-3">Key Features</h3>
-                    <ul className="list-disc pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base text-zinc-300">
-                      {project.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
-                      ))}
-                    </ul>
-                  </AnimatedSection>
-
-                  <AnimatedSection animation="fade-up" delay={300}>
-                    <h3 className="text-base sm:text-lg font-bold mt-6 sm:mt-8 mb-2 sm:mb-3">Technologies Used</h3>
-                    <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
-                      {project.technologies.map((tech, index) => (
-                        <SkillTag key={index}>{tech}</SkillTag>
-                      ))}
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                    <div className="flex-1">
+                      <div className="text-xs sm:text-sm text-purple-400 mb-1 sm:mb-2">{project.category}</div>
+                      <h1 className="text-xl sm:text-3xl md:text-4xl font-bold">{project.title}</h1>
+                      <p className="text-sm text-zinc-400 mt-1 sm:mt-2 max-w-2xl">{project.shortDescription}</p>
                     </div>
-                  </AnimatedSection>
-
-                  <AnimatedSection animation="fade-up" delay={400}>
-                    <div className="flex flex-wrap gap-2 sm:gap-3 mt-6 sm:mt-8">
+                    
+                    {/* Action Buttons - Moved to header */}
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
                       {project.liveUrl && (
                         <Button
                           asChild
@@ -110,7 +83,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                         </Button>
                       )}
                       {project.githubUrl && (
-                        <Button asChild variant="outline" size="sm" className="text-xs sm:text-sm">
+                        <Button asChild variant="outline" size="sm" className="text-xs sm:text-sm bg-black/50 border-zinc-600 hover:bg-black/70">
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                             <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                             View Source Code
@@ -118,7 +91,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                         </Button>
                       )}
                       {project.figmaUrl && (
-                        <Button asChild variant="outline" size="sm" className="text-xs sm:text-sm">
+                        <Button asChild variant="outline" size="sm" className="text-xs sm:text-sm bg-black/50 border-zinc-600 hover:bg-black/70">
                           <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                             View Figma Design
@@ -126,19 +99,65 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                         </Button>
                       )}
                     </div>
-                  </AnimatedSection>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </AnimatedSection>
+
+          {/* Project Content - Single card with optional process before/after */}
+          <div className="lg:col-span-2 space-y-4 sm:space-y-6">
+            {/* Process at top (if configured) */}
+            {showProcessFirst && project.process && project.process.length > 0 && (
+              <AnimatedSection animation="fade-up" delay={100}>
+                <ProjectProcess steps={project.process} />
+              </AnimatedSection>
+            )}
+
+            {/* Description + Features + Technologies in one card */}
+            <AnimatedSection animation="fade-up" delay={showProcessFirst ? 150 : 100}>
+              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+                <CardContent className="p-4 sm:p-6">
+                  <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Overview</h2>
+                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-zinc-300">
+                    {project.description.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
+                  </div>
+
+                  {project.features?.length > 0 && (
+                    <AnimatedSection animation="fade-up" delay={200}>
+                      <h3 className="text-base sm:text-lg font-bold mt-6 sm:mt-8 mb-2 sm:mb-3">Key Features</h3>
+                      <ul className="list-disc pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base text-zinc-300">
+                        {project.features.map((feature, index) => (
+                          <li key={index}>{feature}</li>
+                        ))}
+                      </ul>
+                    </AnimatedSection>
+                  )}
+
+                  {project.technologies?.length > 0 && (
+                    <AnimatedSection animation="fade-up" delay={300}>
+                      <h3 className="text-base sm:text-lg font-bold mt-6 sm:mt-8 mb-2 sm:mb-3">Technologies Used</h3>
+                      <div className="flex flex-wrap gap-2 mb-2 sm:mb-3">
+                        {project.technologies.map((tech, index) => (
+                          <SkillTag key={index}>{tech}</SkillTag>
+                        ))}
+                      </div>
+                    </AnimatedSection>
+                  )}
                 </CardContent>
               </Card>
             </AnimatedSection>
 
-            {/* Project Process Section */}
-            {project.process && project.process.length > 0 && (
+            {/* Process at bottom (default) */}
+            {!showProcessFirst && project.process && project.process.length > 0 && (
               <AnimatedSection animation="fade-up" delay={150}>
                 <ProjectProcess steps={project.process} />
               </AnimatedSection>
             )}
 
-            {/* Project Gallery */}
+            {/* Gallery (unchanged) */}
             {project.gallery && project.gallery.length > 0 && (
               <AnimatedSection animation="fade-up" delay={200}>
                 <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
@@ -197,8 +216,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">More Projects</h2>
                   <div className="space-y-3 sm:space-y-4">
-                    {project.relatedProjects &&
-                      project.relatedProjects.map((related, index) => (
+                    {getRelatedProjects(project.slug, 3).map((related: RelatedProject, index: number) => (
                         <AnimatedSection key={index} animation="fade-up" delay={100 * (index + 1)}>
                           <Link href={`/projects/${related.slug}`} className="block group">
                             <div className="flex items-center gap-2 sm:gap-3">

@@ -8,6 +8,95 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { AnimatedSection } from "@/components/animated-section"
 
+interface SlideshowComponentProps {
+  images: string[]
+  title?: string
+}
+
+function SlideshowComponent({ images, title }: SlideshowComponentProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const handlePrevious = () => {
+    setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1))
+  }
+
+  const handleNext = () => {
+    setCurrentImageIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0))
+  }
+
+  if (images.length === 0) {
+    return (
+      <div className="bg-zinc-800/50 p-4 sm:p-6 rounded-lg">
+        <p className="text-zinc-300">No images available</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
+        <Image
+          src={images[currentImageIndex]}
+          alt={title || `Slideshow image ${currentImageIndex + 1}`}
+          fill
+          className="object-contain"
+        />
+        
+        {/* Navigation arrows */}
+        {images.length > 1 && (
+          <>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white"
+              onClick={handlePrevious}
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white"
+              onClick={handleNext}
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </>
+        )}
+      </div>
+      
+      {/* Image counter and thumbnails */}
+      {images.length > 1 && (
+        <div className="space-y-2">
+          <div className="flex justify-center text-sm text-zinc-400">
+            {currentImageIndex + 1} of {images.length}
+          </div>
+          
+          {/* Thumbnail strip */}
+          <div className="flex gap-2 justify-center overflow-x-auto pb-2">
+            {images.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`relative w-16 h-12 rounded overflow-hidden flex-shrink-0 transition-opacity ${
+                  index === currentImageIndex ? 'opacity-100 ring-2 ring-blue-500' : 'opacity-60 hover:opacity-80'
+                }`}
+              >
+                <Image
+                  src={image}
+                  alt={`Thumbnail ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 interface ProjectProcessProps {
   steps: ProcessStep[]
 }
@@ -83,6 +172,13 @@ export function ProjectProcess({ steps }: ProjectProcessProps) {
                 <div className="bg-zinc-800/50 p-4 sm:p-6 rounded-lg">
                   <p className="text-zinc-300">{currentStep.content}</p>
                 </div>
+              )}
+
+              {currentStep.type === "slideshow" && (
+                <SlideshowComponent 
+                  images={Array.isArray(currentStep.content) ? currentStep.content : []}
+                  title={currentStep.title}
+                />
               )}
             </AnimatedSection>
           </div>
