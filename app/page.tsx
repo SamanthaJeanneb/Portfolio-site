@@ -31,7 +31,7 @@ export default function Home() {
       {/* Header */}
       <PortfolioHeader />
 
-      <div className="relative z-10 container mx-auto p-3 sm:p-4 pt-20 sm:pt-24 pb-6 sm:pb-8">
+      <div className="relative z-10 container mx-auto p-3 sm:p-4 pt-20 sm:pt-24 pb-10 sm:pb-14">
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Enhanced Profile Section */}
@@ -41,36 +41,22 @@ export default function Home() {
             </AnimatedSection>
           </div>
 
-          <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-4 sm:space-y-6">
+          <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-6 sm:space-y-8">
 
-            {/* Projects Section */}
+            {/* Projects Section (cards only grid, no container) */}
             <AnimatedSection animation="fade-up" id="projects">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center justify-between mb-4 sm:mb-6">
-                    <div className="flex items-center">
-                      <GlobeIcon className="w-5 h-5 mr-2 text-purple-400" />
-                      <h3 className="text-lg font-medium">Recent Projects</h3>
-                    </div>
-                    <Button variant="ghost" size="sm" className="text-xs sm:text-sm px-2 sm:px-3">
-                      View All
-                    </Button>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                    {projects.map((project, index) => (
-                      <AnimatedSection key={project.id} animation="zoom-in" delay={100 * (index + 1)}>
-                        <ProjectCard
-                          title={project.title}
-                          category={project.category}
-                          image={project.thumbnailImage}
-                          slug={project.slug}
-                        />
-                      </AnimatedSection>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                {projects.map((project, index) => (
+                  <AnimatedSection key={project.id} animation="zoom-in" delay={100 * (index + 1)}>
+                    <ProjectCard
+                      title={project.title}
+                      category={project.category}
+                      image={project.thumbnailImage}
+                      slug={project.slug}
+                    />
+                  </AnimatedSection>
+                ))}
+              </div>
             </AnimatedSection>
 
             {/* Credentials Section */}
@@ -79,8 +65,7 @@ export default function Home() {
             </AnimatedSection>
 
             {/* Skills Section */}
-            {/* Anchor for Skills to offset fixed header */}
-            <div id="skills" className="-mt-8 pt-8" />
+            <div id="skills" />
             <AnimatedSection animation="fade-up">
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
@@ -140,8 +125,7 @@ export default function Home() {
 
 
             {/* Experience Section - Expanded */}
-            {/* Anchor and spacing for Experience */}
-            <div id="experience" className="-mt-12 pt-12" />
+            <div id="experience" />
             <AnimatedSection animation="fade-up">
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">

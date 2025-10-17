@@ -57,8 +57,8 @@ const projects: Project[] = [
   {
     id: 100,
     slug: "bearly-running",
-    title: "Bearly Running",
-    category: "Rhythm Game",
+    title: "Bear Escape",
+    category: "Big Red Hacks",
     shortDescription:
       "Web-based rhythm game with AI-generated charts and gesture controls (Big Red Hacks Winner).",
     description: [
