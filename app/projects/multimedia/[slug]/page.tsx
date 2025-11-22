@@ -32,7 +32,7 @@ export default function MultimediaProjectPage({ params }: MultimediaProjectPageP
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Background Grid Pattern */}
-      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0" data-background-grid></div>
 
       {/* Header */}
       <PortfolioHeader />

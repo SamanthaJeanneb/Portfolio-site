@@ -618,12 +618,55 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
       "Multimodal input support (text, voice, and image)",
     ],
     technologies: ["React", "TypeScript", "Flask", "Claude", "Hunyuan", "OpenSCAD", "Three.js", "WebXR", "WebAssembly", "Tailwind"],
-    coverImage: "/suzanne-cover.png",
-    thumbnailImage: "/suzanne-thumb.png",
+    coverImage: "/suzanne/cover.jpg",
+    thumbnailImage: "/suzanne/cover.jpg",
     timeline: "Hackathon Project (Fall 2025)",
     role: "Developer",
     liveUrl: "https://vibe-cading-styled.vercel.app/",
     githubUrl: "https://github.com/darthmaulsw/VibeCADing",
+    process: [
+      {
+        id: "slideshow",
+        type: "slideshow",
+        title: "Suzanne Slideshow",
+        description: "A visual walkthrough of the Suzanne platform interface and features.",
+        content: [
+          "/suzanne/slideshow/2.png",
+          "/suzanne/slideshow/3.png",
+          "/suzanne/slideshow/4.png",
+          "/suzanne/slideshow/5.png"
+        ]
+      }
+    ],
+    gallery: [
+      {
+        url: "/suzanne/landing.png",
+        caption: "Suzanne Landing Page"
+      },
+      {
+        url: "/suzanne/login.png",
+        caption: "Login and Mode Selection"
+      },
+      {
+        url: "/suzanne/modeledit.png",
+        caption: "Model Editing Interface"
+      },
+      {
+        url: "/suzanne/modelrotate.png",
+        caption: "3D Model Rotation and Interaction"
+      },
+      {
+        url: "/suzanne/coloredit.png",
+        caption: "Color Editor for 3D Models"
+      }
+    ],
+    layout: {
+      showProcessFirst: true,
+      showGallery: true,
+      showTechnologies: true,
+      showFeatures: true,
+      customOrder: ['process', 'description', 'features', 'technologies']
+    },
     order: 9,
   },
   {

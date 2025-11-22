@@ -11,6 +11,7 @@ import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator"
 import { AnimatedSection } from "@/components/animated-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
 import { ProjectProcess } from "@/components/project-process"
+import { PhotoGallery } from "@/components/photo-gallery"
 
 interface ProjectPageProps {
   params: {
@@ -31,7 +32,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Background Grid Pattern */}
-      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0" data-background-grid></div>
 
       {/* Header */}
       <PortfolioHeader />
@@ -156,31 +157,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <ProjectProcess steps={project.process} />
               </AnimatedSection>
             )}
-
-            {/* Gallery (unchanged) */}
-            {project.gallery && project.gallery.length > 0 && (
-              <AnimatedSection animation="fade-up" delay={200}>
-                <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
-                  <CardContent className="p-4 sm:p-6">
-                    <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Gallery</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-                      {project.gallery.map((image, index) => (
-                        <AnimatedSection key={index} animation="zoom-in" delay={100 * (index + 1)}>
-                          <div className="relative h-40 sm:h-48 rounded-lg overflow-hidden border border-zinc-800">
-                            <Image
-                              src={image.url || "/placeholder.svg"}
-                              alt={image.caption || `Gallery image ${index + 1}`}
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-                        </AnimatedSection>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            )}
           </div>
 
           {/* Project Sidebar */}
@@ -209,6 +185,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </CardContent>
               </Card>
             </AnimatedSection>
+
+            {/* Photo Gallery */}
+            {project.gallery && project.gallery.length > 0 && (
+              <AnimatedSection animation="slide-left" delay={150}>
+                <PhotoGallery images={project.gallery} variant="sidebar" />
+              </AnimatedSection>
+            )}
 
             {/* Next Projects */}
             <AnimatedSection animation="slide-left" delay={200}>
