@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { getNavItems, getPersonalInfo } from "@/lib/data"
+import { BackgroundToggle } from "@/components/background-toggle"
 
 export function PortfolioHeader() {
   const [scrolled, setScrolled] = useState(false)
@@ -72,6 +73,7 @@ export function PortfolioHeader() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
+          <BackgroundToggle />
           {navItems.map((item) => {
             const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
             const target = item.href.startsWith("#") ? item.href.substring(1) : ""
@@ -110,15 +112,18 @@ export function PortfolioHeader() {
           })}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-zinc-400 hover:text-white transition-colors duration-300 relative overflow-hidden group"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          <span className="relative z-10">{mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}</span>
-          <span className="absolute inset-0 scale-0 rounded-full bg-zinc-700/50 group-hover:scale-100 transition-transform duration-300"></span>
-        </button>
+        {/* Mobile Menu Controls */}
+        <div className="md:hidden flex items-center space-x-2">
+          <BackgroundToggle />
+          <button
+            className="text-zinc-400 hover:text-white transition-colors duration-300 relative overflow-hidden group"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span className="relative z-10">{mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}</span>
+            <span className="absolute inset-0 scale-0 rounded-full bg-zinc-700/50 group-hover:scale-100 transition-transform duration-300"></span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}

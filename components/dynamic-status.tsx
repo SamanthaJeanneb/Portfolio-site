@@ -36,6 +36,10 @@ export function DynamicStatus() {
         if (response.ok) {
           const data = await response.json()
           setStatus(data)
+        } else {
+          // Log error response for debugging
+          const errorData = await response.json().catch(() => ({}))
+          console.error('Status API error:', response.status, errorData)
         }
       } catch (error) {
         console.error('Failed to fetch status:', error)
