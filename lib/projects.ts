@@ -695,6 +695,24 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     timeline: "Hackathon Project (CalHacks 12.0)",
     role: "Developer",
     githubUrl: "https://github.com/eggoil166/calhacks",
+    videoUrl: "https://www.youtube.com/embed/iQE7kwcXefY",
+    gallery: [
+      {
+        url: "/Vision-forge/IMG_4314.jpg",
+        caption: "VisionForge live demo on Meta Quest 2"
+      },
+      {
+        url: "/Vision-forge/IMG_4315.jpg",
+        caption: "Team showcasing VisionForge interface"
+      }
+    ],
+    layout: {
+      showProcessFirst: false,
+      showGallery: true,
+      showTechnologies: true,
+      showFeatures: true,
+      customOrder: ['description', 'features', 'technologies']
+    },
     order: 10,
   },
   {
@@ -703,15 +721,15 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     title: "Zyra",
     category: "Capstone Project",
     shortDescription:
-      "Interactive AI music companion that finds YouTube tracks, downloads audio with yt-dlp, and turns playback into touch-responsive art visuals.",
+      "Interactive art player that uses AI only to fetch YouTube URLs, runs them through yt-dlp, and turns playback into touch-responsive visuals.",
     description: [
-      "Zyra is an interactive AI DJ that searches YouTube on command, curates results, and automatically pulls down the exact audio with yt-dlp.",
-      "Once a song is retrieved, Zyra spins up a full-screen visual experience where touch and pointer gestures remix the art overlay while the music plays.",
-      "Art Mode layers responsive shaders, particle fields, and typography that react to both the beat and the user's interactions, making each listening session unique.",
-      "The experience blends AI search, media downloading, and real-time graphics so users can jump from a prompt to an immersive audio-visual performance in seconds.",
+      "Zyra uses a lightweight AI agent strictly to parse natural language prompts and return the precise YouTube URL a user is looking for.",
+      "Once the link is confirmed, yt-dlp handles downloading and converting the audio so it can be played locally with consistent latency.",
+      "Art Mode then launches a full-screen canvas with shaders, particle fields, and typography that react to both the beat and direct touch or pointer gestures.",
+      "The goal is to jump from an idea to an immersive audio-visual performance in seconds without AI trying to compose music—just to fetch the right source.",
     ],
     features: [
-      "AI-powered search agent that understands natural language music prompts",
+      "AI prompt interpreter that returns the exact YouTube URL users actually want",
       "YouTube metadata parsing with automatic yt-dlp download + conversion pipeline",
       "Audio playback controls with seamless buffering and track switching",
       "Touch/gesture-driven Art Mode that paints interactive visual layers",
