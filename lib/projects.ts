@@ -719,12 +719,37 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
       "Adaptive learning of user preferences and routines",
     ],
     technologies: ["React", "Next.js", "Supabase", "LiveKit", "ElevenLabs", "Groq", "Redis", "Upstash", "Bolt", "Composio"],
-    coverImage: "/zyra-cover.png",
-    thumbnailImage: "/zyra-thumb.png",
+    coverImage: "/Zyra/Coverimage.png",
+    thumbnailImage: "/Zyra/Coverimage.png",
     timeline: "Capstone Project (2025)",
     role: "Developer",
     liveUrl: "https://zyraai.org/",
     githubUrl: "https://github.com/ArvindAGI22/Zyra",
+    gallery: [
+      {
+        url: "/Zyra/Coverimage.png",
+        caption: "Zyra Cover Image"
+      },
+      {
+        url: "/Zyra/Artmode1.png",
+        caption: "Zyra Art Mode 1"
+      },
+      {
+        url: "/Zyra/artmode2.png",
+        caption: "Zyra Art Mode 2"
+      },
+      {
+        url: "/Zyra/Visualizer.png",
+        caption: "Zyra Visualizer"
+      }
+    ],
+    layout: {
+      showProcessFirst: false,
+      showGallery: true,
+      showTechnologies: true,
+      showFeatures: true,
+      customOrder: ['description', 'features', 'technologies']
+    },
     order: 11,
   },
 ]
