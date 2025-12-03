@@ -71,7 +71,13 @@ export function ArticleCard({ article, index, isFeatured = false }: ArticleCardP
               {/* Excerpt */}
               {article.excerpt && (
                 <p className="text-xs sm:text-sm text-zinc-400 line-clamp-3">
-                  {article.excerpt}
+                  {article.excerpt.split(/(Samantha Brown)/gi).map((part, i) => 
+                    /Samantha Brown/i.test(part) ? (
+                      <strong key={i} className="font-bold text-zinc-300">{part}</strong>
+                    ) : (
+                      part
+                    )
+                  )}
                 </p>
               )}
 
