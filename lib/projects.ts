@@ -690,8 +690,8 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
       "Speech recognition and 3D model rendering",
     ],
     technologies: ["TypeScript", "WebXR", "Python", "Flask", "Claude", "Gemini", "Three.js", "OpenSCAD", "Node.js", "JavaScript"],
-    coverImage: "/visionforge-cover.png",
-    thumbnailImage: "/visionforge-thumb.png",
+    coverImage: "/Vision-forge/IMG_4314.jpg",
+    thumbnailImage: "/Vision-forge/IMG_4314.jpg",
     timeline: "Hackathon Project (CalHacks 12.0)",
     role: "Developer",
     githubUrl: "https://github.com/eggoil166/calhacks",
@@ -699,11 +699,11 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     gallery: [
       {
         url: "/Vision-forge/IMG_4314.jpg",
-        caption: "VisionForge live demo on Meta Quest 2"
+        caption: "VisionForge Demo"
       },
       {
         url: "/Vision-forge/IMG_4315.jpg",
-        caption: "Team showcasing VisionForge interface"
+        caption: "VisionForge Team"
       }
     ],
     layout: {
