@@ -67,7 +67,14 @@ export default function BrandingProjectPage({ params }: BrandingProjectPageProps
 
           {/* Project Content */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-            <AnimatedSection animation="fade-up" delay={100}>
+            {/* Design Process Section */}
+            {project.process && project.process.length > 0 && (
+              <AnimatedSection animation="fade-up" delay={100}>
+                <ProjectProcess steps={project.process} />
+              </AnimatedSection>
+            )}
+
+            <AnimatedSection animation="fade-up" delay={200}>
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Overview</h2>
@@ -97,7 +104,7 @@ export default function BrandingProjectPage({ params }: BrandingProjectPageProps
             </AnimatedSection>
 
             {/* Features Section */}
-            <AnimatedSection animation="fade-up" delay={200}>
+            <AnimatedSection animation="fade-up" delay={300}>
               <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Key Deliverables</h2>
@@ -112,13 +119,6 @@ export default function BrandingProjectPage({ params }: BrandingProjectPageProps
                 </CardContent>
               </Card>
             </AnimatedSection>
-
-            {/* Design Process Section */}
-            {project.process && project.process.length > 0 && (
-              <AnimatedSection animation="fade-up" delay={300}>
-                <ProjectProcess steps={project.process} />
-              </AnimatedSection>
-            )}
           </div>
 
           {/* Project Sidebar */}
@@ -143,23 +143,25 @@ export default function BrandingProjectPage({ params }: BrandingProjectPageProps
               </Card>
             </AnimatedSection>
 
-            {/* Cover Image */}
-            <AnimatedSection animation="slide-left" delay={200}>
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
-                <CardContent className="p-4 sm:p-6">
-                  <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Brand Identity</h2>
-                  <div className="relative w-full">
-                    <Image
-                      src={project.coverImage}
-                      alt={`${project.title} Brand Identity`}
-                      width={400}
-                      height={300}
-                      className="w-full h-auto rounded-lg border border-zinc-800"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
+            {/* Style Guide Image */}
+            {project.styleGuideImage && (
+              <AnimatedSection animation="slide-left" delay={200}>
+                <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+                  <CardContent className="p-4 sm:p-6">
+                    <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Style Guide</h2>
+                    <div className="relative w-full">
+                      <Image
+                        src={project.styleGuideImage}
+                        alt={`${project.title} Style Guide`}
+                        width={400}
+                        height={600}
+                        className="w-full h-auto rounded-lg border border-zinc-800"
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            )}
           </div>
         </div>
 

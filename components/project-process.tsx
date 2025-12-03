@@ -168,6 +168,17 @@ export function ProjectProcess({ steps }: ProjectProcessProps) {
                 </div>
               )}
 
+              {currentStep.type === "canva" && (
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    src={currentStep.content}
+                    title={currentStep.title || "Canva presentation"}
+                    className="absolute inset-0 w-full h-full"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              )}
+
               {currentStep.type === "text" && (
                 <div className="bg-zinc-800/50 p-4 sm:p-6 rounded-lg">
                   <p className="text-zinc-300">{currentStep.content}</p>

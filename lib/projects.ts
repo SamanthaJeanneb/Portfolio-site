@@ -12,7 +12,7 @@ export interface RelatedProject {
 
 export interface ProcessStep {
   id: string
-  type: "image" | "video" | "figma" | "text" | "slideshow"
+  type: "image" | "video" | "figma" | "text" | "slideshow" | "canva"
   title?: string
   description?: string
   content: string | string[] // URL for images/videos, embed URL for Figma, text content for text, array of image URLs for slideshow
@@ -786,6 +786,7 @@ export interface BrandingProject {
   timeline: string
   role: string
   figmaUrl?: string
+  styleGuideImage?: string
   process?: ProcessStep[]
 }
 
@@ -812,47 +813,33 @@ const brandingProjects: BrandingProject[] = [
       "Accessibility-aware color system",
       "Scalable design tokens structure"
     ],
-    coverImage: "/reach-branding-cover.png",
-    thumbnailImage: "/reach-branding-thumb.png",
+    coverImage: "/reach/reachcover.png",
+    thumbnailImage: "/reach/reachcover.png",
     timeline: "Personal Project (2025)",
     role: "Brand & UI/UX Designer",
-    figmaUrl: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/HjaH7a6lu0J1OY2gyFsgwe/Reach-Design-System?node-id=33525-595&p=f&scaling=contain&content-scaling=fixed&page-id=33525%3A578&embed-host=share",
+    figmaUrl: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHjaH7a6lu0J1OY2gyFsgwe%2FReach-Design-System%3Fnode-id%3D33525-595",
+    styleGuideImage: "/reach/Reach color style 1- Dark.png",
     process: [
-      {
-        id: "logo",
-        type: "image",
-        title: "Logo Exploration",
-        description: "Iterations exploring symbol + wordmark balance and scalable glyph usage.",
-        content: "/reach-process-logo.png"
-      },
-      {
-        id: "tokens",
-        type: "image", 
-        title: "Design Tokens",
-        description: "Color, typography, spacing and elevation tokens defined early for consistency.",
-        content: "/reach-process-tokens.png"
-      },
       {
         id: "prototype",
         type: "figma",
         title: "Interactive Prototype", 
         description: "High-fidelity prototype demonstrating feed, discovery, and event flows.",
-        content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/HjaH7a6lu0J1OY2gyFsgwe/Reach-Design-System?node-id=33525-595&scaling=scale-down-width&content-scaling=fixed&embed-host=share"
+        content: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHjaH7a6lu0J1OY2gyFsgwe%2FReach-Design-System%3Fnode-id%3D33525-595"
       },
       {
-                id: "prototype",
+        id: "prototype2",
         type: "figma",
         title: "Interactive Prototype", 
         description: "High-fidelity prototype demonstrating feed, discovery, and event flows.",
-        content: "https://embed.figma.com/proto/irUmymGEXqgT40J64JUOGj/Pienee--Reach--r-prototype?node-id=3-3&starting-point-node-id=3%3A3&content-scaling=fixed&embed-host=share",
+        content: "https://embed.figma.com/proto/irUmymGEXqgT40J64JUOGj/Pienee--Reach--r-prototype?node-id=3-3&starting-point-node-id=3%3A3&content-scaling=fixed&embed-host=share"
       },
-    
       {
-        id: "components",
-        type: "image",
-        title: "Component Library",
-        description: "Systemized atomic components scaled into complex UI layouts.",
-        content: "/reach-process-components.png"
+        id: "presentation",
+        type: "canva",
+        title: "Pitch Deck",
+        description: "Complete pitch deck showcasing the Reach brand system and UI/UX design.",
+        content: "https://www.canva.com/design/DAFtIfhosOc/wB-dgVgkGTdGUeqsT8Wi-w/view?embed"
       }
     ]
   },

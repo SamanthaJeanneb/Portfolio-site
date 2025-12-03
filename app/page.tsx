@@ -14,6 +14,13 @@ import { getExperienceInfo, getTechnicalSkillsInfo } from "@/lib/data"
 import { getAllArticles } from "@/lib/articles"
 import { ArticlesCarousel } from "@/components/articles-carousel"
 import { Newspaper } from "lucide-react"
+import { ProjectsFilter } from "@/components/projects-filter"
+
+const WINNER_INFO: Record<string, string> = {
+  "bearly-running": "Big Red Hacks 2025 – Overall Winner",
+  "airwaves-rhythm-game": "Bitcamp 2025 – Winning Project",
+  "beat-boxing": "HopHacks 2025 – Winning Project",
+}
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
   return <div className="px-2 py-1 bg-zinc-800 rounded-full text-xs font-medium text-zinc-400">{children}</div>
@@ -47,20 +54,9 @@ export default function Home() {
 
           <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-6 sm:space-y-8">
 
-            {/* Projects Section (cards only grid, no container) */}
+            {/* Projects Section */}
             <AnimatedSection animation="fade-up" id="projects">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                {projects.map((project, index) => (
-                  <AnimatedSection key={project.id} animation="zoom-in" delay={100 * (index + 1)}>
-                    <ProjectCard
-                      title={project.title}
-                      category={project.category}
-                      image={project.thumbnailImage}
-                      slug={project.slug}
-                    />
-                  </AnimatedSection>
-                ))}
-              </div>
+              <ProjectsFilter projects={projects} winnerInfoMap={WINNER_INFO} />
             </AnimatedSection>
 
             {/* Credentials Section */}
@@ -177,6 +173,7 @@ export default function Home() {
                           category={project.category}
                           image={project.thumbnailImage}
                           slug={`branding/${project.slug}`}
+                          winnerInfo={WINNER_INFO[project.slug]}
                         />
                       </AnimatedSection>
                     ))}
@@ -204,6 +201,7 @@ export default function Home() {
                           category={project.category}
                           image={project.thumbnailImage}
                           slug={`multimedia/${project.slug}`}
+                          winnerInfo={WINNER_INFO[project.slug]}
                         />
                       </AnimatedSection>
                     ))}
