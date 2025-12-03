@@ -45,6 +45,14 @@ body {
     text-wrap: balance;
   }
 
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;

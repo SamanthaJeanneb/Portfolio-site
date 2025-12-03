@@ -11,6 +11,9 @@ import { EnhancedProfile } from "@/components/enhanced-profile"
 import { CredentialsSection } from "@/components/credentials-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
 import { getExperienceInfo, getTechnicalSkillsInfo } from "@/lib/data"
+import { getAllArticles } from "@/lib/articles"
+import { ArticlesCarousel } from "@/components/articles-carousel"
+import { Newspaper } from "lucide-react"
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
   return <div className="px-2 py-1 bg-zinc-800 rounded-full text-xs font-medium text-zinc-400">{children}</div>
@@ -22,6 +25,7 @@ export default function Home() {
   const brandingProjects = getAllBrandingProjects()
   const experienceInfo = getExperienceInfo()
   const technicalSkills = getTechnicalSkillsInfo()
+  const articles = getAllArticles()
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -35,7 +39,7 @@ export default function Home() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Enhanced Profile Section */}
-          <div className="md:sticky md:top-24 self-start">
+          <div className="md:sticky md:top-24 self-start md:max-h-[calc(100vh-6rem)] md:overflow-y-auto scrollbar-hide">
             <AnimatedSection animation="slide-right">
               <EnhancedProfile />
             </AnimatedSection>
@@ -207,6 +211,18 @@ export default function Home() {
                 </CardContent>
               </Card>
             </AnimatedSection>
+
+            {/* Articles Section */}
+            {articles.length > 0 && (
+              <AnimatedSection animation="fade-up" id="articles">
+                <div className="flex items-center justify-center mb-3 sm:mb-4">
+                  <h3 className="text-lg font-medium">Articles & Mentions</h3>
+                </div>
+
+                {/* Articles Carousel */}
+                <ArticlesCarousel articles={articles} />
+              </AnimatedSection>
+            )}
           </div>
         </div>
 
