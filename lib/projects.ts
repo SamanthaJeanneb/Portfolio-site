@@ -57,12 +57,12 @@ const projects: Project[] = [
   {
     id: 100,
     slug: "bearly-running",
-    title: "Bear Escape",
-    category: "Big Red Hacks",
+    title: "Big Red Hacks 2025 - Bear Escape",
+    category: "Rhythm Game",
     shortDescription:
       "Web-based rhythm game with AI-generated charts and gesture controls (Big Red Hacks Winner).",
     description: [
-      "Bearly Running is a web-based rhythm game where players keep the beat to help a bear escape from a pursuer.",
+      "Bear Escape is a web-based rhythm game where players keep the beat to help a bear escape from a pursuer.",
       "Features AI-powered chart generation from MP3s (Gemini API) and gesture controls via OpenCV/MediaPipe.",
       "Built with a modern React + Vite frontend and real-time processing.",
     ],
@@ -93,13 +93,13 @@ const projects: Project[] = [
         ]
       }
     ],
-    order: 1,
+    order: 2,
   },
   {
     id: 7,
     slug: "beat-boxing",
-    title: "Beat Boxing",
-    category: "Multiplayer Rhythm Game",
+    title: "HopHacks 2025 - Beat Boxing",
+    category: "Rhythm Game",
     shortDescription: "Web-based boxing rhythm game with webcam hand-tracking and uploadable songs.",
     description: [
       "Multiplayer rhythm boxing game playable in the browser.",
@@ -130,14 +130,14 @@ const projects: Project[] = [
         ]
       }
     ],
-    order: 5,
+    order: 4,
   },
   // Projects with live links first
   {
     id: 1,
     slug: "echochambers",
-    title: "Echochambers",
-    category: "Web-based Game",
+    title: "World's Largest Hackathon 2025 - Echochambers",
+    category: "Web Game",
     shortDescription:
       "Web-based video game where players navigate fake online communities and try to persuade users without getting banned by moderators.",
     description: [
@@ -162,6 +162,7 @@ const projects: Project[] = [
     liveUrl: "https://echochambers-theta.vercel.app/",
     githubUrl: "https://github.com/SamanthaJeanneb/echochambers",
     accessNote: "Submitted for World's Largest Hackathon",
+    order: 12,
   },
   {
     id: 2,
@@ -227,13 +228,13 @@ const projects: Project[] = [
         image: "/airwaves-thumb.png"
       }
     ],
-    order: 3,
+    order: 6,
   },
   {
     id: 3,
     slug: "airwaves-rhythm-game",
-    title: "BitCamp2025-AirWaves",
-    category: "Browser Game",
+    title: "BitCamp 2025 - AirWaves",
+    category: "Rhythm Game",
     shortDescription:
       "Browser-based rhythm game using real-time hand tracking through webcam with OpenCV and TensorFlow.js.",
     description: [
@@ -257,7 +258,7 @@ const projects: Project[] = [
     liveUrl: "http://cs.oswego.edu/~efereira/airwaves/",
     githubUrl: "https://github.com/SamanthaJeanneb/BitCamp2025-AirWaves",
     process: [],
-    order: 6,
+    order: 3,
     relatedProjects: [
       {
         slug: "soundsketch",
@@ -300,6 +301,7 @@ const projects: Project[] = [
     role: "Graphic Designer & Web Developer",
     liveUrl: "http://cs.oswego.edu/lakerhacks/",
     githubUrl: "https://github.com/SamanthaJeanneb/lakerhacks-site",
+    order: 13,
   },
   {
     id: 5,
@@ -394,7 +396,7 @@ const projects: Project[] = [
       showFeatures: true,
       customOrder: ['process', 'description', 'features', 'technologies']
     },
-    order: 4,
+    order: 5,
     relatedProjects: [
       {
         slug: "soundsketch",
@@ -414,7 +416,7 @@ const projects: Project[] = [
   {
     id: 8,
     slug: "getter-done-task-manager",
-    title: "HenHacks2025-GetterDone",
+    title: "HenHacks 2025 - GetterDone",
     category: "Task Management App",
     shortDescription:
       "Task management application designed to help users organize and track their tasks efficiently with category-based organization.",
@@ -438,7 +440,7 @@ const projects: Project[] = [
     role: "Fullstack Developer",
     liveUrl: "https://getterdone-7ab42de2c63d.herokuapp.com/",
     githubUrl: "https://github.com/SamanthaJeanneb/HenHacks2025-GetterDone",
-    order: 2,
+    order: 7,
   },
   {
     id: 9,
@@ -467,6 +469,7 @@ const projects: Project[] = [
     role: "Game Developer",
     liveUrl: "http://cs.oswego.edu/~sbrown27/EscapeUticaNational/",
     githubUrl: "https://github.com/SamanthaJeanneb/Escape-Utica-National",
+    order: 14,
   },
   // Projects without live links
   {
@@ -519,7 +522,8 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
         category: "Office Management App",
         image: "/beardsley-office-thumb.png"
       }
-    ]
+    ],
+    order: 15,
   },
   {
     id: 12,
@@ -564,7 +568,7 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
         image: "/interactive-map-thumb.png"
       }
     ],
-    order: 7,
+    order: 8,
   },
   {
     id: 13,
@@ -595,13 +599,13 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     client: "Beardsley Architects + Engineers",
     liveUrl: "https://beardsley-project-map.netlify.app",
     githubUrl: "https://github.com/SamanthaJeanneb/Beardsley-Map-Application",
-    order: 8,
+    order: 9,
   },
   {
     id: 14,
     slug: "suzanne",
-    title: "Suzanne",
-    category: "HackPrinceton",
+    title: "HackPrinceton 2025 - Suzanne",
+    category: "3D Modeling Platform",
     shortDescription:
       "Creative 3D model generation and editing platform where every object builds itself through text, image, or voice commands.",
     description: [
@@ -667,13 +671,13 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
       showFeatures: true,
       customOrder: ['process', 'description', 'features', 'technologies']
     },
-    order: 9,
+    order: 1,
   },
   {
     id: 15,
     slug: "visionforge",
-    title: "VisionForge",
-    category: "CalHacks",
+    title: "CalHacks 12.0 - VisionForge",
+    category: "AR/VR Prototyping Tool",
     shortDescription:
       "Web-based, voice-activated augmented reality rapid prototyping environment inspired by Tony Stark's design process in Iron Man II.",
     description: [
@@ -741,7 +745,6 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     thumbnailImage: "/Zyra/Coverimage.png",
     timeline: "Capstone Project (2025)",
     role: "Developer",
-    liveUrl: "https://zyraai.org/",
     githubUrl: "https://github.com/ArvindAGI22/Zyra",
     gallery: [
       {
