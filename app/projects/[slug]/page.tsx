@@ -14,13 +14,14 @@ import { ProjectProcess } from "@/components/project-process"
 import { PhotoGallery } from "@/components/photo-gallery"
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = getProjectBySlug(params.slug)
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params
+  const project = getProjectBySlug(slug)
 
   if (!project) {
     notFound()

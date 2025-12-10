@@ -12,13 +12,14 @@ import { PortfolioHeader } from "@/components/portfolio-header"
 import { ProjectProcess } from "@/components/project-process"
 
 interface BrandingProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default function BrandingProjectPage({ params }: BrandingProjectPageProps) {
-  const project = getBrandingProjectBySlug(params.slug)
+export default async function BrandingProjectPage({ params }: BrandingProjectPageProps) {
+  const { slug } = await params
+  const project = getBrandingProjectBySlug(slug)
 
   if (!project) {
     notFound()

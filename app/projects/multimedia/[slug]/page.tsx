@@ -12,13 +12,14 @@ import { PortfolioHeader } from "@/components/portfolio-header"
 import { ProjectProcess } from "@/components/project-process"
 
 interface MultimediaProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default function MultimediaProjectPage({ params }: MultimediaProjectPageProps) {
-  const project = getMultimediaProjectBySlug(params.slug)
+export default async function MultimediaProjectPage({ params }: MultimediaProjectPageProps) {
+  const { slug } = await params
+  const project = getMultimediaProjectBySlug(slug)
 
   if (!project) {
     notFound()
