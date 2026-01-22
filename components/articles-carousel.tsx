@@ -26,9 +26,9 @@ export function ArticlesCarousel({ articles }: ArticlesCarouselProps) {
   if (articles.length === 0) return null
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       {/* Carousel Container */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden w-full">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -36,7 +36,7 @@ export function ArticlesCarousel({ articles }: ArticlesCarouselProps) {
           {articles.map((article, index) => (
             <div
               key={article.id}
-              className="min-w-full flex-shrink-0 px-2"
+              className="min-w-full flex-shrink-0 px-1 sm:px-2"
             >
               <AnimatedSection animation="fade-up" delay={100}>
                 <ArticleCard article={article} index={index} isFeatured={index === 0} />
@@ -53,19 +53,19 @@ export function ArticlesCarousel({ articles }: ArticlesCarouselProps) {
             variant="ghost"
             size="icon"
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-3 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 hover:border-purple-500/50 rounded-full w-10 h-10 sm:w-12 sm:h-12 z-10 shadow-lg"
+            className="absolute left-1 sm:left-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-2 md:-translate-x-3 bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 hover:border-purple-500/50 rounded-full w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 z-10 shadow-lg"
             aria-label="Previous article"
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-400" />
           </Button>
           <Button
             variant="ghost"
             size="icon"
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-3 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 hover:border-purple-500/50 rounded-full w-10 h-10 sm:w-12 sm:h-12 z-10 shadow-lg"
+            className="absolute right-1 sm:right-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-2 md:translate-x-3 bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 hover:border-purple-500/50 rounded-full w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 z-10 shadow-lg"
             aria-label="Next article"
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-400" />
           </Button>
         </>
       )}

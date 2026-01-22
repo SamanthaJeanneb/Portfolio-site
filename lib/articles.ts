@@ -12,6 +12,15 @@ export interface Article {
 const articles: Article[] = [
   {
     id: 1,
+    title: "HopHacks 2025 = Ambition + AI",
+    publication: "Johns Hopkins University",
+    url: "https://www.cs.jhu.edu/news/hophacks-2025-ambition-ai/",
+    date: "January 2026",
+    excerpt: "Johns Hopkins' annual coding marathon brought college students from across the country together to create a record number of software projects in just 36 hours. Finally, a team from State University of New York at Oswego secured the $256 third-place prize with BeatBoxing, a browser-based rhythm and exercise game. \"With their movements tracked through their laptop's webcam, players can throw uppercuts, hooks, and blocks in time with on-screen notes—if the punch lines up with the beat, they score points!\" explains Samantha Brown, a fourth-year computer science and interaction design double major on the team. \"The game is built on rhythm-game charting, so it can run any Clone Hero or Guitar Hero song chart, letting players pick from a huge library of tracks.\"",
+    image: "/articles/lakerhacks-jh.jpg"
+  },
+  {
+    id: 2,
     title: "Computer science, interaction design and winning hackathons: Samantha Brown thrives at Oswego",
     publication: "SUNY Oswego News",
     url: "https://www.oswego.edu/news/file/computer-science-interaction-design-and-winning-hackathons-samantha-brown-thrives-oswego",
@@ -21,7 +30,7 @@ const articles: Article[] = [
     videoUrl: "https://youtu.be/IUdZqbT2CLQ"
   },
   {
-    id: 2,
+    id: 3,
     title: "LakerHacks earns top finishes in Johns Hopkins, Cornell University hackathons",
     publication: "SUNY Oswego News",
     url: "https://www.oswego.edu/news/story/lakerhacks-earns-top-finishes-johns-hopkins-cornell-university-hackathons",
@@ -30,7 +39,7 @@ const articles: Article[] = [
     image: "/articles/lakerhacks-jh.jpg"
   },
   {
-    id: 3,
+    id: 4,
     title: "LakerHacks provides learning opportunity with plans for future growth",
     publication: "SUNY Oswego News",
     url: "https://www.oswego.edu/news/story/lakerhacks-provides-learning-opportunity-plans-future-growth-0",
