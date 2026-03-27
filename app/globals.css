@@ -3,31 +3,41 @@
 @tailwind utilities;
 
 :root {
+  /* Page */
   --background: 0 0% 0%;
   --foreground: 0 0% 100%;
-  --card: 240 10% 4%;
+
+  /* Surfaces */
+  --surface: 240 6% 10%;
+  --surface-alt: 240 4% 16%;
+  --card: 240 6% 10%;
   --card-foreground: 0 0% 100%;
-  --popover: 240 10% 4%;
+  --popover: 240 6% 10%;
   --popover-foreground: 0 0% 100%;
-  --primary: 186 100% 50%;
+
+  /* Borders */
+  --border: 240 4% 16%;
+  --border-hover: 240 5% 26%;
+  --input: 240 4% 16%;
+
+  /* Accent — white */
+  --primary: 0 0% 100%;
   --primary-foreground: 0 0% 0%;
+  --ring: 240 4% 46%;
+
+  /* Neutral tones */
   --secondary: 240 5% 10%;
   --secondary-foreground: 0 0% 100%;
   --muted: 240 5% 20%;
   --muted-foreground: 240 5% 65%;
   --accent: 240 5% 15%;
   --accent-foreground: 0 0% 100%;
+
+  /* Status */
   --destructive: 0 100% 50%;
   --destructive-foreground: 0 0% 100%;
-  --border: 240 5% 26%;
-  --input: 240 5% 26%;
-  --ring: 186 100% 50%;
+
   --radius: 0.5rem;
-  --chart-1: 12 76% 61%;
-  --chart-2: 173 58% 39%;
-  --chart-3: 197 37% 24%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
 }
 
 html {
@@ -167,10 +177,7 @@ body {
   @apply outline-2 outline-offset-2 outline-primary;
 }
 
-/* Custom gradient backgrounds */
-.gradient-bg {
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.05) 100%);
-}
+/* Custom gradient backgrounds — removed */
 
 /* Hover effects */
 .hover-lift {
@@ -213,7 +220,7 @@ body {
 
 /* Card hover effects */
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/10;
+  @apply transition-colors duration-200;
 }
 
 /* Responsive text sizes */
@@ -252,12 +259,8 @@ body {
 }
 
 /* Custom shadows */
-.shadow-glow {
-  box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
-}
-
 .shadow-soft {
-  box-shadow: 0 2px 15px -3px hsl(var(--foreground) / 0.07), 0 10px 20px -2px hsl(var(--foreground) / 0.04);
+  box-shadow: 0 1px 4px -1px hsl(var(--foreground) / 0.06);
 }
 
 /* Animation utilities */
@@ -335,19 +338,3 @@ body {
   }
 }
 
-/* Add animation for glowing effects */
-@keyframes pulse-glow {
-  0%,
-  100% {
-    opacity: 0.8;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}

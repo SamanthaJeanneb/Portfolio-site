@@ -48,22 +48,21 @@ export function EnhancedScrollIndicator() {
       <div className="flex flex-col items-center">
         {/* Circular progress indicator */}
         <div
-          className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-zinc-800/80 backdrop-blur-sm cursor-pointer hover:bg-zinc-700/80 transition-colors"
+          className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-surface-alt cursor-pointer hover:bg-zinc-700 transition-colors"
           onClick={scrollToTop}
           role="button"
           aria-label="Scroll to top"
         >
-          {/* Progress circle */}
           <svg className="w-10 h-10 sm:w-12 sm:h-12 absolute top-0 left-0 -rotate-90">
-            <circle cx="20" cy="20" r="18" fill="none" stroke="#27272a" strokeWidth="2" className="sm:hidden" />
-            <circle cx="24" cy="24" r="20" fill="none" stroke="#27272a" strokeWidth="2" className="hidden sm:block" />
+            <circle cx="20" cy="20" r="18" fill="none" stroke="#27272a" strokeWidth="1.5" className="sm:hidden" />
+            <circle cx="24" cy="24" r="20" fill="none" stroke="#27272a" strokeWidth="1.5" className="hidden sm:block" />
             <circle
               cx="20"
               cy="20"
               r="18"
               fill="none"
-              stroke="url(#gradient)"
-              strokeWidth="2"
+              stroke="#a1a1aa"
+              strokeWidth="1.5"
               strokeDasharray={`${2 * Math.PI * 18}`}
               strokeDashoffset={`${2 * Math.PI * 18 * (1 - scrollProgress)}`}
               strokeLinecap="round"
@@ -74,29 +73,22 @@ export function EnhancedScrollIndicator() {
               cy="24"
               r="20"
               fill="none"
-              stroke="url(#gradient)"
-              strokeWidth="2"
+              stroke="#a1a1aa"
+              strokeWidth="1.5"
               strokeDasharray={`${2 * Math.PI * 20}`}
               strokeDashoffset={`${2 * Math.PI * 20 * (1 - scrollProgress)}`}
               strokeLinecap="round"
               className="hidden sm:block"
             />
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#06b6d4" />
-                <stop offset="100%" stopColor="#3b82f6" />
-              </linearGradient>
-            </defs>
           </svg>
 
-          {/* Percentage text */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-purple-400" />
+            <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-zinc-400" />
           </div>
         </div>
 
         {/* Percentage label */}
-        <div className="mt-1 sm:mt-2 text-xs font-medium bg-zinc-800/80 backdrop-blur-sm text-white px-2 py-1 rounded-md">
+        <div className="mt-1 sm:mt-2 text-xs font-medium bg-surface-alt text-white px-2 py-1 rounded-md">
           {progressPercentage}%
         </div>
       </div>

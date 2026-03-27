@@ -9,10 +9,10 @@ export function CredentialsSection() {
   const credentialsInfo = getCredentialsInfo()
 
   return (
-    <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+    <Card className="bg-surface border-border">
       <CardContent className="p-4 sm:p-6">
         <div className="flex items-center mb-4 sm:mb-6">
-          <Award className="w-5 h-5 mr-2 text-purple-400" />
+          <Award className="w-5 h-5 mr-2 text-zinc-500" />
           <h3 className="text-lg font-medium">Credentials</h3>
         </div>
 
@@ -21,15 +21,15 @@ export function CredentialsSection() {
           {/* Education */}
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="space-y-4">
-              <h4 className="text-sm font-medium text-zinc-400 flex items-center border-b border-zinc-800 pb-2">
-                <GraduationCap className="w-4 h-4 mr-2 text-purple-400" />
+              <h4 className="text-sm font-medium text-muted-foreground flex items-center border-b border-border pb-2">
+                <GraduationCap className="w-4 h-4 mr-2 text-zinc-500" />
                 Education
               </h4>
               <div className="space-y-3 sm:space-y-4">
                 {credentialsInfo.education.map((edu, index) => (
                   <div key={index} className="flex items-start bg-zinc-800/30 p-2 sm:p-3 rounded-lg">
                     {edu.logo && (
-                      <div className="relative w-10 h-10 rounded overflow-hidden mr-3 flex-shrink-0 bg-zinc-800">
+                      <div className="relative w-10 h-10 rounded overflow-hidden mr-3 flex-shrink-0 bg-surface-alt">
                         <Image
                           src={edu.logo || "/placeholder.svg"}
                           alt={edu.institution}
@@ -40,10 +40,10 @@ export function CredentialsSection() {
                     )}
                     <div className="flex-1">
                       <h5 className="text-sm font-medium">{edu.degree}</h5>
-                      <p className="text-xs text-zinc-400">
+                      <p className="text-xs text-muted-foreground">
                         {edu.institution} • {edu.year}
                       </p>
-                      {edu.gpa && <p className="text-xs text-purple-400 font-medium">{edu.gpa}</p>}
+                      {edu.gpa && <p className="text-xs text-zinc-300 font-medium">{edu.gpa}</p>}
                       {edu.description && <p className="text-xs text-zinc-300 mt-2">{edu.description}</p>}
                     </div>
                   </div>
@@ -55,8 +55,8 @@ export function CredentialsSection() {
           {/* Skills & Expertise */}
           <AnimatedSection animation="fade-up" delay={300}>
             <div className="space-y-3">
-              <h4 className="text-sm font-medium text-zinc-400 flex items-center border-b border-zinc-800 pb-2">
-                <Award className="w-4 h-4 mr-2 text-purple-400" />
+              <h4 className="text-sm font-medium text-muted-foreground flex items-center border-b border-border pb-2">
+                <Award className="w-4 h-4 mr-2 text-zinc-500" />
                 Skills & Expertise
               </h4>
               <div className="flex flex-wrap gap-2">

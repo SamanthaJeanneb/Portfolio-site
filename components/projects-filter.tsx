@@ -80,10 +80,10 @@ export function ProjectsFilter({ projects, winnerInfoMap }: ProjectsFilterProps)
               type="button"
               onClick={() => setActiveFilter(filter)}
               className={[
-                "px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-medium transition-all duration-200",
+                "px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-medium transition-colors duration-150",
                 isActive
-                  ? "bg-purple-500/90 text-white shadow-[0_5px_20px_rgba(168,85,247,0.35)]"
-                  : "bg-zinc-900/70 text-zinc-300 hover:text-white hover:bg-zinc-800",
+                  ? "bg-white text-black"
+                  : "bg-surface text-muted-foreground hover:text-white hover:bg-surface-alt",
               ].join(" ")}
             >
               {filter}

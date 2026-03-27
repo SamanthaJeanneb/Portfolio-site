@@ -96,7 +96,7 @@ export function PhotoGallery({
                 <AnimatedSection key={index} animation="fade-up" delay={50 * (index + 1)}>
                   <button
                     onClick={() => openLightbox(index)}
-                    className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden border border-zinc-800 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-zinc-900"
+                    className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden border border-zinc-800 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-zinc-900"
                   >
                     <Image
                       src={image.url || "/placeholder.svg"}
@@ -191,7 +191,7 @@ export function PhotoGallery({
               <AnimatedSection key={index} animation="zoom-in" delay={100 * (index + 1)}>
                 <button
                   onClick={() => openLightbox(index)}
-                  className="relative h-40 sm:h-48 w-full rounded-lg overflow-hidden border border-zinc-800 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-zinc-900"
+                  className="relative h-40 sm:h-48 w-full rounded-lg overflow-hidden border border-zinc-800 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-zinc-900"
                 >
                   <Image
                     src={image.url || "/placeholder.svg"}

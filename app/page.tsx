@@ -23,7 +23,7 @@ const WINNER_INFO: Record<string, string> = {
 }
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
-  return <div className="px-2 py-1 bg-zinc-800 rounded-full text-xs font-medium text-zinc-400">{children}</div>
+  return <div className="px-2 py-1 bg-surface-alt text-xs font-medium text-muted-foreground">{children}</div>
 }
 
 export default function Home() {
@@ -36,8 +36,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Background Grid Pattern */}
-      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0" data-background-grid></div>
+      {/* Subtle dot grid */}
+      <div className="fixed inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:24px_24px] z-0" data-background-grid></div>
 
       {/* Header */}
       <PortfolioHeader />
@@ -67,17 +67,17 @@ export default function Home() {
             {/* Skills Section */}
             <div id="skills" />
             <AnimatedSection animation="fade-up">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4">
-                    <CodeIcon className="w-5 h-5 mr-2 text-purple-400" />
+                    <CodeIcon className="w-5 h-5 mr-2 text-zinc-500" />
                     <h3 className="text-lg font-medium">Technical Skills</h3>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <AnimatedSection animation="slide-right" delay={100}>
                       <div className="space-y-3">
-                        <h4 className="text-sm font-medium text-zinc-400">Design</h4>
+                        <h4 className="text-sm font-medium text-muted-foreground">Design</h4>
                         <div className="flex flex-wrap gap-2">
                           {(technicalSkills?.design || []).map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -88,7 +88,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-left" delay={200}>
                       <div className="space-y-3">
-                        <h4 className="text-sm font-medium text-zinc-400">Development</h4>
+                        <h4 className="text-sm font-medium text-muted-foreground">Development</h4>
                         <div className="flex flex-wrap gap-2">
                           {(technicalSkills?.development || []).map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -99,7 +99,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-right" delay={300}>
                       <div className="space-y-3">
-                        <h4 className="text-sm font-medium text-zinc-400">UX Methods</h4>
+                        <h4 className="text-sm font-medium text-muted-foreground">UX Methods</h4>
                         <div className="flex flex-wrap gap-2">
                           {(technicalSkills?.uxMethods || []).map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -110,7 +110,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-left" delay={400}>
                       <div className="space-y-3">
-                        <h4 className="text-sm font-medium text-zinc-400">Soft Skills</h4>
+                        <h4 className="text-sm font-medium text-muted-foreground">Soft Skills</h4>
                         <div className="flex flex-wrap gap-2">
                           {(technicalSkills?.softSkills || []).map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -127,10 +127,10 @@ export default function Home() {
             {/* Experience Section - Expanded */}
             <div id="experience" />
             <AnimatedSection animation="fade-up">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-6">
-                    <BriefcaseIcon className="w-5 h-5 mr-2 text-purple-400" />
+                    <BriefcaseIcon className="w-5 h-5 mr-2 text-zinc-500" />
                     <h3 className="text-lg font-medium">Experience</h3>
                   </div>
 
@@ -156,11 +156,11 @@ export default function Home() {
             {/* Anchor for Creative Work (branding + multimedia) */}
             <div id="creative" className="-mt-8 pt-8" />
             <AnimatedSection animation="fade-up" id="branding">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className="flex items-center">
-                      <GlobeIcon className="w-5 h-5 mr-2 text-purple-400" />
+                      <GlobeIcon className="w-5 h-5 mr-2 text-zinc-500" />
                       <h3 className="text-lg font-medium">Branding / Design Projects</h3>
                     </div>
                   </div>
@@ -184,11 +184,11 @@ export default function Home() {
 
             {/* Multimedia Projects Section */}
             <AnimatedSection animation="fade-up" id="multimedia">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className="flex items-center">
-                      <GlobeIcon className="w-5 h-5 mr-2 text-purple-400" />
+                      <GlobeIcon className="w-5 h-5 mr-2 text-zinc-500" />
                       <h3 className="text-lg font-medium">Multimedia Projects</h3>
                     </div>
                   </div>
@@ -213,12 +213,15 @@ export default function Home() {
             {/* Articles Section */}
             {articles.length > 0 && (
               <AnimatedSection animation="fade-up" id="articles">
-                <div className="flex items-center justify-center mb-3 sm:mb-4">
-                  <h3 className="text-lg font-medium">Articles & Mentions</h3>
-                </div>
-
-                {/* Articles Carousel */}
-                <ArticlesCarousel articles={articles} />
+                <Card className="bg-surface border-border">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-center mb-4 sm:mb-6">
+                      <Newspaper className="w-5 h-5 mr-2 text-zinc-500" />
+                      <h3 className="text-lg font-medium">Articles & Mentions</h3>
+                    </div>
+                    <ArticlesCarousel articles={articles} />
+                  </CardContent>
+                </Card>
               </AnimatedSection>
             )}
           </div>

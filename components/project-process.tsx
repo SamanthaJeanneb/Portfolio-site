@@ -79,7 +79,7 @@ function SlideshowComponent({ images, title }: SlideshowComponentProps) {
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
                 className={`relative w-16 h-12 rounded overflow-hidden flex-shrink-0 transition-opacity ${
-                  index === currentImageIndex ? 'opacity-100 ring-2 ring-blue-500' : 'opacity-60 hover:opacity-80'
+                  index === currentImageIndex ? 'opacity-100 ring-2 ring-white' : 'opacity-60 hover:opacity-80'
                 }`}
               >
                 <Image
@@ -232,7 +232,7 @@ export function ProjectProcess({ steps }: ProjectProcessProps) {
               key={step.id}
               onClick={() => setActiveStep(index)}
               className={`w-2 h-2 rounded-full transition-all ${
-                activeStep === index ? "bg-purple-400 w-4" : "bg-zinc-600 hover:bg-zinc-500"
+                activeStep === index ? "bg-white w-4" : "bg-zinc-600 hover:bg-zinc-500"
               }`}
               aria-label={`Go to step ${index + 1}`}
             />

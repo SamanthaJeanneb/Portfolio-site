@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
+import { createPortal } from "react-dom"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -10,26 +11,24 @@ export function PortfolioHeader() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+  const [mounted, setMounted] = useState(false)
 
   const navItems = getNavItems()
   const personalInfo = getPersonalInfo()
 
+  useEffect(() => setMounted(true), [])
+
   useEffect(() => {
-      const handleScroll = () => {
+    const handleScroll = () => {
       setScrolled(window.scrollY > 20)
 
-      // Determine active section based on scroll position
       const sections = navItems.filter((item) => item.href.startsWith("#")).map((item) => item.href.substring(1))
 
-      // Find the current section in view (use a larger threshold but require the section
-      // to still have visible area so sections above don't steal the highlight)
       const HEADER_THRESHOLD = 220
       for (const section of sections.reverse()) {
         const element = document.getElementById(section)
         if (element) {
           const rect = element.getBoundingClientRect()
-          // rect.top <= HEADER_THRESHOLD means the element has moved into the header zone
-          // rect.bottom > 60 ensures the element still has visible content below the top
           if (rect.top <= HEADER_THRESHOLD && rect.bottom > 20) {
             setActiveSection(section)
             break
@@ -37,7 +36,6 @@ export function PortfolioHeader() {
         }
       }
 
-      // If scrolled to top, set Home as active
       if (window.scrollY < 120) {
         setActiveSection("")
       }
@@ -47,31 +45,74 @@ export function PortfolioHeader() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [navItems])
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
-  }
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : ""
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [mobileMenuOpen])
+
+  const closeMenu = useCallback(() => setMobileMenuOpen(false), [])
+
+  const mobileMenu =
+    mounted && mobileMenuOpen
+      ? createPortal(
+          <div
+            className="fixed inset-0 z-[200] flex flex-col md:hidden bg-black pt-[4.5rem] px-5"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
+          >
+            <nav className="flex flex-col">
+              {navItems.map((item) => {
+                const isActive =
+                  item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
+                const target = item.href.startsWith("#") ? item.href.substring(1) : ""
+
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={cn(
+                      "py-4 text-lg border-b border-border transition-colors",
+                      isActive ? "text-white" : "text-zinc-400 active:text-white",
+                    )}
+                    onClick={() => {
+                      closeMenu()
+                      if (target) setActiveSection(target)
+                      else setActiveSection("")
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              })}
+            </nav>
+          </div>,
+          document.body,
+        )
+      : null
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
-        scrolled ? "bg-zinc-900/90 backdrop-blur-md shadow-md py-2" : "bg-transparent",
+        "fixed top-0 left-0 right-0 z-[300] transition-all duration-300",
+        mobileMenuOpen
+          ? "bg-black border-b border-border py-2"
+          : scrolled
+            ? "bg-black/95 backdrop-blur-md border-b border-border py-2"
+            : "bg-transparent py-4",
       )}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo/Name */}
-        <Link href="/" className="flex items-center group">
-          <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 font-bold text-xl relative overflow-hidden transition-transform duration-300 group-hover:scale-105">
+      <div className="container mx-auto px-4 flex items-center justify-between relative">
+        <Link href="/" className="flex items-center gap-2 group min-w-0">
+          <span className="text-white font-bold text-lg sm:text-xl tracking-tight truncate">
             {personalInfo.name}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-          </div>
-          <span className="text-zinc-400 text-sm ml-2 hidden sm:inline-block transition-all duration-300 group-hover:text-zinc-300">
-            / {personalInfo.title}
           </span>
+          <span className="text-zinc-500 text-sm hidden sm:inline shrink-0">/ {personalInfo.title}</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
+        <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => {
             const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
             const target = item.href.startsWith("#") ? item.href.substring(1) : ""
@@ -81,91 +122,32 @@ export function PortfolioHeader() {
                 key={item.label}
                 href={item.href}
                 onClick={() => {
-                  if (target) {
-                    // immediately set active section to avoid incorrect highlight while scrolling
-                    setActiveSection(target)
-                  } else {
-                    setActiveSection("")
-                  }
-                }}
-                className={cn(
-                  "px-3 py-2 text-sm relative group transition-all duration-300",
-                  isActive ? "text-purple-400" : "text-zinc-400 hover:text-white",
-                )}
-              >
-                <span className="relative z-10">{item.label}</span>
-
-                {/* Hover effect - subtle background glow */}
-                <span className="absolute inset-0 bg-purple-500/0 rounded-md group-hover:bg-purple-500/10 transition-all duration-300"></span>
-
-                {/* Hover effect - bottom border */}
-                <span
-                  className={cn(
-                    "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-500 transition-all duration-300 group-hover:w-4/5",
-                    isActive && "w-4/5",
-                  )}
-                ></span>
-              </Link>
-            )
-          })}
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-zinc-400 hover:text-white transition-colors duration-300 relative overflow-hidden group"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          <span className="relative z-10">{mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}</span>
-          <span className="absolute inset-0 scale-0 rounded-full bg-zinc-700/50 group-hover:scale-100 transition-transform duration-300"></span>
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      <div
-        className={cn(
-          "fixed inset-0 bg-black/95 z-40 flex flex-col pt-20 px-4 md:hidden transition-all duration-500",
-          mobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none",
-        )}
-      >
-        <nav className="flex flex-col space-y-4">
-          {navItems.map((item, index) => {
-            const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
-            const target = item.href.startsWith("#") ? item.href.substring(1) : ""
-
-            return (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={cn(
-                  "px-3 py-4 text-lg border-b border-zinc-800 relative group transition-all duration-300",
-                  isActive ? "text-purple-400 border-purple-400/30" : "text-zinc-300 hover:text-white hover:pl-5",
-                )}
-                onClick={() => {
-                  setMobileMenuOpen(false)
                   if (target) setActiveSection(target)
                   else setActiveSection("")
                 }}
-                style={{
-                  transitionDelay: `${index * 50}ms`,
-                  transform: mobileMenuOpen ? "translateX(0)" : "translateX(20px)",
-                  opacity: mobileMenuOpen ? 1 : 0,
-                }}
+                className={cn(
+                  "px-3 py-2 text-sm transition-colors",
+                  isActive ? "text-white" : "text-zinc-500 hover:text-white",
+                )}
               >
-                <span className="relative z-10">{item.label}</span>
-
-                {/* Hover effect - left border accent */}
-                <span
-                  className={cn(
-                    "absolute left-0 top-1/2 -translate-y-1/2 w-0 h-1/2 bg-gradient-to-b from-purple-400/20 to-blue-500/20 transition-all duration-300 group-hover:w-1",
-                    isActive && "w-1",
-                  )}
-                ></span>
+                {item.label}
               </Link>
             )
           })}
         </nav>
+
+        <button
+          type="button"
+          className="md:hidden relative z-[400] p-2 -mr-2 text-zinc-300 hover:text-white"
+          onClick={() => setMobileMenuOpen((prev) => !prev)}
+          aria-expanded={mobileMenuOpen}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {mobileMenu}
     </header>
   )
 }

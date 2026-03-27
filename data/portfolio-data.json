@@ -1,17 +1,17 @@
 {
   "meta": {
-    "title": "Samantha J. Brown | Fullstack Developer",
-    "description": "Hey :) Check me out!"
+    "title": "Samantha J. Brown | Software Engineer",
+    "description": "Frontend engineer and interaction design student. Portfolio, projects, and contact."
   },
   "personal": {
     "name": "Samantha J. Brown",
-    "title": "Fullstack Developer",
-    "location": "Oswego, NY",
+    "title": "Associate Software Engineer",
+    "location": "New York, NY",
     "avatar": "/confident-professional.png",
     "email": "SamanthaJeanneb@gmail.com",
     "phone": "(315) 725-2868",
     "availableForWork": true,
-    "badges": ["Fullstack Development", "UX Design", "Java"],
+    "badges": ["Angular", "UX", "TypeScript"],
     "social": [
       {
         "platform": "GitHub",
@@ -20,17 +20,17 @@
       },
       {
         "platform": "LinkedIn",
-        "url": "https://linkedin.com/in/SamanthaJeanneb",
+        "url": "https://www.linkedin.com/in/samanthajeanneb/",
         "icon": "Linkedin"
       }
     ]
   },
   "about": {
-    "bio": "I am a fullstack developer with expertise in Java, JavaScript, React, and UX design. I have experience collaborating with cross-functional teams to optimize user experiences and develop interactive applications. Currently pursuing a dual major in Interaction Design and Computer Science with a 3.80 GPA.",
+    "bio": "I build front-end software and care about how it feels to use. CS + interaction design at SUNY Oswego, now at Sicura full time.",
     "focus": [
-      "Developing fullstack web applications with modern technologies",
-      "Creating intuitive user experiences through UX design principles",
-      "Leading design and development projects in academic and professional settings"
+      "Angular UI for compliance and security tooling",
+      "Hackathons and student-led events (LakerHacks, MLH)",
+      "Design systems, prototypes, and clear UX copy"
     ],
     "languages": [
       {
@@ -40,147 +40,128 @@
         "flag": "🇺🇸"
       }
     ],
-    "interests": ["Fullstack Development", "UX Design", "Computer Vision", "Hackathons", "Graphic Design"]
+    "interests": ["Frontend", "UX", "Hackathons", "Branding"]
   },
   "navigation": [
-    {
-      "label": "Home",
-      "href": "/"
-    },
-    {
-      "label": "Projects",
-      "href": "#projects"
-    },
-    {
-      "label": "Education",
-      "href": "#credentials"
-    },
-    {
-      "label": "Skills",
-      "href": "#skills"
-    },
-    {
-      "label": "Experience",
-      "href": "#experience"
-    },
-    {
-      "label": "Creative Work",
-      "href": "#creative"
-    },
-    {
-      "label": "Articles",
-      "href": "#articles"
-    }
+    { "label": "Home", "href": "/" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Education", "href": "#credentials" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Creative", "href": "#creative" },
+    { "label": "Articles", "href": "#articles" }
   ],
   "experience": [
     {
-      "title": "Software Developer Intern (Front-end)",
+      "title": "Associate Software Engineer",
       "company": "Sicura",
-      "period": "Jun 2025 – present",
-      "description": "Designed and implemented front-end features in Angular for the Sicura Console, improving usability of compliance automation tools for CIS Benchmarks, DISA STIGs, and NIST controls. Collaborated with developers and engineers to modernize/improve UI components, integrating with backend APIs.",
+      "period": "Jan 2026 – present",
+      "description": "Full-time frontend role: Angular features and UI/UX for the Sicura Console (CIS, DISA STIG, NIST workflows). Ship reusable components and API-connected screens with the engineering team.",
       "achievements": [
-        "Designed and implemented front-end features in Angular for Sicura Console",
-        "Improved usability of compliance automation tools",
-        "Collaborated with cross-functional development teams",
-        "Modernized UI components and integrated with backend APIs"
+        "Promoted from intern; own end-to-end UI work on compliance automation",
+        "Coordinate with backend on API integration and component patterns"
       ],
-      "technologies": ["Angular", "Angular Material", "TypeScript", "UX Design", "API Integration"]
+      "technologies": ["Angular", "TypeScript", "Angular Material", "REST APIs", "UX"]
     },
     {
-      "title": "User Experience Designer",
-      "company": "Pioneer",
-      "period": "Mar 2023 – Oct 2023",
-      "description": "Collaborated with software developers and marketers to optimize the app's user experience. Led UX design efforts, creating application prototypes and developing interactive webpages. Additionally, contributed to branding and investor presentations.",
+      "title": "Software Engineer Intern",
+      "company": "Sicura",
+      "period": "Jun 2025 – Jan 2026",
+      "description": "Built and refined Angular UI for compliance tooling; improved usability of flows around benchmarks and controls.",
       "achievements": [
-        "Led UX design efforts for mobile application optimization",
-        "Created application prototypes and interactive webpages",
-        "Contributed to branding and investor presentations",
-        "Collaborated effectively with cross-functional teams"
+        "Implemented front-end features tied to real product APIs",
+        "Iterated on components with design and engineering feedback"
       ],
-      "technologies": ["UX Design", "Prototyping", "Wireframing", "Branding"]
+      "technologies": ["Angular", "TypeScript", "UI components", "APIs"]
     },
     {
-      "title": "Campus Organizations Leadership",
+      "title": "Event Coach",
+      "company": "Major League Hacking",
+      "period": "Jan 2026 – present",
+      "description": "Support hackathon participants and events in an MLH coaching capacity.",
+      "achievements": ["On-site and virtual event support for student builders"],
+      "technologies": ["Community", "Events"]
+    },
+    {
+      "title": "Co-Founder & Graphic Designer",
+      "company": "LakerHacks",
+      "period": "Jan 2025 – present",
+      "description": "SUNY Oswego’s student hackathon: brand, visuals, and event experience.",
+      "achievements": [
+        "Visual identity and collateral for a growing annual event",
+        "Hands-on with logistics and opening/closing programming"
+      ],
+      "technologies": ["Branding", "Graphic design", "Event ops"]
+    },
+    {
+      "title": "Student Admissions Representative",
       "company": "SUNY Oswego",
-      "period": "Nov 2022 – present",
-      "description": "Human Computer Interaction President, Computer Science Association Vice President, and Vega Honor Society PR. Organized workshops and events focused on UX/UI design, Computer Science and graphic design skills. Creator and lead Graphic Designer of SUNY Oswego's annual Hackathon: LakerHacks.",
-      "achievements": [
-        "Organized workshops and events for UX/UI design and Computer Science",
-        "Created and led graphic design for LakerHacks annual hackathon",
-        "Served in leadership roles across multiple organizations",
-        "Developed strong organizational and event management skills"
-      ],
-      "technologies": ["Event Management", "Graphic Design", "UX/UI Design", "Leadership"]
+      "period": "Feb 2023 – Jan 2026",
+      "description": "Tours, presentations, and front-desk work for prospective students and families.",
+      "achievements": ["Campus tours, events, scheduling, and phone support"],
+      "technologies": ["Public speaking", "Customer service"]
     },
     {
-      "title": "Admissions Representative",
-      "company": "State University of New York at Oswego",
-      "period": "Feb 2023 – present",
-      "description": "Strengthened communication and public speaking skills by leading tours and presenting at events; handled office tasks including scheduling, data entry, and phone support.",
-      "achievements": [
-        "Led campus tours and presented at recruitment events",
-        "Developed strong communication and public speaking skills",
-        "Managed office tasks including scheduling and data entry",
-        "Provided excellent phone support to prospective students"
-      ],
-      "technologies": ["Public Speaking", "Communication", "Data Entry", "Customer Service"]
+      "title": "Graphic & UX Design Intern",
+      "company": "Pioneer",
+      "period": "May 2023 – Oct 2023",
+      "description": "Design support alongside dev and marketing: social, investor decks, and app UX prototypes.",
+      "achievements": ["Lead designer for social and slides; contributed to UX team prototypes"],
+      "technologies": ["Figma", "Branding", "Prototyping"]
     }
   ],
   "credentials": {
     "certifications": [],
     "education": [
       {
-        "degree": "B.S. in Interaction Design and Computer Science (Dual Major)",
-        "institution": "State University of New York at Oswego",
-        "year": "Aug 2022 – May 2025",
+        "degree": "B.S. Interaction Design & Computer Science (dual major)",
+        "institution": "SUNY Oswego",
+        "year": "2022 – 2026",
         "gpa": "3.80 GPA",
-        "description": "Gained hands-on experience in UX/UI design, front-end development, and human-computer interaction, developing skills in wireframing, prototyping, and coding. Worked on team projects to design user interfaces and implement functional applications while maintaining a high GPA. Actively participated in clubs focused on design and development projects. Early graduate.",
+        "description": "HCI, front-end, and design coursework. Clubs: HCIO, CSA, hackathons.",
         "logo": "/generic-art-school-logo.png"
       },
       {
-        "degree": "General Studies (Associates Equivalent)",
+        "degree": "General studies (dual-credit / associate-equivalent coursework)",
         "institution": "Mohawk Valley Community College",
-        "year": "Sep 2018 – Jun 2022",
+        "year": "2018 – 2022",
         "gpa": "4.0 GPA",
-        "description": "Earned the credit hour equivalent of an Associates Degree through High School Dual Credit and Summer classes, including digital design based courses.",
+        "description": "Early college credit including digital design.",
         "logo": "/mvcc.png"
       }
     ],
     "skills": [
-      "Fullstack Development",
+      "TypeScript",
+      "Angular",
       "Java",
       "JavaScript",
       "React",
-      "MongoDB",
+      "Spring",
       "SQL",
-      "Springboot",
-      "REST API",
-      "UX Design",
-      "Wireframing",
+      "MongoDB",
+      "REST",
+      "UX",
+      "Figma",
       "Python",
-      "C",
-      "C++",
-      "Functional Programming",
-      "OpenCV",
       "Docker"
     ]
   },
   "technicalSkills": {
-    "design": ["UX Design", "Wireframing", "Prototyping", "Graphic Design", "Branding"],
+    "design": ["UX", "Wireframes", "Prototyping", "Branding", "Figma"],
     "development": [
+      "TypeScript",
+      "Angular",
       "Java",
       "JavaScript",
       "React",
-      "Springboot",
+      "Spring",
       "MongoDB",
       "SQL",
-      "REST API",
+      "REST",
       "Python",
-      "C",
-      "C++",
       "Docker"
     ],
-    "uxMethods": ["Wireframing", "Prototyping", "User Research", "Information Architecture"],
-    "softSkills": ["Leadership", "Event Management", "Public Speaking", "Communication", "Team Collaboration"]
+    "uxMethods": ["Prototyping", "User flows", "IA", "Research basics"],
+    "softSkills": ["Leadership", "Events", "Public speaking", "Collaboration"]
   }
 }

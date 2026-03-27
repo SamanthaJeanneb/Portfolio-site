@@ -26,9 +26,8 @@ export function ArticlesCarousel({ articles }: ArticlesCarouselProps) {
   if (articles.length === 0) return null
 
   return (
-    <div className="relative w-full">
-      {/* Carousel Container */}
-      <div className="overflow-hidden w-full">
+    <div className="relative w-full min-w-0">
+      <div className="overflow-hidden w-full min-w-0 px-0 sm:px-11">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -36,7 +35,7 @@ export function ArticlesCarousel({ articles }: ArticlesCarouselProps) {
           {articles.map((article, index) => (
             <div
               key={article.id}
-              className="min-w-full flex-shrink-0 px-1 sm:px-2"
+              className="min-w-full w-full max-w-full flex-shrink-0 box-border pl-0 pr-0 sm:px-1"
             >
               <AnimatedSection animation="fade-up" delay={100}>
                 <ArticleCard article={article} index={index} isFeatured={index === 0} />
@@ -46,42 +45,39 @@ export function ArticlesCarousel({ articles }: ArticlesCarouselProps) {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
       {articles.length > 1 && (
         <>
           <Button
             variant="ghost"
             size="icon"
             onClick={goToPrevious}
-            className="absolute left-1 sm:left-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-2 md:-translate-x-3 bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 hover:border-purple-500/50 rounded-full w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 z-10 shadow-lg"
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 h-10 w-10 bg-surface border border-border hover:bg-surface-alt"
             aria-label="Previous article"
           >
-            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-400" />
+            <ChevronLeft className="w-5 h-5 text-zinc-400" />
           </Button>
           <Button
             variant="ghost"
             size="icon"
             onClick={goToNext}
-            className="absolute right-1 sm:right-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-2 md:translate-x-3 bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 hover:border-purple-500/50 rounded-full w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 z-10 shadow-lg"
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 h-10 w-10 bg-surface border border-border hover:bg-surface-alt"
             aria-label="Next article"
           >
-            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-400" />
+            <ChevronRight className="w-5 h-5 text-zinc-400" />
           </Button>
         </>
       )}
 
-      {/* Dots Indicator */}
       {articles.length > 1 && (
         <div className="flex justify-center gap-2 mt-4">
           {articles.map((_, index) => (
             <button
               key={index}
+              type="button"
               onClick={() => setCurrentIndex(index)}
               className={cn(
-                "w-2 h-2 rounded-full transition-all duration-300",
-                index === currentIndex
-                  ? "bg-purple-400 w-6"
-                  : "bg-zinc-700 hover:bg-zinc-600"
+                "h-2 rounded-full transition-all duration-300",
+                index === currentIndex ? "bg-white w-6" : "w-2 bg-zinc-700 hover:bg-zinc-500",
               )}
               aria-label={`Go to article ${index + 1}`}
             />
@@ -91,4 +87,3 @@ export function ArticlesCarousel({ articles }: ArticlesCarouselProps) {
     </div>
   )
 }
-

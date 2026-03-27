@@ -53,7 +53,7 @@ export default async function MultimediaProjectPage({ params }: MultimediaProjec
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
           {/* Project Header */}
           <AnimatedSection animation="fade-up" className="lg:col-span-3">
-            <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm overflow-hidden">
+            <Card className="bg-surface border-border overflow-hidden">
               <div className="relative h-48 sm:h-64 md:h-80 w-full">
                 <Image
                   src={project.thumbnailImage || "/placeholder.svg"}
@@ -63,7 +63,7 @@ export default async function MultimediaProjectPage({ params }: MultimediaProjec
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4 sm:p-6">
-                  <div className="text-xs sm:text-sm text-purple-400 mb-1 sm:mb-2">{project.category}</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">{project.category}</div>
                   <h1 className="text-xl sm:text-3xl md:text-4xl font-bold">{project.title}</h1>
                   <p className="text-sm text-zinc-400 mt-1 sm:mt-2 max-w-2xl">{project.shortDescription}</p>
                 </div>
@@ -76,7 +76,7 @@ export default async function MultimediaProjectPage({ params }: MultimediaProjec
             {/* Video Embed Section */}
             {project.youtubeUrl && (
               <AnimatedSection animation="fade-up" delay={50}>
-                <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+                <Card className="bg-surface border-border">
                   <CardContent className="p-4 sm:p-6">
                     <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
                       <iframe
@@ -93,7 +93,7 @@ export default async function MultimediaProjectPage({ params }: MultimediaProjec
             )}
 
             <AnimatedSection animation="fade-up" delay={100}>
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Overview</h2>
                   <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-zinc-300">
@@ -119,7 +119,7 @@ export default async function MultimediaProjectPage({ params }: MultimediaProjec
                         <Button
                           asChild
                           size="sm"
-                          className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-xs sm:text-sm"
+                          className="bg-white text-black hover:bg-zinc-200 text-xs sm:text-sm"
                         >
                           <a href={project.youtubeUrl} target="_blank" rel="noopener noreferrer">
                             <Youtube className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
@@ -144,7 +144,7 @@ export default async function MultimediaProjectPage({ params }: MultimediaProjec
           {/* Project Sidebar */}
           <div className="space-y-4 sm:space-y-6">
             <AnimatedSection animation="slide-left" delay={100}>
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Details</h2>
 
@@ -166,7 +166,7 @@ export default async function MultimediaProjectPage({ params }: MultimediaProjec
             {/* Movie Poster Section */}
             {project.posterImage && (
               <AnimatedSection animation="slide-left" delay={200}>
-                <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+                <Card className="bg-surface border-border">
                   <CardContent className="p-4 sm:p-6">
                     <div className="relative w-full">
                       <Image

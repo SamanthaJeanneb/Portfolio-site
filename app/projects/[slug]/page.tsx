@@ -53,7 +53,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
           {/* Project Header */}
           <AnimatedSection animation="fade-up" className="lg:col-span-3">
-            <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm overflow-hidden">
+            <Card className="bg-surface border-border overflow-hidden">
               <div className="relative h-48 sm:h-64 md:h-80 w-full">
                 <Image
                   src={project.coverImage || "/placeholder.svg"}
@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
                   <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                     <div className="flex-1">
-                      <div className="text-xs sm:text-sm text-purple-400 mb-1 sm:mb-2">{project.category}</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">{project.category}</div>
                       <h1 className="text-xl sm:text-3xl md:text-4xl font-bold">{project.title}</h1>
                       <p className="text-sm text-zinc-400 mt-1 sm:mt-2 max-w-2xl">{project.shortDescription}</p>
                     </div>
@@ -76,7 +76,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         <Button
                           asChild
                           size="sm"
-                          className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-xs sm:text-sm"
+                          className="bg-white text-black hover:bg-zinc-200 text-xs sm:text-sm"
                         >
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
             {/* Description + Features + Technologies in one card */}
             <AnimatedSection animation="fade-up" delay={showProcessFirst ? 150 : 100}>
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Overview</h2>
                   <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-zinc-300">
@@ -163,7 +163,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {/* Project Sidebar */}
           <div className="space-y-4 sm:space-y-6">
             <AnimatedSection animation="slide-left" delay={100}>
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Details</h2>
 
@@ -196,7 +196,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
             {/* Next Projects */}
             <AnimatedSection animation="slide-left" delay={200}>
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-surface border-border">
                 <CardContent className="p-4 sm:p-6">
                   <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">More Projects</h2>
                   <div className="space-y-3 sm:space-y-4">
@@ -213,7 +213,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                                 />
                               </div>
                               <div>
-                                <h3 className="text-sm sm:text-base font-medium group-hover:text-purple-400 transition-colors">
+                                <h3 className="text-sm sm:text-base font-medium group-hover:text-white transition-colors">
                                   {related.title}
                                 </h3>
                                 <p className="text-xs text-zinc-400">{related.category}</p>
