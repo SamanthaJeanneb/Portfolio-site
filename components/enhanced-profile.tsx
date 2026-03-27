@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { SocialLinks } from "@/components/social-links"
 import { DynamicStatus } from "@/components/dynamic-status"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { User, MapPin, Mail, Phone, Languages, Briefcase, ArrowUpRight } from "lucide-react"
+import { User, MapPin, Mail, Phone } from "lucide-react"
 import { getPersonalInfo, getAboutInfo } from "@/lib/data"
 
 export function EnhancedProfile() {
@@ -145,19 +145,6 @@ export function EnhancedProfile() {
             </div>
           </TabsContent>
         </Tabs>
-
-        <a
-          href="https://calendar.app.google/8y4Xp8cMWiiwUT6F9"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 sm:p-4 border-t border-border flex items-center justify-center gap-2 group hover:bg-surface-alt transition-colors"
-        >
-          <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-          <span className="text-xs text-muted-foreground group-hover:text-white transition-colors">
-            Book a meeting
-          </span>
-          <ArrowUpRight className="w-3 h-3 text-zinc-600 group-hover:text-white transition-colors" />
-        </a>
       </CardContent>
     </Card>
   )

@@ -190,6 +190,7 @@ export async function GET() {
             
             recentCommit = {
               repo: pushEvent.repo.name.split('/')[1],
+              repoFullName: pushEvent.repo.name,
               message: finalMessage,
               date: pushEvent.created_at,
             }
