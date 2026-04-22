@@ -1,11 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Great_Vibes } from "next/font/google"
+import type { Metadata } from "next"
 
 const signatureFont = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
 })
+
+export const metadata: Metadata = {
+  title: "My letter back to you",
+}
 
 const letter = `Neo,
 I'm writing this on my phone, voice-texting to compile my thoughts while I drive from NYC to upstate (so I apologize if this is a little disorganized). I'm finalizing the details that will let me pause my life here and start a new chapter in San Francisco.
@@ -62,12 +67,12 @@ export default function NeoPage() {
   const signatureLine = "Love, Sam"
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+    <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-10">
       <article className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm sm:p-8">
         <h1 className="mb-6 text-2xl font-semibold tracking-tight sm:mb-8 sm:text-3xl">
           My letter back to you
         </h1>
-        <div className="space-y-4 text-[15px] leading-7 text-neutral-800 sm:space-y-5 sm:text-[17px] sm:leading-8">
+        <div className="space-y-4 text-sm leading-7 text-neutral-800 sm:space-y-5 sm:text-base sm:leading-8">
           {paragraphs.map((paragraph, index) => {
             if (paragraph.startsWith(tuesdayLine)) {
               return (
@@ -107,7 +112,10 @@ export default function NeoPage() {
 
             if (paragraph === signatureLine) {
               return (
-                <p key={index} className={`pt-2 text-5xl ${signatureFont.className}`}>
+                <p
+                  key={index}
+                  className={`pt-2 text-4xl sm:text-5xl ${signatureFont.className}`}
+                >
                   {paragraph}
                 </p>
               )

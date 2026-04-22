@@ -1,5 +1,11 @@
+import type { Metadata } from "next"
+
 const author = "Marc Randolph"
 const handle = "@marcrandolph"
+
+export const metadata: Metadata = {
+  title: "Maxims",
+}
 
 const paragraphs = [
   "My definition of success is a bit different.",
@@ -12,7 +18,7 @@ const paragraphs = [
 
 export default function MaximsPage() {
   return (
-    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+    <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-10">
       <article className="rounded-2xl border border-blue-100 bg-gradient-to-b from-white to-blue-50 p-5 shadow-sm sm:p-8">
         <h1 className="mb-2 text-2xl font-semibold tracking-tight sm:text-3xl">
           Maxims
@@ -28,7 +34,7 @@ export default function MaximsPage() {
           <p className="text-sm text-blue-700">{handle}</p>
         </div>
 
-        <div className="space-y-4 text-[15px] leading-7 text-neutral-800 sm:space-y-5 sm:text-[17px] sm:leading-8">
+        <div className="space-y-4 text-sm leading-7 text-neutral-800 sm:space-y-5 sm:text-base sm:leading-8">
           {paragraphs.map((paragraph, index) => (
             <p
               key={index}
