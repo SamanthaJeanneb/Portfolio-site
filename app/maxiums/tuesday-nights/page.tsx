@@ -33,10 +33,7 @@ export default function TuesdayNightsPage() {
           </p>
           <p className="text-sm text-blue-700">{handle}</p>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-600">
-            Marc Randolph is the co-founder and first CEO of Netflix. He is
-            known for helping build the company in its early years and for
-            sharing lessons on entrepreneurship, leadership, and keeping life
-            balanced while building ambitious things.
+            Marc Randolph is the co-founder and first CEO of Netflix
           </p>
         </div>
 
