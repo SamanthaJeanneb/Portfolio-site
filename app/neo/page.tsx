@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const letter = `Neo,
 I'm writing this on my phone, voice-texting to compile my thoughts while I drive from NYC to upstate (so I apologize if this is a little disorganized). I'm finalizing the details that will let me pause my life here and start a new chapter in San Francisco.
 That sentence alone would have sounded insane to me six months ago. I'm so excited for it now.
@@ -47,6 +49,7 @@ Love, Sam`
 
 export default function NeoPage() {
   const paragraphs = letter.split("\n").filter(Boolean)
+  const tuesdayLine = "I want you to be the one I give my Tuesday nights to."
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
@@ -55,9 +58,25 @@ export default function NeoPage() {
           My letter back to you
         </h1>
         <div className="space-y-5 text-[17px] leading-8 text-neutral-800">
-          {paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+          {paragraphs.map((paragraph, index) => {
+            if (paragraph.startsWith(tuesdayLine)) {
+              return (
+                <p key={index}>
+                  I want you to be the one I give my{" "}
+                  <Link
+                    href="/quotes"
+                    className="underline decoration-neutral-400 underline-offset-4 hover:text-neutral-950"
+                  >
+                    Tuesday Nights
+                  </Link>{" "}
+                  to. And my Monday mornings, and my bad weeks, and my worst
+                  versions, I'd love to do my "laundry and taxes" with you.
+                </p>
+              )
+            }
+
+            return <p key={index}>{paragraph}</p>
+          })}
         </div>
       </article>
     </main>
