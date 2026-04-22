@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Great_Vibes } from "next/font/google"
 
 const signatureFont = Great_Vibes({
@@ -56,29 +57,51 @@ Love, Sam`
 export default function NeoPage() {
   const paragraphs = letter.split("\n").filter(Boolean)
   const tuesdayLine = "I want you to be the one I give my Tuesday nights to."
+  const couchLine =
+    "I wanted to know everything about you. I was so intrigued. The night we watched a movie and cuddled on the couch, I felt like we'd known each other longer."
   const signatureLine = "Love, Sam"
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-12">
-      <article className="rounded-2xl border border-black/10 bg-white p-8 shadow-sm">
-        <h1 className="mb-8 text-3xl font-semibold tracking-tight">
+    <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+      <article className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm sm:p-8">
+        <h1 className="mb-6 text-2xl font-semibold tracking-tight sm:mb-8 sm:text-3xl">
           My letter back to you
         </h1>
-        <div className="space-y-5 text-[17px] leading-8 text-neutral-800">
+        <div className="space-y-4 text-[15px] leading-7 text-neutral-800 sm:space-y-5 sm:text-[17px] sm:leading-8">
           {paragraphs.map((paragraph, index) => {
             if (paragraph.startsWith(tuesdayLine)) {
               return (
                 <p key={index}>
                   I want you to be the one I give my{" "}
                   <Link
-                    href="/quotes"
-                    className="underline decoration-neutral-400 underline-offset-4 hover:text-neutral-950"
+                    href="/maxims"
+                    className="font-medium text-blue-600 underline decoration-blue-300 underline-offset-4 hover:text-blue-700"
                   >
                     Tuesday Nights
                   </Link>{" "}
                   to. And my Monday mornings, and my bad weeks, and my worst
                   versions, I'd love to do my "laundry and taxes" with you.
                 </p>
+              )
+            }
+
+            if (paragraph.startsWith(couchLine)) {
+              return (
+                <div key={index} className="space-y-3">
+                  <p>{paragraph}</p>
+                  <figure className="overflow-hidden rounded-xl border border-black/10">
+                    <Image
+                      src="/neo-couch-text.png"
+                      alt="Text conversation saying 'I hope ur couch is small ;)'."
+                      width={1024}
+                      height={512}
+                      className="h-auto w-full"
+                    />
+                  </figure>
+                  <p className="text-center text-xs italic text-neutral-500">
+                    ( This is funny "It is, relatively" )
+                  </p>
+                </div>
               )
             }
 
