@@ -23,9 +23,6 @@ export default function MaximsPage() {
         <h1 className="mb-2 text-2xl font-semibold tracking-tight sm:text-3xl">
           Maxims
         </h1>
-        <p className="mb-8 text-xs uppercase tracking-[0.12em] text-neutral-500 sm:text-sm">
-          Saved Inspiration
-        </p>
 
         <div className="mb-8 border-l-4 border-blue-400 pl-4">
           <p className="text-base font-semibold text-neutral-900 sm:text-lg">
