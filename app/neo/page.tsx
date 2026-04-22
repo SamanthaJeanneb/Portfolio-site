@@ -1,4 +1,10 @@
 import Link from "next/link"
+import { Great_Vibes } from "next/font/google"
+
+const signatureFont = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+})
 
 const letter = `Neo,
 I'm writing this on my phone, voice-texting to compile my thoughts while I drive from NYC to upstate (so I apologize if this is a little disorganized). I'm finalizing the details that will let me pause my life here and start a new chapter in San Francisco.
@@ -50,6 +56,7 @@ Love, Sam`
 export default function NeoPage() {
   const paragraphs = letter.split("\n").filter(Boolean)
   const tuesdayLine = "I want you to be the one I give my Tuesday nights to."
+  const signatureLine = "Love, Sam"
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
@@ -71,6 +78,14 @@ export default function NeoPage() {
                   </Link>{" "}
                   to. And my Monday mornings, and my bad weeks, and my worst
                   versions, I'd love to do my "laundry and taxes" with you.
+                </p>
+              )
+            }
+
+            if (paragraph === signatureLine) {
+              return (
+                <p key={index} className={`pt-2 text-5xl ${signatureFont.className}`}>
+                  {paragraph}
                 </p>
               )
             }
