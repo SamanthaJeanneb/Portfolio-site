@@ -68,8 +68,8 @@ export default function NeoPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-10">
-      <article className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm sm:p-8">
-        <h1 className="mb-6 text-2xl font-semibold tracking-tight sm:mb-8 sm:text-3xl">
+      <article className="rounded-2xl border border-black/10 bg-white p-5 text-neutral-900 shadow-sm sm:p-8">
+        <h1 className="mb-6 text-2xl font-semibold tracking-tight text-neutral-900 sm:mb-8 sm:text-3xl">
           My letter back to you
         </h1>
         <div className="space-y-4 text-sm leading-7 text-neutral-800 sm:space-y-5 sm:text-base sm:leading-8">
