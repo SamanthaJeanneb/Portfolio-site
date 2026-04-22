@@ -1,8 +1,4 @@
-export default function NeoPage() {
-  return (
-    <main style={{ padding: "2rem", maxWidth: "900px", margin: "0 auto" }}>
-      <article style={{ whiteSpace: "pre-wrap", lineHeight: 1.6 }}>
-        {`Neo,
+const letter = `Neo,
 I'm writing this on my phone, voice-texting to compile my thoughts while I drive from NYC to upstate (so I apologize if this is a little disorganized). I'm finalizing the details that will let me pause my life here and start a new chapter in San Francisco.
 That sentence alone would have sounded insane to me six months ago. I'm so excited for it now.
 I've been keeping notes on us since the beginning. How we met, what I was thinking, the reasons I was falling for you. I wasn't going to show them to anyone. They were just meant for me, so I didn't forget any of the little details.
@@ -47,7 +43,22 @@ Deciding to go all-in on what I love has never come easily to me. I've spent mos
 You said you want to be the person who makes me feel safe while I go all-in. You already are. You were the person I felt safe with before I even realized I was going all-in on anything.
 I want you to be the one I give my Tuesday nights to. And my Monday mornings, and my bad weeks, and my worst versions, I'd love to do my "laundry and taxes" with you.
 I'm not going anywhere either.
-Love, Sam`}
+Love, Sam`
+
+export default function NeoPage() {
+  const paragraphs = letter.split("\n").filter(Boolean)
+
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12">
+      <article className="rounded-2xl border border-black/10 bg-white p-8 shadow-sm">
+        <h1 className="mb-8 text-3xl font-semibold tracking-tight">
+          My letter back to you
+        </h1>
+        <div className="space-y-5 text-[17px] leading-8 text-neutral-800">
+          {paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
       </article>
     </main>
   )
