@@ -79,7 +79,7 @@ export default function NeoPage() {
                 <p key={index}>
                   I want you to be the one I give my{" "}
                   <Link
-                    href="/maxims"
+                    href="/maxiums/tuesday-nights"
                     className="font-medium text-blue-600 underline decoration-blue-300 underline-offset-4 hover:text-blue-700"
                   >
                     Tuesday Nights
