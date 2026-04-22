@@ -19,13 +19,10 @@ const paragraphs = [
 export default function TuesdayNightsPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-10">
-      <article className="rounded-2xl border border-blue-100 bg-gradient-to-b from-white to-blue-50 p-5 shadow-sm sm:p-8">
+      <article className="rounded-2xl border border-blue-100 bg-white p-5 text-neutral-900 shadow-sm sm:p-8">
         <h1 className="mb-2 text-2xl font-semibold tracking-tight sm:text-3xl">
           Tuesday Nights
         </h1>
-        <p className="mb-8 text-xs uppercase tracking-[0.12em] text-neutral-500 sm:text-sm">
-          Saved Inspiration
-        </p>
 
         <div className="mb-8 border-l-4 border-blue-400 pl-4">
           <p className="text-base font-semibold text-neutral-900 sm:text-lg">
@@ -33,7 +30,7 @@ export default function TuesdayNightsPage() {
           </p>
           <p className="text-sm text-blue-700">{handle}</p>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-600">
-            Marc Randolph is the co-founder and first CEO of Netflix
+            Marc Randolph is the co-founder and first CEO of Netflix.
           </p>
         </div>
 
