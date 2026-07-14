@@ -1,15 +1,4 @@
-import { Cormorant_Garamond, Great_Vibes } from "next/font/google"
 import type { Metadata } from "next"
-
-const signatureFont = Great_Vibes({
-  subsets: ["latin"],
-  weight: "400",
-})
-
-const quoteFont = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600"],
-})
 
 export const metadata: Metadata = {
   title: "Happy 3 Months",
@@ -37,26 +26,13 @@ export default function HappyThreeMonthsPage() {
         <h1 className="mb-6 text-2xl font-semibold tracking-tight text-neutral-900 sm:mb-8 sm:text-3xl">
           Happy 3 Months
         </h1>
-        <figure className="mb-8 rounded-2xl bg-rose-50/80 px-5 py-6 text-center text-rose-950 sm:px-8 sm:py-7">
-          <blockquote
-            className={`text-2xl font-semibold leading-snug sm:text-3xl ${quoteFont.className}`}
-          >
-            “Being deeply loved by someone gives you strength, while loving
-            someone deeply gives you courage.”
-          </blockquote>
-          <figcaption
-            className={`mt-3 text-lg font-medium text-rose-800 sm:text-xl ${quoteFont.className}`}
-          >
-            Lao Tzu
-          </figcaption>
-        </figure>
         <div className="space-y-4 text-sm leading-7 text-neutral-800 sm:space-y-5 sm:text-base sm:leading-8">
           {paragraphs.map((paragraph, index) => {
             if (signatureLines.includes(paragraph)) {
               return (
                 <p
                   key={index}
-                  className={`pt-2 text-4xl sm:text-5xl ${signatureFont.className}`}
+                  className="pt-2 text-base font-medium text-neutral-900 sm:text-lg"
                 >
                   {paragraph}
                 </p>
@@ -66,6 +42,13 @@ export default function HappyThreeMonthsPage() {
             return <p key={index}>{paragraph}</p>
           })}
         </div>
+        <figure className="mt-8 border-t border-black/10 pt-5 text-center text-xs italic leading-5 text-neutral-500 sm:text-sm">
+          <blockquote>
+            “Being deeply loved by someone gives you strength, while loving
+            someone deeply gives you courage.”
+          </blockquote>
+          <figcaption className="mt-2">Lao Tzu</figcaption>
+        </figure>
       </article>
     </main>
   )
