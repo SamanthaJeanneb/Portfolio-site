@@ -83,8 +83,7 @@ export default function Home() {
             &amp;{" "}
             <Link href="/projects/vex-robotics" className={link}>
               robotics
-            </Link>{" "}
-            (VEX Robotics comp)
+            </Link>
           </li>
           <li>Beautiful websites</li>
           <li>
