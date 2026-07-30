@@ -52,6 +52,10 @@ export default function Home() {
             Instagram
           </a>
           <span className="text-zinc-600"> · </span>
+          <a href="https://x.com/samanthajeanneb" target="_blank" rel="noopener noreferrer" className={link}>
+            X
+          </a>
+          <span className="text-zinc-600"> · </span>
           <a href={github} target="_blank" rel="noopener noreferrer" className={link}>
             GitHub
           </a>
@@ -70,13 +74,9 @@ export default function Home() {
           <li>I am an artist</li>
           <li>B.S. double major in Computer Science &amp; Design</li>
           <li>
-            30k on socials,{" "}
+            30k on{" "}
             <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
-              Instagram
-            </a>{" "}
-            &amp;{" "}
-            <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
-              LinkedIn
+              socials
             </a>{" "}
             (I make tech memes)
           </li>
