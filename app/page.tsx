@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ProjectCard } from "@/components/project-card"
 import { getAllProjects, getAllMultimediaProjects, getAllBrandingProjects } from "@/lib/data"
 import { ExperienceCard } from "@/components/experience-card"
-import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator"
 import { AnimatedSection } from "@/components/animated-section"
 import { EnhancedProfile } from "@/components/enhanced-profile"
 import { CredentialsSection } from "@/components/credentials-section"
@@ -36,9 +35,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Subtle dot grid */}
-      <div className="fixed inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:24px_24px] z-0" data-background-grid></div>
-
       {/* Header */}
       <PortfolioHeader />
 
@@ -152,8 +148,7 @@ export default function Home() {
               </Card>
             </AnimatedSection>
 
-            {/* Branding / Design Projects Section */}
-            {/* Anchor for Creative Work (branding + multimedia) */}
+            {/* Creative Work Section (branding + multimedia) */}
             <div id="creative" className="-mt-8 pt-8" />
             <AnimatedSection animation="fade-up" id="branding">
               <Card className="bg-surface border-border">
@@ -161,46 +156,21 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className="flex items-center">
                       <GlobeIcon className="w-5 h-5 mr-2 text-zinc-500" />
-                      <h3 className="text-lg font-medium">Branding / Design Projects</h3>
+                      <h3 className="text-lg font-medium">Creative Work</h3>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                    {brandingProjects.map((project, index) => (
-                      <AnimatedSection key={project.id} animation="zoom-in" delay={100 * (index + 1)}>
+                    {[
+                      ...brandingProjects.map((project) => ({ project, slug: `branding/${project.slug}` })),
+                      ...multimediaProjects.map((project) => ({ project, slug: `multimedia/${project.slug}` })),
+                    ].map(({ project, slug }, index) => (
+                      <AnimatedSection key={slug} animation="zoom-in" delay={100 * (index + 1)}>
                         <ProjectCard
                           title={project.title}
                           category={project.category}
                           image={project.thumbnailImage}
-                          slug={`branding/${project.slug}`}
-                          winnerInfo={WINNER_INFO[project.slug]}
-                        />
-                      </AnimatedSection>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            {/* Multimedia Projects Section */}
-            <AnimatedSection animation="fade-up" id="multimedia">
-              <Card className="bg-surface border-border">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center justify-between mb-4 sm:mb-6">
-                    <div className="flex items-center">
-                      <GlobeIcon className="w-5 h-5 mr-2 text-zinc-500" />
-                      <h3 className="text-lg font-medium">Multimedia Projects</h3>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                    {multimediaProjects.map((project, index) => (
-                      <AnimatedSection key={project.id} animation="zoom-in" delay={100 * (index + 1)}>
-                        <ProjectCard
-                          title={project.title}
-                          category={project.category}
-                          image={project.thumbnailImage}
-                          slug={`multimedia/${project.slug}`}
+                          slug={slug}
                           winnerInfo={WINNER_INFO[project.slug]}
                         />
                       </AnimatedSection>
@@ -236,9 +206,6 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Samantha J. Brown. All rights reserved.</p>
         </AnimatedSection>
       </div>
-
-      {/* Scroll to Top Button */}
-      <EnhancedScrollIndicator />
     </main>
   )
 }

@@ -1,17 +1,17 @@
 {
   "meta": {
-    "title": "Samantha J. Brown | Software Engineer",
-    "description": "Frontend engineer and interaction design student. Portfolio, projects, and contact."
+    "title": "Samantha J. Brown | Co-Founder & CEO, Suzanne 3D",
+    "description": "Co-founder & CEO of Suzanne 3D — AI 3D models that actually work. Portfolio, projects, and contact."
   },
   "personal": {
     "name": "Samantha J. Brown",
-    "title": "Associate Software Engineer",
-    "location": "New York, NY",
+    "title": "Co-Founder & CEO, Suzanne 3D",
+    "location": "San Francisco Bay Area",
     "avatar": "/confident-professional.png",
-    "email": "SamanthaJeanneb@gmail.com",
+    "email": "samantha@suzanne3d.studio",
     "phone": "(315) 725-2868",
-    "availableForWork": true,
-    "badges": ["Angular", "UX", "TypeScript"],
+    "availableForWork": false,
+    "badges": ["Founder", "AI / 3D", "Frontend"],
     "social": [
       {
         "platform": "GitHub",
@@ -22,15 +22,20 @@
         "platform": "LinkedIn",
         "url": "https://www.linkedin.com/in/samanthajeanneb/",
         "icon": "Linkedin"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/sam.jeanne.b/",
+        "icon": "Instagram"
       }
     ]
   },
   "about": {
-    "bio": "I build front-end software and care about how it feels to use. CS + interaction design at SUNY Oswego, now at Sicura full time.",
+    "bio": "I'm building Suzanne — AI that turns text, sketches, and photos into production-ready 3D models in minutes. Co-founder & CEO, based in San Francisco. Previously frontend engineering at Sicura; CS + interaction design at SUNY Oswego.",
     "focus": [
-      "Angular UI for compliance and security tooling",
-      "Hackathons and student-led events (LakerHacks, MLH)",
-      "Design systems, prototypes, and clear UX copy"
+      "Suzanne 3D — physical AI for product design (Founders Inc, NVIDIA Inception)",
+      "Coaching hackathons with Major League Hacking",
+      "Tech content creation — 22M+ views across socials"
     ],
     "languages": [
       {
@@ -40,26 +45,59 @@
         "flag": "🇺🇸"
       }
     ],
-    "interests": ["Frontend", "UX", "Hackathons", "Branding"]
+    "interests": ["AI", "3D", "Startups", "Hackathons"]
   },
   "navigation": [
     { "label": "Home", "href": "/" },
     { "label": "Projects", "href": "#projects" },
-    { "label": "Education", "href": "#credentials" },
-    { "label": "Skills", "href": "#skills" },
     { "label": "Experience", "href": "#experience" },
-    { "label": "Creative", "href": "#creative" },
-    { "label": "Articles", "href": "#articles" }
+    { "label": "Education", "href": "#credentials" },
+    { "label": "Creative", "href": "#creative" }
   ],
   "experience": [
     {
-      "title": "Associate Software Engineer",
-      "company": "Sicura",
-      "period": "Jan 2026 – present",
-      "description": "Full-time frontend role: Angular features and UI/UX for the Sicura Console (CIS, DISA STIG, NIST workflows). Ship reusable components and API-connected screens with the engineering team.",
+      "title": "Co-Founder & CEO",
+      "company": "Suzanne 3D",
+      "period": "Apr 2026 – present",
+      "description": "AI 3D models that actually work — Suzanne turns text, a sketch, or a photo into a production-ready 3D model in minutes. Physical AI for product design.",
       "achievements": [
-        "Promoted from intern; own end-to-end UI work on compliance automation",
-        "Coordinate with backend on API integration and component patterns"
+        "Founders Inc & NVIDIA Inception programs",
+        "Launched beta to 120 users in under 24 hours; closed angel round and signed first paying customers and API contract"
+      ],
+      "technologies": ["AI", "3D modeling", "Product", "Growth"]
+    },
+    {
+      "title": "Event Coach",
+      "company": "Major League Hacking",
+      "period": "Jan 2026 – present",
+      "description": "Coaching hackathon organizers and participants at MLH events — flying to a hackathon near you.",
+      "achievements": ["On-site and virtual event support for student builders"],
+      "technologies": ["Community", "Events"]
+    },
+    {
+      "title": "Content Creator",
+      "company": "Instagram",
+      "period": "Jan 2026 – present",
+      "description": "Posting about tech, startups, and tips for college students.",
+      "achievements": ["22M+ views and 14,000+ followers in under 3 months"],
+      "technologies": ["Content", "Social media"]
+    },
+    {
+      "title": "Founder in Residence",
+      "company": "Founders, Inc.",
+      "period": "Apr 2026 – May 2026",
+      "description": "Built Suzanne at Canopy, the Founders, Inc. residency in San Francisco.",
+      "achievements": [],
+      "technologies": ["Startups"]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Sicura",
+      "period": "Jan 2026 – Apr 2026",
+      "description": "Promoted from intern to full-time. Drove Angular feature development for the Sicura Console compliance automation tooling (CIS Benchmarks, DISA STIGs, NIST controls).",
+      "achievements": [
+        "Owned end-to-end UI work on compliance automation",
+        "Coordinated with backend on API integration and component patterns"
       ],
       "technologies": ["Angular", "TypeScript", "Angular Material", "REST APIs", "UX"]
     },
@@ -67,101 +105,61 @@
       "title": "Software Engineer Intern",
       "company": "Sicura",
       "period": "Jun 2025 – Jan 2026",
-      "description": "Built and refined Angular UI for compliance tooling; improved usability of flows around benchmarks and controls.",
-      "achievements": [
-        "Implemented front-end features tied to real product APIs",
-        "Iterated on components with design and engineering feedback"
-      ],
+      "description": "Collaborated with developers and engineers to modernize and improve UI components of the Sicura Console.",
+      "achievements": ["Implemented front-end features tied to real product APIs"],
       "technologies": ["Angular", "TypeScript", "UI components", "APIs"]
     },
     {
-      "title": "Event Coach",
-      "company": "Major League Hacking",
-      "period": "Jan 2026 – present",
-      "description": "Support hackathon participants and events in an MLH coaching capacity.",
-      "achievements": ["On-site and virtual event support for student builders"],
-      "technologies": ["Community", "Events"]
-    },
-    {
-      "title": "Co-Founder & Graphic Designer",
+      "title": "Founder & Lead Event Coordinator",
       "company": "LakerHacks",
-      "period": "Jan 2025 – present",
-      "description": "SUNY Oswego’s student hackathon: brand, visuals, and event experience.",
-      "achievements": [
-        "Visual identity and collateral for a growing annual event",
-        "Hands-on with logistics and opening/closing programming"
-      ],
+      "period": "Jan 2025 – Jan 2026",
+      "description": "Founded SUNY Oswego's annual hackathon: designed the full graphics package, managed event logistics, and led the opening and closing ceremonies. The event now draws hundreds of participants each year.",
+      "achievements": ["Grew a student hackathon from scratch into an annual event"],
       "technologies": ["Branding", "Graphic design", "Event ops"]
-    },
-    {
-      "title": "Student Admissions Representative",
-      "company": "SUNY Oswego",
-      "period": "Feb 2023 – Jan 2026",
-      "description": "Tours, presentations, and front-desk work for prospective students and families.",
-      "achievements": ["Campus tours, events, scheduling, and phone support"],
-      "technologies": ["Public speaking", "Customer service"]
-    },
-    {
-      "title": "Graphic & UX Design Intern",
-      "company": "Pioneer",
-      "period": "May 2023 – Oct 2023",
-      "description": "Design support alongside dev and marketing: social, investor decks, and app UX prototypes.",
-      "achievements": ["Lead designer for social and slides; contributed to UX team prototypes"],
-      "technologies": ["Figma", "Branding", "Prototyping"]
     }
   ],
   "credentials": {
     "certifications": [],
     "education": [
       {
-        "degree": "B.S. Interaction Design & Computer Science (dual major)",
+        "degree": "B.S. Computer Science & Interaction Design",
         "institution": "SUNY Oswego",
-        "year": "2022 – 2026",
+        "year": "2023 – 2026",
         "gpa": "3.80 GPA",
-        "description": "HCI, front-end, and design coursework. Clubs: HCIO, CSA, hackathons.",
+        "description": "Jessie E. and Jay D. Rudolph Award for excellence in design. President of HCIO and the Computer Science Association; founding director of LakerHacks.",
         "logo": "/generic-art-school-logo.png"
-      },
-      {
-        "degree": "General studies (dual-credit / associate-equivalent coursework)",
-        "institution": "Mohawk Valley Community College",
-        "year": "2018 – 2022",
-        "gpa": "4.0 GPA",
-        "description": "Early college credit including digital design.",
-        "logo": "/mvcc.png"
       }
     ],
     "skills": [
+      "AI",
+      "3D Modeling",
       "TypeScript",
       "Angular",
-      "Java",
-      "JavaScript",
       "React",
-      "Spring",
+      "JavaScript",
+      "Python",
+      "Java",
       "SQL",
-      "MongoDB",
       "REST",
       "UX",
       "Figma",
-      "Python",
       "Docker"
     ]
   },
   "technicalSkills": {
-    "design": ["UX", "Wireframes", "Prototyping", "Branding", "Figma"],
+    "design": ["UX", "3D modeling", "Prototyping", "Branding", "Figma"],
     "development": [
       "TypeScript",
       "Angular",
-      "Java",
-      "JavaScript",
       "React",
-      "Spring",
-      "MongoDB",
+      "JavaScript",
+      "Python",
+      "Java",
       "SQL",
       "REST",
-      "Python",
       "Docker"
     ],
     "uxMethods": ["Prototyping", "User flows", "IA", "Research basics"],
-    "softSkills": ["Leadership", "Events", "Public speaking", "Collaboration"]
+    "softSkills": ["Leadership", "Public speaking", "Events", "Content creation"]
   }
 }

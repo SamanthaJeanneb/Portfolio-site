@@ -7,7 +7,6 @@ import { SkillTag } from "@/components/skill-tag"
 import { getProjectBySlug, getRelatedProjects } from "@/lib/data"
 import type { RelatedProject } from "@/lib/projects"
 import { notFound } from "next/navigation"
-import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator"
 import { AnimatedSection } from "@/components/animated-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
 import { ProjectProcess } from "@/components/project-process"
@@ -33,7 +32,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Background Grid Pattern */}
-      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0" data-background-grid></div>
 
       {/* Header */}
       <PortfolioHeader />
@@ -240,7 +238,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </div>
 
       {/* Scroll to Top Button */}
-      <EnhancedScrollIndicator />
     </main>
   )
 }
