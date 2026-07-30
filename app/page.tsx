@@ -10,20 +10,20 @@ export default function Home() {
   const instagram = personal.social.find((s) => s.platform === "Instagram")?.url
   const github = personal.social.find((s) => s.platform === "GitHub")?.url
 
-  const link = "text-blue-700 underline hover:text-blue-900"
+  const link = "italic text-zinc-400 underline underline-offset-4 decoration-zinc-600 hover:text-white hover:decoration-zinc-400 transition-colors"
 
   return (
-    <main className="min-h-screen bg-white text-black" style={serif}>
-      <div className="mx-auto max-w-2xl px-6 py-16 text-lg leading-relaxed">
+    <main className="min-h-screen bg-black text-zinc-200" style={serif}>
+      <div className="mx-auto max-w-2xl px-6 py-16 sm:py-24 text-lg leading-loose">
         <Image
           src={personal.avatar || "/placeholder.svg"}
           alt={personal.name}
           width={160}
           height={160}
           priority
-          className="w-40 h-40 object-cover rounded mb-6"
+          className="w-36 h-36 object-cover rounded-sm mb-8"
         />
-        <h1 className="text-2xl font-bold mb-8">{personal.name}</h1>
+        <h1 className="text-2xl font-bold text-white mb-8">{personal.name}</h1>
 
         <p className="mb-6">
           I'm building{" "}
