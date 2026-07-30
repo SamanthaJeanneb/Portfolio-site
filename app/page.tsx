@@ -23,7 +23,8 @@ export default function Home() {
           priority
           className="w-36 h-36 object-cover rounded-sm mb-8"
         />
-        <h1 className="text-2xl font-bold text-white mb-4">{personal.name}</h1>
+        <h1 className="text-2xl font-bold text-white mb-2">Hellooo :)</h1>
+        <p className="mb-4">Welcome to my corner of the internet!</p>
 
         <p className="text-base mb-8">
           <Link href="/projects" className={link}>
@@ -55,26 +56,43 @@ export default function Home() {
           </a>
         </p>
 
-        <p className="mb-6">
-          I'm building{" "}
-          <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
-            Suzanne
-          </a>
-          , AI-native 3D modeling for parts that actually work in the real world. We're based in San
-          Francisco, backed by Founders, Inc., and part of NVIDIA Inception. Along the way I've picked
-          up 30k+ followers across socials posting about what I'm building.
-        </p>
+        <h2 className="text-xl font-bold text-white mb-3">A little bit about me</h2>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
+          <li>I am an artist</li>
+          <li>B.S. double major in Computer Science &amp; Design</li>
+          <li>30k on socials (I make tech memes)</li>
+          <li>Coaching students through MLH</li>
+          <li>Ex software engineer</li>
+        </ul>
 
-        <p className="mb-6">
-          I'm 21. Before Suzanne I wrote software at Sicura, double majored in Computer Science and
-          Design at SUNY Oswego, won a national VEX Robotics championship, and started LakerHacks, my
-          school's annual hackathon.
-        </p>
-
-        <p>
-          Most of what I make sits somewhere between hardware, design, and teaching people to build.
-          When I'm not working on Suzanne, I'm coaching hackathons for Major League Hacking.
-        </p>
+        <h2 className="text-xl font-bold text-white mb-3">What I love</h2>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1">
+          <li>
+            <Link href="/projects#work" className={link}>
+              Hackathons
+            </Link>{" "}
+            &amp;{" "}
+            <Link href="/projects/vex-robotics" className={link}>
+              robotics
+            </Link>{" "}
+            (VEX Robotics comp)
+          </li>
+          <li>Beautiful websites</li>
+          <li>
+            Magic: The Gathering player, check out my{" "}
+            <Link href="/mtg" className={link}>
+              card collection
+            </Link>
+          </li>
+          <li>
+            Art, check out my{" "}
+            <Link href="/projects#creative" className={link}>
+              work
+            </Link>
+          </li>
+          <li>Math</li>
+          <li>3D printing</li>
+        </ul>
       </div>
     </main>
   )
