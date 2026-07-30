@@ -21,18 +21,19 @@ const cards = collection as CardEntry[]
 
 const TYPES = ["All", "Creature", "Instant", "Sorcery", "Artifact", "Enchantment", "Planeswalker", "Battle", "Land"]
 const RARITIES = ["all", "common", "uncommon", "rare", "mythic"]
-const COLORS: { key: string; label: string; className: string }[] = [
-  { key: "All", label: "ALL", className: "text-zinc-300 border-zinc-500" },
-  { key: "W", label: "W", className: "text-yellow-100 border-yellow-200" },
-  { key: "U", label: "U", className: "text-sky-400 border-sky-400" },
-  { key: "B", label: "B", className: "text-purple-400 border-purple-400" },
-  { key: "R", label: "R", className: "text-red-400 border-red-400" },
-  { key: "G", label: "G", className: "text-green-400 border-green-400" },
-  { key: "M", label: "MULTI", className: "text-amber-400 border-amber-400" },
-  { key: "C", label: "NONE", className: "text-zinc-400 border-zinc-400" },
+const COLORS: { key: string; label: string; textClass: string }[] = [
+  { key: "All", label: "ALL", textClass: "" },
+  { key: "W", label: "W", textClass: "text-[#d8cfa8]" },
+  { key: "U", label: "U", textClass: "text-[#7fa6c8]" },
+  { key: "B", label: "B", textClass: "text-[#a08cb8]" },
+  { key: "R", label: "R", textClass: "text-[#c87f7f]" },
+  { key: "G", label: "G", textClass: "text-[#8cb88c]" },
+  { key: "M", label: "MULTI", textClass: "" },
+  { key: "C", label: "NONE", textClass: "" },
 ]
 const PAGE_SIZE = 60
 const TRADE_EMAIL = "samantha@suzanne3d.com"
+const ACCENT = "#d8a83c"
 
 function imageUrl(id: string) {
   return `https://cards.scryfall.io/normal/front/${id[0]}/${id[1]}/${id}.jpg`
@@ -88,51 +89,43 @@ export function MtgArcade() {
     return `mailto:${TRADE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
-  const button = (active: boolean, extra = "") =>
-    `border-2 px-2 py-1 text-[10px] sm:text-xs uppercase transition-colors ${
-      active ? "bg-[#00ff66] text-black border-[#00ff66]" : `bg-transparent hover:bg-[#1a1a2e] ${extra || "text-zinc-300 border-zinc-600"}`
+  const button = (active: boolean, textClass = "") =>
+    `border-2 px-2 py-1 text-[9px] uppercase transition-none ${
+      active
+        ? "bg-[#e8e8e8] text-black border-[#e8e8e8]"
+        : `border-[#3a3a3a] hover:border-[#8a8a8a] ${textClass || "text-[#b8b8b8]"}`
     }`
 
   return (
-    <main
-      className="min-h-screen bg-[#0a0a12] text-zinc-200 pb-28"
-      style={{ fontFamily: "var(--font-terminal)" }}
-    >
-      {/* CRT scanlines */}
-      <div
-        className="pointer-events-none fixed inset-0 z-50 opacity-20"
-        style={{ background: "repeating-linear-gradient(0deg, transparent 0px, transparent 2px, #000 3px)" }}
-      />
-
+    <main className="min-h-screen bg-[#141414] text-[#e8e8e8] pb-28" style={{ fontFamily: "var(--font-terminal)" }}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-8">
         <Link
           href="/"
-          className="text-sm text-zinc-500 hover:text-[#00e5ff] uppercase tracking-widest"
+          className="text-[10px] text-[#8a8a8a] hover:text-[#e8e8e8] uppercase"
           style={{ fontFamily: "var(--font-pixel)" }}
         >
           ← exit
         </Link>
 
-        {/* Marquee */}
-        <header className="text-center border-4 border-[#ff2bd6] bg-[#12081c] rounded-lg px-4 py-6 mt-4 mb-6 shadow-[0_0_24px_#ff2bd644]">
-          <h1
-            className="text-lg sm:text-2xl text-[#00ff66] mb-3 [text-shadow:0_0_8px_#00ff66]"
-            style={{ fontFamily: "var(--font-pixel)" }}
-          >
-            SAM'S CARD VAULT
-          </h1>
-          <p className="text-[#00e5ff] text-lg sm:text-xl">
-            MAGIC: THE GATHERING · {totalCopies.toLocaleString()} CARDS · {cards.length.toLocaleString()} UNIQUE
-          </p>
-          <p className="text-[#ff2bd6] text-base mt-1 animate-pulse" style={{ fontFamily: "var(--font-pixel)" }}>
-            PICK CARDS TO REQUEST A TRADE
-          </p>
+        {/* Title box */}
+        <header className="border-2 border-[#e8e8e8] mt-4 mb-6">
+          <div className="border-2 border-[#141414] outline outline-1 outline-[#3a3a3a] px-4 py-6 text-center">
+            <h1 className="text-base sm:text-xl mb-3" style={{ fontFamily: "var(--font-pixel)" }}>
+              SAM'S CARD VAULT
+            </h1>
+            <p className="text-lg sm:text-xl text-[#8a8a8a]">
+              MAGIC: THE GATHERING · {totalCopies.toLocaleString()} CARDS · {cards.length.toLocaleString()} UNIQUE
+            </p>
+            <p className="text-[10px] mt-2 text-[#8a8a8a]" style={{ fontFamily: "var(--font-pixel)" }}>
+              PICK CARDS TO REQUEST A TRADE
+            </p>
+          </div>
         </header>
 
         {/* Controls */}
-        <div className="border-2 border-zinc-700 bg-[#0e0e1a] rounded-lg p-3 sm:p-4 mb-6 space-y-3">
+        <div className="border-2 border-[#3a3a3a] p-3 sm:p-4 mb-6 space-y-3">
           <div className="flex flex-wrap items-center gap-1.5" style={{ fontFamily: "var(--font-pixel)" }}>
-            <span className="text-[10px] text-zinc-500 mr-1">TYPE</span>
+            <span className="text-[9px] text-[#8a8a8a] mr-1 w-12">TYPE</span>
             {TYPES.map((t) => (
               <button key={t} className={button(type === t)} onClick={() => { setType(t); resetPaging() }}>
                 {t === "All" ? "ALL" : t}
@@ -140,11 +133,11 @@ export function MtgArcade() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-1.5" style={{ fontFamily: "var(--font-pixel)" }}>
-            <span className="text-[10px] text-zinc-500 mr-1">COLOR</span>
+            <span className="text-[9px] text-[#8a8a8a] mr-1 w-12">COLOR</span>
             {COLORS.map((c) => (
               <button
                 key={c.key}
-                className={button(color === c.key, c.className)}
+                className={button(color === c.key, c.textClass)}
                 onClick={() => { setColor(c.key); resetPaging() }}
               >
                 {c.label}
@@ -152,7 +145,7 @@ export function MtgArcade() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-1.5" style={{ fontFamily: "var(--font-pixel)" }}>
-            <span className="text-[10px] text-zinc-500 mr-1">RARITY</span>
+            <span className="text-[9px] text-[#8a8a8a] mr-1 w-12">RARITY</span>
             {RARITIES.map((r) => (
               <button key={r} className={button(rarity === r)} onClick={() => { setRarity(r); resetPaging() }}>
                 {r === "all" ? "ALL" : r}
@@ -160,17 +153,17 @@ export function MtgArcade() {
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-zinc-500" style={{ fontFamily: "var(--font-pixel)" }}>
-              SEARCH
+            <span className="text-[9px] text-[#8a8a8a] w-12 shrink-0" style={{ fontFamily: "var(--font-pixel)" }}>
+              FIND
             </span>
             <input
               value={search}
               onChange={(e) => { setSearch(e.target.value); resetPaging() }}
               placeholder="type a card or set name..."
-              className="flex-1 bg-black border-2 border-zinc-700 focus:border-[#00e5ff] outline-none rounded px-3 py-1.5 text-lg text-[#00ff66] placeholder:text-zinc-600"
+              className="flex-1 bg-[#141414] border-2 border-[#3a3a3a] focus:border-[#8a8a8a] outline-none px-3 py-1.5 text-lg placeholder:text-[#5a5a5a]"
             />
           </div>
-          <p className="text-zinc-500 text-base">
+          <p className="text-[#8a8a8a] text-base">
             {filtered.length.toLocaleString()} result{filtered.length === 1 ? "" : "s"}
           </p>
         </div>
@@ -182,35 +175,29 @@ export function MtgArcade() {
             return (
               <div
                 key={card.id}
-                className={`border-2 rounded-lg bg-[#0e0e1a] p-2 flex flex-col transition-colors ${
-                  inTrade ? "border-[#00ff66] shadow-[0_0_12px_#00ff6655]" : "border-zinc-800 hover:border-[#00e5ff]"
-                }`}
+                className="border-2 p-2 flex flex-col bg-[#1a1a1a]"
+                style={{ borderColor: inTrade ? ACCENT : "#2a2a2a" }}
               >
-                <img
-                  src={imageUrl(card.id)}
-                  alt={card.n}
-                  loading="lazy"
-                  className="w-full rounded-md mb-2"
-                />
-                <p className="text-base leading-tight text-zinc-100 truncate" title={card.n}>
+                <img src={imageUrl(card.id)} alt={card.n} loading="lazy" className="w-full rounded-[5px] mb-2" />
+                <p className="text-base leading-tight truncate" title={card.n}>
                   {card.n}
                 </p>
-                <p className="text-sm text-zinc-500 truncate">{card.s}</p>
-                <div className="flex items-center gap-2 text-sm mt-0.5 mb-2">
-                  <span className="text-[#00e5ff]">x{card.q}</span>
-                  <span className="text-zinc-500 capitalize">{card.r}</span>
-                  {card.f && <span className="text-amber-300">✦ FOIL</span>}
+                <p className="text-sm text-[#8a8a8a] truncate">{card.s}</p>
+                <div className="flex items-center gap-2 text-sm mt-0.5 mb-2 text-[#8a8a8a]">
+                  <span className="text-[#b8b8b8]">x{card.q}</span>
+                  <span className="capitalize">{card.r}</span>
+                  {card.f && <span style={{ color: ACCENT }}>foil</span>}
                 </div>
                 <button
                   onClick={() => toggleTrade(card)}
-                  className={`mt-auto text-[9px] py-1.5 border-2 rounded uppercase transition-colors ${
+                  className={`mt-auto text-[8px] py-1.5 border-2 uppercase ${
                     inTrade
-                      ? "bg-[#00ff66] text-black border-[#00ff66]"
-                      : "text-[#ff2bd6] border-[#ff2bd6] hover:bg-[#ff2bd6] hover:text-black"
+                      ? "text-black"
+                      : "text-[#b8b8b8] border-[#3a3a3a] hover:bg-[#e8e8e8] hover:text-black hover:border-[#e8e8e8]"
                   }`}
-                  style={{ fontFamily: "var(--font-pixel)" }}
+                  style={inTrade ? { background: ACCENT, borderColor: ACCENT } : undefined}
                 >
-                  {inTrade ? "✓ in trade" : "+ trade"}
+                  {inTrade ? "in trade ✓" : "trade"}
                 </button>
               </div>
             )
@@ -218,8 +205,8 @@ export function MtgArcade() {
         </div>
 
         {shown.length === 0 && (
-          <p className="text-center text-2xl text-[#ff2bd6] py-16" style={{ fontFamily: "var(--font-pixel)" }}>
-            GAME OVER · NO CARDS FOUND
+          <p className="text-center text-sm text-[#8a8a8a] py-16" style={{ fontFamily: "var(--font-pixel)" }}>
+            NO CARDS FOUND
           </p>
         )}
 
@@ -227,10 +214,10 @@ export function MtgArcade() {
           <div className="text-center mt-8">
             <button
               onClick={() => setVisible((v) => v + PAGE_SIZE)}
-              className="border-2 border-[#00e5ff] text-[#00e5ff] hover:bg-[#00e5ff] hover:text-black px-6 py-3 text-xs uppercase transition-colors"
+              className="border-2 border-[#3a3a3a] text-[#b8b8b8] hover:bg-[#e8e8e8] hover:text-black hover:border-[#e8e8e8] px-6 py-3 text-[10px] uppercase"
               style={{ fontFamily: "var(--font-pixel)" }}
             >
-              continue? ({filtered.length - shown.length} left)
+              continue ({filtered.length - shown.length} left)
             </button>
           </div>
         )}
@@ -238,20 +225,23 @@ export function MtgArcade() {
 
       {/* Trade tray */}
       {tradeList.length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 z-40 border-t-4 border-[#00ff66] bg-[#0a0a12ee] backdrop-blur px-4 py-3">
+        <div className="fixed bottom-0 left-0 right-0 z-40 border-t-2 border-[#3a3a3a] bg-[#1a1a1a] px-4 py-3">
           <div className="mx-auto max-w-6xl flex flex-wrap items-center justify-between gap-3">
-            <p className="text-lg text-[#00ff66]">
+            <p className="text-lg">
               TRADE PILE: {tradeList.length} card{tradeList.length === 1 ? "" : "s"}
-              <button onClick={() => setTrade({})} className="ml-3 text-sm text-zinc-500 hover:text-[#ff2bd6] underline">
+              <button
+                onClick={() => setTrade({})}
+                className="ml-3 text-sm text-[#8a8a8a] hover:text-[#e8e8e8] underline"
+              >
                 clear
               </button>
             </p>
             <a
               href={tradeMailto()}
-              className="bg-[#00ff66] text-black border-2 border-[#00ff66] px-5 py-2.5 text-[10px] uppercase hover:bg-transparent hover:text-[#00ff66] transition-colors animate-pulse"
-              style={{ fontFamily: "var(--font-pixel)" }}
+              className="text-black px-5 py-2.5 text-[9px] uppercase border-2 hover:brightness-110"
+              style={{ fontFamily: "var(--font-pixel)", background: ACCENT, borderColor: ACCENT }}
             >
-              ▶ request trade
+              request trade →
             </a>
           </div>
         </div>
