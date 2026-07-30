@@ -119,10 +119,10 @@ export function ProjectProcess({ steps }: ProjectProcessProps) {
   const currentStep = steps[activeStep]
 
   return (
-    <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+    <Card className="bg-transparent border-border">
       <CardContent className="p-4 sm:p-6">
         <div className="flex items-center justify-between mb-4 sm:mb-6">
-          <h2 className="text-lg sm:text-xl font-bold">Project Process</h2>
+          <h2 className="text-lg font-semibold">Process</h2>
           <div className="flex items-center gap-2 text-xs sm:text-sm text-zinc-400">
             <span>
               Step {activeStep + 1} of {steps.length}

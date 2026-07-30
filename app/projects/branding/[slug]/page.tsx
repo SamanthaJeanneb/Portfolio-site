@@ -1,13 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, ExternalLink, Figma } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { SkillTag } from "@/components/skill-tag"
+import { ArrowLeft } from "lucide-react"
 import { getAllBrandingProjects, getBrandingProjectBySlug } from "@/lib/projects"
 import { notFound } from "next/navigation"
-import { AnimatedSection } from "@/components/animated-section"
-import { PortfolioHeader } from "@/components/portfolio-header"
 import { ProjectProcess } from "@/components/project-process"
 
 interface BrandingProjectPageProps {
@@ -30,155 +25,76 @@ export default async function BrandingProjectPage({ params }: BrandingProjectPag
 
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Background Grid Pattern */}
+      <div className="mx-auto max-w-3xl px-5 sm:px-8 py-12 sm:py-16">
+        <Link
+          href="/projects#creative"
+          className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-white transition-colors mb-8"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Creative work
+        </Link>
 
-      {/* Header */}
-      <PortfolioHeader />
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">{project.title}</h1>
+        <p className="text-zinc-400 leading-relaxed mb-3">{project.shortDescription}</p>
+        <p className="text-sm text-zinc-500 mb-4">
+          {[project.category, project.timeline, project.role].filter(Boolean).join(" · ")}
+        </p>
 
-      <div className="relative z-10 container mx-auto p-3 sm:p-4 pt-20 sm:pt-24 pb-6 sm:pb-8">
-        {/* Back Button */}
-        <AnimatedSection animation="fade-in">
-          <Link
-            href="/"
-            className="inline-flex items-center text-xs sm:text-sm text-zinc-400 hover:text-white mb-4 sm:mb-6 transition-colors"
-          >
-            <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-            Back to Portfolio
-          </Link>
-        </AnimatedSection>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
-          {/* Project Header */}
-          <AnimatedSection animation="fade-up" className="lg:col-span-3">
-            <Card className="bg-surface border-border overflow-hidden">
-              <div className="relative h-48 sm:h-64 md:h-80 w-full">
-                <Image
-                  src={project.thumbnailImage || "/placeholder.svg"}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-4 sm:p-6">
-                  <div className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">{project.category}</div>
-                  <h1 className="text-xl sm:text-3xl md:text-4xl font-bold">{project.title}</h1>
-                  <p className="text-sm text-zinc-400 mt-1 sm:mt-2 max-w-2xl">{project.shortDescription}</p>
-                </div>
-              </div>
-            </Card>
-          </AnimatedSection>
-
-          {/* Project Content */}
-          <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-            {/* Design Process Section */}
-            {project.process && project.process.length > 0 && (
-              <AnimatedSection animation="fade-up" delay={100}>
-                <ProjectProcess steps={project.process} />
-              </AnimatedSection>
-            )}
-
-            <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="bg-surface border-border">
-                <CardContent className="p-4 sm:p-6">
-                  <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Overview</h2>
-                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-zinc-300">
-                    {project.description.map((paragraph: string, index: number) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
-                  </div>
-                  
-                  {/* Action Buttons */}
-                  {project.figmaUrl && (
-                    <div className="flex flex-wrap gap-2 sm:gap-3 mt-6 sm:mt-8">
-                      <Button
-                        asChild
-                        size="sm"
-                        className="bg-white text-black hover:bg-zinc-200 text-xs sm:text-sm"
-                      >
-                        <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
-                          <Figma className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                          View in Figma
-                        </a>
-                      </Button>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            {/* Features Section */}
-            <AnimatedSection animation="fade-up" delay={300}>
-              <Card className="bg-surface border-border">
-                <CardContent className="p-4 sm:p-6">
-                  <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Key Deliverables</h2>
-                  <div className="grid gap-2 sm:gap-3">
-                    {project.features.map((feature: string, index: number) => (
-                      <div key={index} className="flex items-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-zinc-400 mt-2 mr-3 flex-shrink-0"></div>
-                        <p className="text-sm sm:text-base text-zinc-300">{feature}</p>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
+        {project.figmaUrl && (
+          <div className="mb-10">
+            <a
+              href={project.figmaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-zinc-300 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-600 hover:decoration-white"
+            >
+              View in Figma
+            </a>
           </div>
+        )}
 
-          {/* Project Sidebar */}
-          <div className="space-y-4 sm:space-y-6">
-            <AnimatedSection animation="slide-left" delay={100}>
-              <Card className="bg-surface border-border">
-                <CardContent className="p-4 sm:p-6">
-                  <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Project Details</h2>
-
-                  <div className="space-y-3 sm:space-y-4">
-                    <div>
-                      <h3 className="text-xs sm:text-sm font-medium text-zinc-400">Timeline</h3>
-                      <p className="text-sm sm:text-base">{project.timeline}</p>
-                    </div>
-
-                    <div>
-                      <h3 className="text-xs sm:text-sm font-medium text-zinc-400">Role</h3>
-                      <p className="text-sm sm:text-base">{project.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            {/* Style Guide Image */}
-            {project.styleGuideImage && (
-              <AnimatedSection animation="slide-left" delay={200}>
-                <Card className="bg-surface border-border">
-                  <CardContent className="p-4 sm:p-6">
-                    <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Style Guide</h2>
-                    <div className="relative w-full">
-                      <Image
-                        src={project.styleGuideImage}
-                        alt={`${project.title} Style Guide`}
-                        width={400}
-                        height={600}
-                        className="w-full h-auto rounded-lg border border-zinc-800"
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            )}
-          </div>
+        <div className="relative aspect-video rounded-xl overflow-hidden bg-surface mb-10">
+          <Image
+            src={project.thumbnailImage || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            priority
+            className="object-cover"
+          />
         </div>
 
-        {/* Footer */}
-        <AnimatedSection
-          animation="fade-in"
-          delay={500}
-          className="mt-8 sm:mt-12 py-4 sm:py-6 text-center text-xs sm:text-sm text-zinc-500"
-        >
-          <p>© {new Date().getFullYear()} Samantha J. Brown. All rights reserved.</p>
-        </AnimatedSection>
-      </div>
+        <div className="space-y-4 text-zinc-400 leading-relaxed mb-10">
+          {project.description.map((paragraph: string, index: number) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
 
-      {/* Scroll to Top Button */}
+        {project.features?.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-lg font-semibold mb-3">Features</h2>
+            <ul className="list-disc pl-5 space-y-1.5 text-zinc-400">
+              {project.features.map((feature: string, index: number) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {project.process && project.process.length > 0 && <ProjectProcess steps={project.process} />}
+
+        {project.styleGuideImage && (
+          <figure className="mt-10">
+            <Image
+              src={project.styleGuideImage}
+              alt={`${project.title} style guide`}
+              width={1200}
+              height={800}
+              className="w-full h-auto rounded-xl"
+            />
+            <figcaption className="text-sm text-zinc-500 mt-2">Style guide</figcaption>
+          </figure>
+        )}
+      </div>
     </main>
   )
 }
