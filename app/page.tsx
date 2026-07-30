@@ -23,7 +23,37 @@ export default function Home() {
           priority
           className="w-36 h-36 object-cover rounded-sm mb-8"
         />
-        <h1 className="text-2xl font-bold text-white mb-8">{personal.name}</h1>
+        <h1 className="text-2xl font-bold text-white mb-4">{personal.name}</h1>
+
+        <p className="text-base mb-8">
+          <Link href="/projects" className={link}>
+            projects
+          </Link>
+          <span className="text-zinc-600"> · </span>
+          <Link href="/projects#press" className={link}>
+            press
+          </Link>
+          <span className="text-zinc-600"> · </span>
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
+            LinkedIn
+          </a>
+          <span className="text-zinc-600"> · </span>
+          <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
+            Instagram
+          </a>
+          <span className="text-zinc-600"> · </span>
+          <a href={github} target="_blank" rel="noopener noreferrer" className={link}>
+            GitHub
+          </a>
+          <span className="text-zinc-600"> · </span>
+          <a href={`mailto:${personal.email}`} className={link}>
+            email
+          </a>
+          <span className="text-zinc-600"> · </span>
+          <a href={personal.bookingUrl} target="_blank" rel="noopener noreferrer" className={link}>
+            book a meeting
+          </a>
+        </p>
 
         <p className="mb-6">
           I'm building{" "}
@@ -50,41 +80,9 @@ export default function Home() {
           <li>and teaching people to build.</li>
         </ul>
 
-        <p className="mb-6">
+        <p>
           Outside of work I coach hackathons for Major League Hacking and make content about tech,
           startups, and college life for 30k+ followers across socials.
-        </p>
-
-        <p>
-          You can see{" "}
-          <Link href="/projects" className={link}>
-            my projects
-          </Link>{" "}
-          and some{" "}
-          <Link href="/projects#press" className={link}>
-            press
-          </Link>
-          , or connect with me on{" "}
-          <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
-            LinkedIn
-          </a>
-          ,{" "}
-          <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
-            Instagram
-          </a>
-          , or{" "}
-          <a href={github} target="_blank" rel="noopener noreferrer" className={link}>
-            GitHub
-          </a>
-          . Email me at{" "}
-          <a href={`mailto:${personal.email}`} className={link}>
-            {personal.email}
-          </a>
-          , or{" "}
-          <a href={personal.bookingUrl} target="_blank" rel="noopener noreferrer" className={link}>
-            book a meeting
-          </a>
-          .
         </p>
       </div>
     </main>
