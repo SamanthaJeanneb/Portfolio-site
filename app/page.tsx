@@ -15,15 +15,18 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-zinc-200 flex items-center justify-center" style={serif}>
       <div className="w-full max-w-xl px-6 py-16 text-lg leading-relaxed">
-        <Image
-          src={personal.avatar || "/placeholder.svg"}
-          alt={personal.name}
-          width={160}
-          height={160}
-          priority
-          className="w-36 h-36 object-cover rounded-sm mb-8"
-        />
-        <h1 className="text-2xl font-bold text-white mb-2">Hellooo :)</h1>
+        <div className="flex items-center justify-between gap-6 mb-8">
+          <h1 className="text-2xl font-bold text-white">Sam Brown</h1>
+          <Image
+            src={personal.avatar || "/placeholder.svg"}
+            alt={personal.name}
+            width={160}
+            height={160}
+            priority
+            className="w-36 h-36 object-cover rounded-sm"
+          />
+        </div>
+        <h2 className="text-xl font-bold text-white mb-2">Hellooo :)</h2>
         <p className="mb-4">Welcome to my corner of the internet!</p>
 
         <p className="mb-4">
