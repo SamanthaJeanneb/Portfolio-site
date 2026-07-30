@@ -612,7 +612,7 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
       "VEX is a competitive robotics league where teams design, build, and program a robot to play a brand new game each season, scoring points in a short autonomous period and a driver-controlled period against alliances of other teams.",
       "Our robot was built around a custom metal chassis with an omni-wheel drivetrain for fast, agile positioning, paired with a multi-jointed arm and claw intake for picking game pieces off the field and placing them into scoring zones.",
       "Each season ran like an engineering sprint: design in CAD, build, break, and rebuild, program autonomous routines, and log hours of driver practice, with scrimmages and tournaments stress-testing every decision along the way.",
-      "Competing in college at SUNY Oswego, our team earned a national championship, and the work contributed to a New York State innovation grant.",
+      "Competing in college at SUNY Oswego, our team earned a national championship and won the Innovate Award at nationals, recognizing a uniquely clever design element. The work also contributed to a New York State innovation grant.",
       "VEX is where I first learned to design for the physical world: parts that have to survive real matches, real loads, and real deadlines. That mindset carried directly into building Suzanne.",
     ],
     features: [

@@ -8,7 +8,7 @@ import { getAllArticles } from "@/lib/articles"
 import { ArticlesCarousel } from "@/components/articles-carousel"
 
 const WINNER_INFO: Record<string, string> = {
-  "vex-robotics": "VEX Robotics – National Champion",
+  "vex-robotics": "VEX Robotics – National Champion & Innovate Award",
   "bearly-running": "Big Red Hacks 2025 – Overall Winner",
   "airwaves-rhythm-game": "Bitcamp 2025 – Winning Project",
   "beat-boxing": "HopHacks 2025 – Winning Project",
