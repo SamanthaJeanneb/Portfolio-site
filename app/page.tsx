@@ -62,8 +62,7 @@ export default function Home() {
           </a>
           , AI-native 3D modeling for parts that actually work in the real world, based in San
           Francisco (backed by Founders, Inc. and part of NVIDIA Inception). The problem I'm obsessed
-          with right now is making AI understand the physical world: material strength, where stress
-          concentrates, and what it takes for a part to come off the printer working the first time.
+          with right now is making AI understand the physical world.
         </p>
 
         <p className="mb-2">
