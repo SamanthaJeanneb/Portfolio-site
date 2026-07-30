@@ -81,7 +81,7 @@ export default function Home() {
             (I make tech memes)
           </li>
           <li>Coaching students through MLH</li>
-          <li>Ex software engineer</li>
+          <li>Retired software engineer, full time building cool things</li>
         </ul>
 
         <h2 className="text-xl font-bold text-white mb-3">What I love</h2>
