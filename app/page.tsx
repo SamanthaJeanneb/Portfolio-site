@@ -69,7 +69,17 @@ export default function Home() {
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
           <li>I am an artist</li>
           <li>B.S. double major in Computer Science &amp; Design</li>
-          <li>30k on socials (I make tech memes)</li>
+          <li>
+            30k on socials,{" "}
+            <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
+              Instagram
+            </a>{" "}
+            &amp;{" "}
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
+              LinkedIn
+            </a>{" "}
+            (I make tech memes)
+          </li>
           <li>Coaching students through MLH</li>
           <li>Ex software engineer</li>
         </ul>
