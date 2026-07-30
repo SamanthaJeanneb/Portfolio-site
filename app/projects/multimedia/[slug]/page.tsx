@@ -4,7 +4,7 @@ import { ArrowLeft, ExternalLink, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { SkillTag } from "@/components/skill-tag"
-import { getMultimediaProjectBySlug } from "@/lib/data"
+import { getAllMultimediaProjects, getMultimediaProjectBySlug } from "@/lib/data"
 import { notFound } from "next/navigation"
 import { AnimatedSection } from "@/components/animated-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
@@ -14,6 +14,10 @@ interface MultimediaProjectPageProps {
   params: Promise<{
     slug: string
   }>
+}
+
+export function generateStaticParams() {
+  return getAllMultimediaProjects().map((project) => ({ slug: project.slug }))
 }
 
 export default async function MultimediaProjectPage({ params }: MultimediaProjectPageProps) {

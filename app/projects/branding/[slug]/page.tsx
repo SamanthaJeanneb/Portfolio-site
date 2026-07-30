@@ -16,6 +16,10 @@ interface BrandingProjectPageProps {
   }>
 }
 
+export function generateStaticParams() {
+  return getAllBrandingProjects().map((project) => ({ slug: project.slug }))
+}
+
 export default async function BrandingProjectPage({ params }: BrandingProjectPageProps) {
   const { slug } = await params
   const project = getBrandingProjectBySlug(slug)

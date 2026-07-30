@@ -4,7 +4,7 @@ import { ArrowLeft, ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { SkillTag } from "@/components/skill-tag"
-import { getProjectBySlug, getRelatedProjects } from "@/lib/data"
+import { getAllProjects, getProjectBySlug, getRelatedProjects } from "@/lib/data"
 import type { RelatedProject } from "@/lib/projects"
 import { notFound } from "next/navigation"
 import { AnimatedSection } from "@/components/animated-section"
@@ -16,6 +16,10 @@ interface ProjectPageProps {
   params: Promise<{
     slug: string
   }>
+}
+
+export function generateStaticParams() {
+  return getAllProjects().map((project) => ({ slug: project.slug }))
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
