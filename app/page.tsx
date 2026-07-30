@@ -13,8 +13,8 @@ export default function Home() {
   const link = "italic text-zinc-400 underline underline-offset-4 decoration-zinc-600 hover:text-white hover:decoration-zinc-400 transition-colors"
 
   return (
-    <main className="min-h-screen bg-black text-zinc-200" style={serif}>
-      <div className="mx-auto max-w-2xl px-6 py-16 sm:py-24 text-lg leading-loose">
+    <main className="min-h-screen bg-black text-zinc-200 flex items-center justify-center" style={serif}>
+      <div className="w-full max-w-xl px-6 py-16 text-lg leading-relaxed">
         <Image
           src={personal.avatar || "/placeholder.svg"}
           alt={personal.name}
