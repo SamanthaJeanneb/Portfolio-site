@@ -24,7 +24,7 @@ export default function Home() {
           <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
             Suzanne
           </a>
-          , AI-native 3D modeling for parts that actually work in the real world.
+          .
         </p>
 
         <p className="text-base mb-8">
