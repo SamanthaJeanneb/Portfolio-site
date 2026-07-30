@@ -6,14 +6,20 @@ interface ProjectCardProps {
   title: string
   category: string
   image: string
-  slug: string
+  slug?: string
+  href?: string
   winnerInfo?: string
 }
 
-export function ProjectCard({ title, category, image, slug, winnerInfo }: ProjectCardProps) {
+export function ProjectCard({ title, category, image, slug, href, winnerInfo }: ProjectCardProps) {
+  const target = href ?? `/projects/${slug}`
+  const isExternal = target.startsWith("http")
+
   return (
     <Link
-      href={`/projects/${slug}`}
+      href={target}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className="block h-full"
       title={winnerInfo}
       aria-label={winnerInfo ? `${title} - ${winnerInfo}` : title}

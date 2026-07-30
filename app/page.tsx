@@ -94,6 +94,12 @@ export default function Home() {
         <section id="work" className="mb-16 sm:mb-24 scroll-mt-24">
           <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Selected work</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            <ProjectCard
+              title="Suzanne"
+              category="AI 3D Modeling"
+              image="/suzanne/cover.jpg"
+              href="https://suzanne3d.com"
+            />
             {projects.map((project) => (
               <ProjectCard
                 key={project.slug}
