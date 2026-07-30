@@ -10,6 +10,7 @@ import { ArticlesCarousel } from "@/components/articles-carousel"
 import { ProjectsFilter } from "@/components/projects-filter"
 
 const WINNER_INFO: Record<string, string> = {
+  "vex-robotics": "VEX Robotics – National Champion",
   "bearly-running": "Big Red Hacks 2025 – Overall Winner",
   "airwaves-rhythm-game": "Bitcamp 2025 – Winning Project",
   "beat-boxing": "HopHacks 2025 – Winning Project",

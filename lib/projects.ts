@@ -674,6 +674,31 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
     order: 1,
   },
   {
+    id: 101,
+    slug: "vex-robotics",
+    title: "VEX Robotics Competition",
+    category: "Robotics",
+    shortDescription:
+      "Competition robot designed, built, and programmed for VEX Robotics, part of a national championship college season.",
+    description: [
+      "A competition robot designed, built, and programmed for VEX Robotics, engineered to score game elements in both autonomous and driver-controlled periods.",
+      "The robot pairs a custom drivetrain with a multi-jointed arm and claw for picking and placing game pieces, refined through seasons of iteration, scrimmages, and tournament play.",
+      "Competing in college, our team earned a national championship, and the work contributed to a New York State innovation grant.",
+    ],
+    features: [
+      "Custom drivetrain and chassis",
+      "Multi-jointed arm with claw intake",
+      "Autonomous scoring routines",
+      "Tournament-tuned driver control",
+    ],
+    technologies: ["VEX V5", "Mechanical design", "CAD", "Autonomous programming"],
+    coverImage: "/vex/genius-robotics.webp",
+    thumbnailImage: "/vex/genius-robotics.webp",
+    timeline: "VEX Robotics Competition",
+    role: "Design, build, and programming",
+    order: 2,
+  },
+  {
     id: 15,
     slug: "visionforge",
     title: "CalHacks 12.0 - VisionForge",
