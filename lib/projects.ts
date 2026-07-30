@@ -604,8 +604,8 @@ content: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com
   {
     id: 14,
     slug: "suzanne",
-    title: "HackPrinceton 2025 - Suzanne",
-    category: "3D Modeling Platform",
+    title: "Suzanne",
+    category: "AI 3D Modeling",
     shortDescription:
       "Creative 3D model generation and editing platform where every object builds itself through text, image, or voice commands.",
     description: [

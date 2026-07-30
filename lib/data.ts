@@ -20,9 +20,9 @@ export function getPersonalInfo() {
   return data.personal
 }
 
-// Helper function to get the story/about paragraphs
-export function getStoryInfo() {
-  return data.story
+// Helper function to get the about section (intro, now, before)
+export function getAboutInfo() {
+  return data.about
 }
 
 // Helper function to get meta information

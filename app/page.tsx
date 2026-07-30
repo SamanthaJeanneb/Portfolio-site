@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Github, Linkedin, Instagram, Mail } from "lucide-react"
 import { ProjectCard } from "@/components/project-card"
-import { getAllProjects, getAllMultimediaProjects, getPersonalInfo, getStoryInfo } from "@/lib/data"
+import { getAllProjects, getAllMultimediaProjects, getPersonalInfo, getAboutInfo } from "@/lib/data"
 import { getAllBrandingProjects } from "@/lib/data"
 import { AnimatedSection } from "@/components/animated-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
@@ -27,7 +27,7 @@ export default function Home() {
   const brandingProjects = getAllBrandingProjects()
   const articles = getAllArticles()
   const personal = getPersonalInfo()
-  const story = getStoryInfo()
+  const about = getAboutInfo()
 
   const creativeProjects = [
     ...brandingProjects.map((project) => ({ project, slug: `branding/${project.slug}` })),
@@ -124,13 +124,30 @@ export default function Home() {
         {/* About */}
         <AnimatedSection animation="fade-up">
           <section id="about" className="mb-16 sm:mb-24 scroll-mt-24">
-            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">About</h2>
-            <div className="space-y-4 max-w-2xl">
-              {story.map((paragraph) => (
-                <p key={paragraph} className="text-zinc-400 leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 mb-12">
+              <div className="flex-1 min-w-0">
+                <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-4">About</h2>
+                <p className="text-zinc-400 leading-relaxed max-w-2xl">{about.intro}</p>
+              </div>
+              <div className="relative w-full sm:w-64 aspect-[4/3] rounded-xl overflow-hidden shrink-0 bg-surface">
+                <Image src={about.photo} alt={personal.name} fill className="object-cover" />
+              </div>
+            </div>
+
+            <div className="mb-10">
+              <h3 className="text-base font-semibold mb-3 pb-3 border-b border-border">Now</h3>
+              <p className="text-zinc-400 leading-relaxed">{about.now}</p>
+            </div>
+
+            <div>
+              <h3 className="text-base font-semibold mb-3 pb-3 border-b border-border">Before</h3>
+              <div className="space-y-4">
+                {about.before.map((paragraph) => (
+                  <p key={paragraph} className="text-zinc-400 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
           </section>
         </AnimatedSection>

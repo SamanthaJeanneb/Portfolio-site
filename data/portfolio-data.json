@@ -46,9 +46,13 @@
       "href": "#press"
     }
   ],
-  "story": [
-    "I'm Samantha, co-founder & CEO of Suzanne 3D, based in the San Francisco Bay Area.",
-    "Outside of Suzanne, I coach hackathons with Major League Hacking and make content about tech, startups, and college life: 22M+ views and 30k+ followers across platforms.",
-    "Before this I was a software engineer at Sicura, building frontend for security compliance tooling, and studied Computer Science & Interaction Design at SUNY Oswego, where I won the Rudolph Award for excellence in design and founded LakerHacks, the campus's annual hackathon."
-  ]
+  "about": {
+    "intro": "I'm Samantha, 21, co-founder & CEO of Suzanne 3D. I like building things people can hold in their hands. Before Suzanne, I was a software engineer at Sicura, won hackathons across the country, and grew an audience of 30k+ posting about tech and startups.",
+    "photo": "/confident-professional.png",
+    "now": "Suzanne is AI-native 3D modeling for parts that actually work in the real world. Models come out knowing their material, their loads, and their printer, so they print right the first time. We're building it in San Francisco, backed by Founders, Inc. and part of NVIDIA Inception.",
+    "before": [
+      "I was a software engineer at Sicura, building compliance automation tooling used by the Department of State and U.S. Army.",
+      "I double majored in Computer Science and Design at SUNY Oswego, where I won the Rudolph Award for excellence in design and founded LakerHacks, the campus's annual hackathon. Outside of work I coach hackathons with Major League Hacking and make content about tech, startups, and college life."
+    ]
+  }
 }
