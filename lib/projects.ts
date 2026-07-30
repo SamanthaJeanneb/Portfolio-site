@@ -801,7 +801,7 @@ const brandingProjects: BrandingProject[] = [
     category: "Branding / UI Design",
     shortDescription: "End-to-end branding system and UI/UX design for a campus networking & resource discovery platform.",
     description: [
-      "Reach is a conceptual platform that helps college students discover organizations, events, study groups, mentorship opportunities, and campus resources through a personalized feed and structured discovery flows.",
+      "Reach is a platform that helps college students discover organizations, events, study groups, mentorship opportunities, and campus resources through a personalized feed and structured discovery flows. I designed it during my product design internship at Pinear.",
       "I created a full branding system: logo suite (primary, wordmark, glyph), color architecture (core, semantic, neutrals), typography scale, iconography style, spacing grid, and motion guidelines.",
       "The UI design includes onboarding flows, adaptive dashboard/feed, event & organization detail pages, tag-driven discovery, messaging previews, and notification system wires elevated to high-fidelity interactive components.",
       "All components were built in a scalable design system in Figma (atoms → molecules → layouts), with documentation for states, accessibility contrast, and reusable interaction patterns." 
@@ -818,7 +818,7 @@ const brandingProjects: BrandingProject[] = [
     ],
     coverImage: "/reach/reachcover.png",
     thumbnailImage: "/reach/reachcover.png",
-    timeline: "Personal Project (2025)",
+    timeline: "Internship at Pinear (2023)",
     role: "Brand & UI/UX Designer",
     figmaUrl: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHjaH7a6lu0J1OY2gyFsgwe%2FReach-Design-System%3Fnode-id%3D33525-595",
     styleGuideImage: "/reach/Reach color style 1- Dark.png",
