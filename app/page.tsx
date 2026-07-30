@@ -52,7 +52,8 @@ export default function Home() {
               >
                 Suzanne
               </a>{" "}
-              (Founders, Inc. &amp; NVIDIA Inception). AI 3D models that actually work.
+              (Founders, Inc. &amp; NVIDIA Inception). AI 3D models that actually work. 30k+ followers
+              across socials.
             </p>
             <div className="flex items-center gap-4">
               {personal.social.map((link) => {
