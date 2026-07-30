@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { ProjectCard } from "@/components/project-card"
@@ -15,6 +16,18 @@ const WINNER_INFO: Record<string, string> = {
   "bearly-running": "Big Red Hacks 2025 – Overall Winner",
   "airwaves-rhythm-game": "Bitcamp 2025 – Winning Project",
   "beat-boxing": "HopHacks 2025 – Winning Project",
+}
+
+function highlightName(text: string) {
+  return text.split(/(Samantha(?: J\.)? Brown|Samantha)/g).map((part, index) =>
+    /^Samantha(?: J\.)? Brown$|^Samantha$/.test(part) ? (
+      <strong key={index} className="text-white font-semibold">
+        {part}
+      </strong>
+    ) : (
+      part
+    ),
+  )
 }
 
 export default function ProjectsPage() {
@@ -80,20 +93,32 @@ export default function ProjectsPage() {
         {articles.length > 0 && (
           <section id="press" className="scroll-mt-12">
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Press &amp; mentions</h2>
-            <ul className="space-y-4">
+            <ul className="space-y-8">
               {articles.map((article) => (
-                <li key={article.id}>
-                  <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-300 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-600 hover:decoration-white"
-                  >
-                    {article.title}
-                  </a>
-                  <p className="text-sm text-zinc-500">
-                    {article.publication} · {article.date}
-                  </p>
+                <li key={article.id} className="flex flex-col sm:flex-row gap-4">
+                  {article.image && (
+                    <div className="relative w-full sm:w-48 aspect-video rounded-lg overflow-hidden bg-surface shrink-0">
+                      <Image src={article.image} alt={article.title} fill className="object-cover" />
+                    </div>
+                  )}
+                  <div className="min-w-0">
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-zinc-300 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-600 hover:decoration-white"
+                    >
+                      {article.title}
+                    </a>
+                    <p className="text-sm text-zinc-500 mb-1.5">
+                      {article.publication} · {article.date}
+                    </p>
+                    {article.excerpt && (
+                      <p className="text-sm text-zinc-400 leading-relaxed line-clamp-3">
+                        {highlightName(article.excerpt)}
+                      </p>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
