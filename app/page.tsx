@@ -16,14 +16,6 @@ export default function Home() {
     <main className="min-h-screen bg-black text-zinc-200 flex items-center justify-center" style={serif}>
       <div className="w-full max-w-xl px-6 py-16 text-lg leading-relaxed">
         <h1 className="text-2xl font-bold text-white mb-8">Sam Brown</h1>
-        <Image
-          src={personal.avatar || "/placeholder.svg"}
-          alt={personal.name}
-          width={160}
-          height={160}
-          priority
-          className="float-right w-36 h-36 object-cover ml-5 mb-2"
-        />
         <h2 className="text-xl font-bold text-white mb-2">Hellooo :)</h2>
         <p className="mb-4">Welcome to my corner of the internet!</p>
 
@@ -65,6 +57,14 @@ export default function Home() {
           </a>
         </p>
 
+        <Image
+          src={personal.avatar || "/placeholder.svg"}
+          alt={personal.name}
+          width={1179}
+          height={1670}
+          priority
+          className="float-right w-56 h-auto ml-6 mb-3"
+        />
         <h2 className="text-xl font-bold text-white mb-3">A little bit about me</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
           <li>I am an artist</li>
