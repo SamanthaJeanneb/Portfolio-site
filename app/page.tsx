@@ -23,7 +23,7 @@ export default function Home() {
             width={160}
             height={160}
             priority
-            className="w-36 h-36 object-cover rounded-sm"
+            className="w-36 h-36 object-cover"
           />
         </div>
         <h2 className="text-xl font-bold text-white mb-2">Hellooo :)</h2>
