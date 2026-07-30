@@ -324,8 +324,8 @@ const projects: Project[] = [
     technologies: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "CSS3"],
     coverImage: "/quotable-cover.png",
     thumbnailImage: "/quotable-thumb.png",
-    timeline: "Personal Project (2025)",
-    role: "Fullstack Developer",
+    timeline: "Course Project (2025)",
+    role: "Scrum Master & Fullstack Developer",
     liveUrl: "http://moxie.cs.oswego.edu:48080/",
     githubUrl: "https://github.com/Paul-Austin-Oswego-CSC480-HCI521/OZ-CSC-480-HCI-521-Spring-2025",
     process: [
