@@ -47,65 +47,7 @@ html {
 body {
   background-color: black;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  /* Custom Scrollbar */
-  .scrollbar-thin {
-    scrollbar-width: thin;
-  }
-
-  .scrollbar-thumb-zinc-700::-webkit-scrollbar-thumb {
-    background-color: #3f3f46;
-    border-radius: 3px;
-  }
-
-  .scrollbar-track-zinc-800\/50::-webkit-scrollbar-track {
-    background-color: rgba(39, 39, 42, 0.5);
-  }
-
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 3px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
+  font-family: "Times New Roman", Times, serif;
 }
 
 @layer base {
@@ -117,216 +59,39 @@ body {
   }
 }
 
-/* Custom scrollbar */
-/*::-webkit-scrollbar {
-  width: 8px;
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--muted));
+  background: rgba(255, 255, 255, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary));
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.8);
-}*/
-
-/* Smooth scrolling */
-/*html {
-  scroll-behavior: smooth;
-}*/
-
-/* Animation delays for staggered effects */
-.delay-100 {
-  animation-delay: 100ms;
-}
-.delay-200 {
-  animation-delay: 200ms;
-}
-.delay-300 {
-  animation-delay: 300ms;
-}
-.delay-400 {
-  animation-delay: 400ms;
-}
-.delay-500 {
-  animation-delay: 500ms;
-}
-.delay-600 {
-  animation-delay: 600ms;
-}
-.delay-700 {
-  animation-delay: 700ms;
-}
-.delay-800 {
-  animation-delay: 800ms;
-}
-.delay-900 {
-  animation-delay: 900ms;
-}
-.delay-1000 {
-  animation-delay: 1000ms;
+  background: rgba(255, 255, 255, 0.3);
 }
 
-/* Focus styles for accessibility */
-.focus-visible:focus-visible {
-  @apply outline-2 outline-offset-2 outline-primary;
-}
-
-/* Custom gradient backgrounds — removed */
-
-/* Hover effects */
-.hover-lift {
-  transition: transform 0.2s ease-in-out;
-}
-
-.hover-lift:hover {
-  transform: translateY(-2px);
-}
-
-/* Text selection */
 ::selection {
   background-color: hsl(var(--primary) / 0.2);
   color: hsl(var(--foreground));
 }
 
-/* Loading animation */
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Custom button styles */
-.btn-primary {
-  @apply bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:outline-primary;
-}
-
-.btn-secondary {
-  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 focus-visible:outline-secondary;
-}
-
-/* Card hover effects */
-.card-hover {
-  @apply transition-colors duration-200;
-}
-
-/* Responsive text sizes */
-.text-responsive-xl {
-  @apply text-2xl md:text-3xl lg:text-4xl;
-}
-
-.text-responsive-lg {
-  @apply text-xl md:text-2xl lg:text-3xl;
-}
-
-.text-responsive-md {
-  @apply text-lg md:text-xl lg:text-2xl;
-}
-
-/* Grid layouts */
-.grid-auto-fit {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.grid-auto-fill {
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-/* Backdrop blur utilities */
-.backdrop-blur-sm {
-  backdrop-filter: blur(4px);
-}
-
-.backdrop-blur-md {
-  backdrop-filter: blur(8px);
-}
-
-.backdrop-blur-lg {
-  backdrop-filter: blur(16px);
-}
-
-/* Custom shadows */
-.shadow-soft {
-  box-shadow: 0 1px 4px -1px hsl(var(--foreground) / 0.06);
-}
-
-/* Animation utilities */
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.5s ease-out;
-}
-
-.animate-slide-down {
-  animation: slideDown 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-
-  .print-break {
-    page-break-before: always;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  :root {
-    --primary: 142 100% 25%;
-    --accent: 142 100% 25%;
-  }
-}
-
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -337,4 +102,3 @@ body {
     scroll-behavior: auto !important;
   }
 }
-

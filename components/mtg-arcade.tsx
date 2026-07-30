@@ -97,12 +97,12 @@ export function MtgArcade() {
     }`
 
   return (
-    <main className="min-h-screen bg-[#141414] text-[#e8e8e8] pb-28" style={{ fontFamily: "var(--font-terminal)" }}>
+    <main className="min-h-screen bg-[#141414] text-[#e8e8e8] pb-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-8">
         <Link
           href="/"
           className="text-[10px] text-[#8a8a8a] hover:text-[#e8e8e8] uppercase"
-          style={{ fontFamily: "var(--font-pixel)" }}
+         
         >
           ← exit
         </Link>
@@ -110,13 +110,13 @@ export function MtgArcade() {
         {/* Title box */}
         <header className="border-2 border-[#e8e8e8] mt-4 mb-6">
           <div className="border-2 border-[#141414] outline outline-1 outline-[#3a3a3a] px-4 py-6 text-center">
-            <h1 className="text-base sm:text-xl mb-3" style={{ fontFamily: "var(--font-pixel)" }}>
+            <h1 className="text-base sm:text-xl mb-3">
               SAM'S CARD VAULT
             </h1>
             <p className="text-lg sm:text-xl text-[#8a8a8a]">
               MAGIC: THE GATHERING · {totalCopies.toLocaleString()} CARDS · {cards.length.toLocaleString()} UNIQUE
             </p>
-            <p className="text-[10px] mt-2 text-[#8a8a8a]" style={{ fontFamily: "var(--font-pixel)" }}>
+            <p className="text-[10px] mt-2 text-[#8a8a8a]">
               PICK CARDS TO REQUEST A TRADE
             </p>
           </div>
@@ -124,7 +124,7 @@ export function MtgArcade() {
 
         {/* Controls */}
         <div className="border-2 border-[#3a3a3a] p-3 sm:p-4 mb-6 space-y-3">
-          <div className="flex flex-wrap items-center gap-1.5" style={{ fontFamily: "var(--font-pixel)" }}>
+          <div className="flex flex-wrap items-center gap-1.5">
             <span className="text-[9px] text-[#8a8a8a] mr-1 w-12">TYPE</span>
             {TYPES.map((t) => (
               <button key={t} className={button(type === t)} onClick={() => { setType(t); resetPaging() }}>
@@ -132,7 +132,7 @@ export function MtgArcade() {
               </button>
             ))}
           </div>
-          <div className="flex flex-wrap items-center gap-1.5" style={{ fontFamily: "var(--font-pixel)" }}>
+          <div className="flex flex-wrap items-center gap-1.5">
             <span className="text-[9px] text-[#8a8a8a] mr-1 w-12">COLOR</span>
             {COLORS.map((c) => (
               <button
@@ -144,7 +144,7 @@ export function MtgArcade() {
               </button>
             ))}
           </div>
-          <div className="flex flex-wrap items-center gap-1.5" style={{ fontFamily: "var(--font-pixel)" }}>
+          <div className="flex flex-wrap items-center gap-1.5">
             <span className="text-[9px] text-[#8a8a8a] mr-1 w-12">RARITY</span>
             {RARITIES.map((r) => (
               <button key={r} className={button(rarity === r)} onClick={() => { setRarity(r); resetPaging() }}>
@@ -153,7 +153,7 @@ export function MtgArcade() {
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[9px] text-[#8a8a8a] w-12 shrink-0" style={{ fontFamily: "var(--font-pixel)" }}>
+            <span className="text-[9px] text-[#8a8a8a] w-12 shrink-0">
               FIND
             </span>
             <input
@@ -205,7 +205,7 @@ export function MtgArcade() {
         </div>
 
         {shown.length === 0 && (
-          <p className="text-center text-sm text-[#8a8a8a] py-16" style={{ fontFamily: "var(--font-pixel)" }}>
+          <p className="text-center text-sm text-[#8a8a8a] py-16">
             NO CARDS FOUND
           </p>
         )}
@@ -215,7 +215,7 @@ export function MtgArcade() {
             <button
               onClick={() => setVisible((v) => v + PAGE_SIZE)}
               className="border-2 border-[#3a3a3a] text-[#b8b8b8] hover:bg-[#e8e8e8] hover:text-black hover:border-[#e8e8e8] px-6 py-3 text-[10px] uppercase"
-              style={{ fontFamily: "var(--font-pixel)" }}
+             
             >
               continue ({filtered.length - shown.length} left)
             </button>
@@ -239,7 +239,6 @@ export function MtgArcade() {
             <a
               href={tradeMailto()}
               className="text-black px-5 py-2.5 text-[9px] uppercase border-2 hover:brightness-110"
-              style={{ fontFamily: "var(--font-pixel)", background: ACCENT, borderColor: ACCENT }}
             >
               request trade →
             </a>

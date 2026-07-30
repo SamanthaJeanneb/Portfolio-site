@@ -2,8 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { getPersonalInfo } from "@/lib/data"
 
-const serif = { fontFamily: '"Times New Roman", Times, serif' }
-
 export default function Home() {
   const personal = getPersonalInfo()
   const linkedin = personal.social.find((s) => s.platform === "LinkedIn")?.url
@@ -13,7 +11,7 @@ export default function Home() {
   const link = "italic text-zinc-400 underline underline-offset-4 decoration-zinc-600 hover:text-white hover:decoration-zinc-400 transition-colors"
 
   return (
-    <main className="min-h-screen bg-black text-zinc-200 flex items-center justify-center" style={serif}>
+    <main className="min-h-screen bg-black text-zinc-200 flex items-center justify-center">
       <div className="w-full max-w-xl px-6 py-16 text-lg leading-relaxed">
         <h1 className="text-2xl font-bold text-white mb-8">Sam Brown</h1>
         <Image
@@ -104,7 +102,7 @@ export default function Home() {
           </li>
           <li>
             Art, check out my{" "}
-            <Link href="/projects#creative" className={link}>
+            <Link href="/art" className={link}>
               work
             </Link>
           </li>
