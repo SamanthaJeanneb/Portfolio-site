@@ -109,7 +109,6 @@ export function PortfolioHeader() {
           <span className="text-white font-bold text-lg sm:text-xl tracking-tight truncate">
             {personalInfo.name}
           </span>
-          <span className="text-zinc-500 text-sm hidden sm:inline shrink-0">/ {personalInfo.title}</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

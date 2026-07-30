@@ -20,24 +20,14 @@ export function getPersonalInfo() {
   return data.personal
 }
 
-// Helper function to get about information
-export function getAboutInfo() {
-  return data.about
+// Helper function to get the "Now" section (current venture + build log)
+export function getNowInfo() {
+  return data.now
 }
 
-// Helper function to get experience information
-export function getExperienceInfo() {
-  return data.experience
-}
-
-// Helper function to get credentials information
-export function getCredentialsInfo() {
-  return data.credentials
-}
-
-// Helper function to get technical skills information
-export function getTechnicalSkillsInfo() {
-  return data.technicalSkills
+// Helper function to get the story/about paragraphs
+export function getStoryInfo() {
+  return data.story
 }
 
 // Helper function to get meta information

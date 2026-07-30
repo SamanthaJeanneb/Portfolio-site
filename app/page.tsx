@@ -1,18 +1,12 @@
-import type React from "react"
-import { GlobeIcon, CodeIcon, BriefcaseIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
+import { Github, Linkedin, Instagram, Mail } from "lucide-react"
 import { ProjectCard } from "@/components/project-card"
-import { getAllProjects, getAllMultimediaProjects, getAllBrandingProjects } from "@/lib/data"
-import { ExperienceCard } from "@/components/experience-card"
+import { getAllProjects, getAllMultimediaProjects, getPersonalInfo, getNowInfo, getStoryInfo } from "@/lib/data"
+import { getAllBrandingProjects } from "@/lib/data"
 import { AnimatedSection } from "@/components/animated-section"
-import { EnhancedProfile } from "@/components/enhanced-profile"
-import { CredentialsSection } from "@/components/credentials-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
-import { getExperienceInfo, getTechnicalSkillsInfo } from "@/lib/data"
 import { getAllArticles } from "@/lib/articles"
 import { ArticlesCarousel } from "@/components/articles-carousel"
-import { Newspaper } from "lucide-react"
 import { ProjectsFilter } from "@/components/projects-filter"
 
 const WINNER_INFO: Record<string, string> = {
@@ -21,189 +15,177 @@ const WINNER_INFO: Record<string, string> = {
   "beat-boxing": "HopHacks 2025 – Winning Project",
 }
 
-const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
-  return <div className="px-2 py-1 bg-surface-alt text-xs font-medium text-muted-foreground">{children}</div>
+const SOCIAL_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+  Github,
+  Linkedin,
+  Instagram,
 }
 
 export default function Home() {
   const projects = getAllProjects()
   const multimediaProjects = getAllMultimediaProjects()
   const brandingProjects = getAllBrandingProjects()
-  const experienceInfo = getExperienceInfo()
-  const technicalSkills = getTechnicalSkillsInfo()
   const articles = getAllArticles()
+  const personal = getPersonalInfo()
+  const now = getNowInfo()
+  const story = getStoryInfo()
+
+  const creativeProjects = [
+    ...brandingProjects.map((project) => ({ project, slug: `branding/${project.slug}` })),
+    ...multimediaProjects.map((project) => ({ project, slug: `multimedia/${project.slug}` })),
+  ]
 
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Header */}
       <PortfolioHeader />
 
-      <div className="relative z-10 container mx-auto p-3 sm:p-4 pt-20 sm:pt-24 pb-10 sm:pb-14">
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {/* Enhanced Profile Section */}
-          <div className="md:sticky md:top-24 self-start">
-            <AnimatedSection animation="slide-right">
-              <EnhancedProfile />
-            </AnimatedSection>
-          </div>
+      <div className="mx-auto max-w-4xl px-5 sm:px-8 pt-24 sm:pt-32 pb-16">
+        {/* Hero */}
+        <AnimatedSection animation="fade-in">
+          <section className="flex flex-col-reverse sm:flex-row sm:items-center gap-8 sm:gap-12 mb-16 sm:mb-24">
+            <div className="flex-1 min-w-0">
+              <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4">{personal.name}</h1>
+              <p className="text-base sm:text-lg text-zinc-400 leading-relaxed max-w-2xl mb-6">
+                Building{" "}
+                <a
+                  href="https://suzanne3d.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white underline underline-offset-4 decoration-zinc-600 hover:decoration-white transition-colors"
+                >
+                  Suzanne
+                </a>{" "}
+                (Founders, Inc. &amp; NVIDIA Inception). AI 3D models that actually work.
+              </p>
+              <div className="flex items-center gap-4">
+                {personal.social.map((link) => {
+                  const Icon = SOCIAL_ICONS[link.icon]
+                  return (
+                    <a
+                      key={link.platform}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={link.platform}
+                      className="text-zinc-500 hover:text-white transition-colors"
+                    >
+                      {Icon && <Icon className="w-5 h-5" />}
+                    </a>
+                  )
+                })}
+                <a
+                  href={`mailto:${personal.email}`}
+                  aria-label="Email"
+                  className="text-zinc-500 hover:text-white transition-colors"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div className="relative w-24 h-24 sm:w-36 sm:h-36 rounded-full overflow-hidden shrink-0 border border-border">
+              <Image
+                src={personal.avatar || "/placeholder.svg"}
+                alt={personal.name}
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
+          </section>
+        </AnimatedSection>
 
-          <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-6 sm:space-y-8">
+        {/* Now */}
+        <AnimatedSection animation="fade-up">
+          <section id="now" className="mb-16 sm:mb-24 scroll-mt-24">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-4">Now</h2>
+            <p className="text-zinc-400 leading-relaxed max-w-2xl mb-10">{now.body}</p>
+            <ol className="space-y-5 border-l border-border pl-6">
+              {now.log.map((item) => (
+                <li key={item.entry}>
+                  <span className="block text-xs uppercase tracking-wider text-zinc-500 mb-1">{item.date}</span>
+                  <span className="text-sm sm:text-base text-zinc-300 leading-relaxed">{item.entry}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </AnimatedSection>
 
-            {/* Projects Section */}
-            <AnimatedSection animation="fade-up" id="projects">
-              <ProjectsFilter projects={projects} winnerInfoMap={WINNER_INFO} />
-            </AnimatedSection>
+        {/* Selected work */}
+        <AnimatedSection animation="fade-up">
+          <section id="work" className="mb-16 sm:mb-24 scroll-mt-24">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Selected work</h2>
+            <ProjectsFilter projects={projects} winnerInfoMap={WINNER_INFO} />
+          </section>
+        </AnimatedSection>
 
-            {/* Credentials Section */}
-            <AnimatedSection animation="fade-up" id="credentials">
-              <CredentialsSection />
-            </AnimatedSection>
+        {/* Creative work */}
+        <AnimatedSection animation="fade-up">
+          <section id="creative" className="mb-16 sm:mb-24 scroll-mt-24">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Creative work</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+              {creativeProjects.map(({ project, slug }, index) => (
+                <AnimatedSection key={slug} animation="zoom-in" delay={100 * (index + 1)}>
+                  <ProjectCard
+                    title={project.title}
+                    category={project.category}
+                    image={project.thumbnailImage}
+                    slug={slug}
+                    winnerInfo={WINNER_INFO[project.slug]}
+                  />
+                </AnimatedSection>
+              ))}
+            </div>
+          </section>
+        </AnimatedSection>
 
-            {/* Skills Section */}
-            <div id="skills" />
-            <AnimatedSection animation="fade-up">
-              <Card className="bg-surface border-border">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center mb-4">
-                    <CodeIcon className="w-5 h-5 mr-2 text-zinc-500" />
-                    <h3 className="text-lg font-medium">Technical Skills</h3>
-                  </div>
+        {/* About */}
+        <AnimatedSection animation="fade-up">
+          <section id="about" className="mb-16 sm:mb-24 scroll-mt-24">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">About</h2>
+            <div className="space-y-4 max-w-2xl">
+              {story.map((paragraph) => (
+                <p key={paragraph} className="text-zinc-400 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </section>
+        </AnimatedSection>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                    <AnimatedSection animation="slide-right" delay={100}>
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-medium text-muted-foreground">Design</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {(technicalSkills?.design || []).map((skill, index) => (
-                            <SkillTagComponent key={index}>{skill}</SkillTagComponent>
-                          ))}
-                        </div>
-                      </div>
-                    </AnimatedSection>
+        {/* Press */}
+        {articles.length > 0 && (
+          <AnimatedSection animation="fade-up">
+            <section id="press" className="mb-16 sm:mb-24 scroll-mt-24">
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Press &amp; mentions</h2>
+              <ArticlesCarousel articles={articles} />
+            </section>
+          </AnimatedSection>
+        )}
 
-                    <AnimatedSection animation="slide-left" delay={200}>
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-medium text-muted-foreground">Development</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {(technicalSkills?.development || []).map((skill, index) => (
-                            <SkillTagComponent key={index}>{skill}</SkillTagComponent>
-                          ))}
-                        </div>
-                      </div>
-                    </AnimatedSection>
-
-                    <AnimatedSection animation="slide-right" delay={300}>
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-medium text-muted-foreground">UX Methods</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {(technicalSkills?.uxMethods || []).map((skill, index) => (
-                            <SkillTagComponent key={index}>{skill}</SkillTagComponent>
-                          ))}
-                        </div>
-                      </div>
-                    </AnimatedSection>
-
-                    <AnimatedSection animation="slide-left" delay={400}>
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-medium text-muted-foreground">Soft Skills</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {(technicalSkills?.softSkills || []).map((skill, index) => (
-                            <SkillTagComponent key={index}>{skill}</SkillTagComponent>
-                          ))}
-                        </div>
-                      </div>
-                    </AnimatedSection>
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-
-            {/* Experience Section - Expanded */}
-            <div id="experience" />
-            <AnimatedSection animation="fade-up">
-              <Card className="bg-surface border-border">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center mb-4 sm:mb-6">
-                    <BriefcaseIcon className="w-5 h-5 mr-2 text-zinc-500" />
-                    <h3 className="text-lg font-medium">Experience</h3>
-                  </div>
-
-                  <div className="space-y-6 sm:space-y-8">
-                    {experienceInfo.map((experience, index) => (
-                      <AnimatedSection key={index} animation="fade-up" delay={100 * (index + 1)}>
-                        <ExperienceCard
-                          title={experience.title}
-                          company={experience.company}
-                          period={experience.period}
-                          description={experience.description}
-                          achievements={experience.achievements}
-                          technologies={experience.technologies}
-                        />
-                      </AnimatedSection>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            {/* Creative Work Section (branding + multimedia) */}
-            <div id="creative" className="-mt-8 pt-8" />
-            <AnimatedSection animation="fade-up" id="branding">
-              <Card className="bg-surface border-border">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center justify-between mb-4 sm:mb-6">
-                    <div className="flex items-center">
-                      <GlobeIcon className="w-5 h-5 mr-2 text-zinc-500" />
-                      <h3 className="text-lg font-medium">Creative Work</h3>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                    {[
-                      ...brandingProjects.map((project) => ({ project, slug: `branding/${project.slug}` })),
-                      ...multimediaProjects.map((project) => ({ project, slug: `multimedia/${project.slug}` })),
-                    ].map(({ project, slug }, index) => (
-                      <AnimatedSection key={slug} animation="zoom-in" delay={100 * (index + 1)}>
-                        <ProjectCard
-                          title={project.title}
-                          category={project.category}
-                          image={project.thumbnailImage}
-                          slug={slug}
-                          winnerInfo={WINNER_INFO[project.slug]}
-                        />
-                      </AnimatedSection>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            {/* Articles Section */}
-            {articles.length > 0 && (
-              <AnimatedSection animation="fade-up" id="articles">
-                <Card className="bg-surface border-border">
-                  <CardContent className="p-4 sm:p-6">
-                    <div className="flex items-center mb-4 sm:mb-6">
-                      <Newspaper className="w-5 h-5 mr-2 text-zinc-500" />
-                      <h3 className="text-lg font-medium">Articles & Mentions</h3>
-                    </div>
-                    <ArticlesCarousel articles={articles} />
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            )}
-          </div>
-        </div>
-
-        {/* Footer */}
-        <AnimatedSection
-          animation="fade-in"
-          delay={500}
-          className="mt-8 sm:mt-12 py-4 sm:py-6 text-center text-xs sm:text-sm text-zinc-500"
-        >
-          <p>© {new Date().getFullYear()} Samantha J. Brown. All rights reserved.</p>
+        {/* Contact / footer */}
+        <AnimatedSection animation="fade-in">
+          <footer className="border-t border-border pt-10">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-4">Get in touch</h2>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-8 mb-10">
+              <a
+                href={`mailto:${personal.email}`}
+                className="text-zinc-300 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-600 hover:decoration-white"
+              >
+                {personal.email}
+              </a>
+              <a
+                href={personal.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-300 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-600 hover:decoration-white"
+              >
+                Book a meeting
+              </a>
+            </div>
+            <p className="text-xs sm:text-sm text-zinc-600">
+              © {new Date().getFullYear()} {personal.name}. All rights reserved.
+            </p>
+          </footer>
         </AnimatedSection>
       </div>
     </main>

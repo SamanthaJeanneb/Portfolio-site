@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Samantha J. Brown | Co-Founder & CEO, Suzanne 3D",
-    "description": "Co-founder & CEO of Suzanne 3D — AI 3D models that actually work. Portfolio, projects, and contact."
+    "description": "Co-founder & CEO of Suzanne 3D. AI 3D models that actually work. Projects, creative work, and contact."
   },
   "personal": {
     "name": "Samantha J. Brown",
@@ -9,9 +9,7 @@
     "location": "San Francisco Bay Area",
     "avatar": "/confident-professional.png",
     "email": "samantha@suzanne3d.studio",
-    "phone": "(315) 725-2868",
-    "availableForWork": false,
-    "badges": ["Founder", "AI / 3D", "Frontend"],
+    "bookingUrl": "https://calendar.app.google/8y4Xp8cMWiiwUT6F9",
     "social": [
       {
         "platform": "GitHub",
@@ -30,136 +28,52 @@
       }
     ]
   },
-  "about": {
-    "bio": "I'm building Suzanne — AI that turns text, sketches, and photos into production-ready 3D models in minutes. Co-founder & CEO, based in San Francisco. Previously frontend engineering at Sicura; CS + interaction design at SUNY Oswego.",
-    "focus": [
-      "Suzanne 3D — physical AI for product design (Founders Inc, NVIDIA Inception)",
-      "Coaching hackathons with Major League Hacking",
-      "Tech content creation — 22M+ views across socials"
-    ],
-    "languages": [
-      {
-        "name": "English",
-        "proficiency": "Native",
-        "level": 100,
-        "flag": "🇺🇸"
-      }
-    ],
-    "interests": ["AI", "3D", "Startups", "Hackathons"]
-  },
   "navigation": [
-    { "label": "Home", "href": "/" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Experience", "href": "#experience" },
-    { "label": "Education", "href": "#credentials" },
-    { "label": "Creative", "href": "#creative" }
-  ],
-  "experience": [
     {
-      "title": "Co-Founder & CEO",
-      "company": "Suzanne 3D",
-      "period": "Apr 2026 – present",
-      "description": "AI 3D models that actually work — Suzanne turns text, a sketch, or a photo into a production-ready 3D model in minutes. Physical AI for product design.",
-      "achievements": [
-        "Founders Inc & NVIDIA Inception programs",
-        "Launched beta to 120 users in under 24 hours; closed angel round and signed first paying customers and API contract"
-      ],
-      "technologies": ["AI", "3D modeling", "Product", "Growth"]
+      "label": "Now",
+      "href": "#now"
     },
     {
-      "title": "Event Coach",
-      "company": "Major League Hacking",
-      "period": "Jan 2026 – present",
-      "description": "Coaching hackathon organizers and participants at MLH events — flying to a hackathon near you.",
-      "achievements": ["On-site and virtual event support for student builders"],
-      "technologies": ["Community", "Events"]
+      "label": "Work",
+      "href": "#work"
     },
     {
-      "title": "Content Creator",
-      "company": "Instagram",
-      "period": "Jan 2026 – present",
-      "description": "Posting about tech, startups, and tips for college students.",
-      "achievements": ["22M+ views and 14,000+ followers in under 3 months"],
-      "technologies": ["Content", "Social media"]
+      "label": "Creative",
+      "href": "#creative"
     },
     {
-      "title": "Founder in Residence",
-      "company": "Founders, Inc.",
-      "period": "Apr 2026 – May 2026",
-      "description": "Built Suzanne at Canopy, the Founders, Inc. residency in San Francisco.",
-      "achievements": [],
-      "technologies": ["Startups"]
+      "label": "About",
+      "href": "#about"
     },
     {
-      "title": "Software Engineer",
-      "company": "Sicura",
-      "period": "Jan 2026 – Apr 2026",
-      "description": "Promoted from intern to full-time. Drove Angular feature development for the Sicura Console compliance automation tooling (CIS Benchmarks, DISA STIGs, NIST controls).",
-      "achievements": [
-        "Owned end-to-end UI work on compliance automation",
-        "Coordinated with backend on API integration and component patterns"
-      ],
-      "technologies": ["Angular", "TypeScript", "Angular Material", "REST APIs", "UX"]
-    },
-    {
-      "title": "Software Engineer Intern",
-      "company": "Sicura",
-      "period": "Jun 2025 – Jan 2026",
-      "description": "Collaborated with developers and engineers to modernize and improve UI components of the Sicura Console.",
-      "achievements": ["Implemented front-end features tied to real product APIs"],
-      "technologies": ["Angular", "TypeScript", "UI components", "APIs"]
-    },
-    {
-      "title": "Founder & Lead Event Coordinator",
-      "company": "LakerHacks",
-      "period": "Jan 2025 – Jan 2026",
-      "description": "Founded SUNY Oswego's annual hackathon: designed the full graphics package, managed event logistics, and led the opening and closing ceremonies. The event now draws hundreds of participants each year.",
-      "achievements": ["Grew a student hackathon from scratch into an annual event"],
-      "technologies": ["Branding", "Graphic design", "Event ops"]
+      "label": "Press",
+      "href": "#press"
     }
   ],
-  "credentials": {
-    "certifications": [],
-    "education": [
+  "now": {
+    "body": "Suzanne turns text, a sketch, or a photo into a production-ready 3D model in minutes. Physical AI for product design, built in San Francisco, backed by Founders, Inc. and part of NVIDIA Inception.",
+    "log": [
       {
-        "degree": "B.S. Computer Science & Interaction Design",
-        "institution": "SUNY Oswego",
-        "year": "2023 – 2026",
-        "gpa": "3.89 GPA",
-        "description": "Jessie E. and Jay D. Rudolph Award for excellence in design. President of HCIO and the Computer Science Association; founding director of LakerHacks.",
-        "logo": "/generic-art-school-logo.png"
+        "date": "Jun 2026",
+        "entry": "Launched Claude for 3D modeling: production-level models from any AI agent through the Suzanne API"
+      },
+      {
+        "date": "May 2026",
+        "entry": "First paying customers, first API contract, and a closed angel round"
+      },
+      {
+        "date": "Apr 2026",
+        "entry": "One-way ticket to SF for Canopy at Founders, Inc. Beta hit 120 users in its first 24 hours"
+      },
+      {
+        "date": "2025",
+        "entry": "Suzanne starts as a weekend hackathon project at HackPrinceton"
       }
-    ],
-    "skills": [
-      "AI",
-      "3D Modeling",
-      "TypeScript",
-      "Angular",
-      "React",
-      "JavaScript",
-      "Python",
-      "Java",
-      "SQL",
-      "REST",
-      "UX",
-      "Figma",
-      "Docker"
     ]
   },
-  "technicalSkills": {
-    "design": ["UX", "3D modeling", "Prototyping", "Branding", "Figma"],
-    "development": [
-      "TypeScript",
-      "Angular",
-      "React",
-      "JavaScript",
-      "Python",
-      "Java",
-      "SQL",
-      "REST",
-      "Docker"
-    ],
-    "uxMethods": ["Prototyping", "User flows", "IA", "Research basics"],
-    "softSkills": ["Leadership", "Public speaking", "Events", "Content creation"]
-  }
+  "story": [
+    "I'm Samantha, co-founder & CEO of Suzanne 3D, based in the San Francisco Bay Area.",
+    "Outside of Suzanne, I coach hackathons with Major League Hacking and make content about tech, startups, and college life: 22M+ views and 30k+ followers across platforms.",
+    "Before this I was a software engineer at Sicura, building frontend for security compliance tooling, and studied Computer Science & Interaction Design at SUNY Oswego, where I won the Rudolph Award for excellence in design and founded LakerHacks, the campus's annual hackathon."
+  ]
 }
