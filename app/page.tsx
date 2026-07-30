@@ -60,28 +60,20 @@ export default function Home() {
           <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
             Suzanne
           </a>
-          , AI-native 3D modeling for parts that actually work in the real world, based in San
-          Francisco (backed by Founders, Inc. and part of NVIDIA Inception). The problem I'm obsessed
-          with right now is making AI understand the physical world.
+          , AI-native 3D modeling for parts that actually work in the real world. We're based in San
+          Francisco, backed by Founders, Inc., and part of NVIDIA Inception. Along the way I've picked
+          up 30k+ followers across socials posting about what I'm building.
         </p>
 
-        <p className="mb-2">
-          I like building things people can hold in their hands. I'm 21, and before Suzanne I was a
-          software engineer at Sicura, double majored in Computer Science and Design at SUNY Oswego,
-          won a national VEX Robotics championship, and founded LakerHacks, my campus's annual
-          hackathon. The things I keep coming back to are
+        <p className="mb-6">
+          I'm 21. Before Suzanne I wrote software at Sicura, double majored in Computer Science and
+          Design at SUNY Oswego, won a national VEX Robotics championship, and started LakerHacks, my
+          school's annual hackathon.
         </p>
-
-        <ul className="list-disc pl-8 mb-6">
-          <li>hardware and 3D printing,</li>
-          <li>design systems and interaction design,</li>
-          <li>hackathons,</li>
-          <li>and teaching people to build.</li>
-        </ul>
 
         <p>
-          Outside of work I coach hackathons for Major League Hacking and make content about tech,
-          startups, and college life for 30k+ followers across socials.
+          Most of what I make sits somewhere between hardware, design, and teaching people to build.
+          When I'm not working on Suzanne, I'm coaching hackathons for Major League Hacking.
         </p>
       </div>
     </main>
