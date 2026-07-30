@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Github, Linkedin, Instagram, Mail } from "lucide-react"
 import { ProjectCard } from "@/components/project-card"
-import { getAllProjects, getAllMultimediaProjects, getPersonalInfo, getNowInfo, getStoryInfo } from "@/lib/data"
+import { getAllProjects, getAllMultimediaProjects, getPersonalInfo, getStoryInfo } from "@/lib/data"
 import { getAllBrandingProjects } from "@/lib/data"
 import { AnimatedSection } from "@/components/animated-section"
 import { PortfolioHeader } from "@/components/portfolio-header"
@@ -27,7 +27,6 @@ export default function Home() {
   const brandingProjects = getAllBrandingProjects()
   const articles = getAllArticles()
   const personal = getPersonalInfo()
-  const now = getNowInfo()
   const story = getStoryInfo()
 
   const creativeProjects = [
@@ -91,22 +90,6 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-          </section>
-        </AnimatedSection>
-
-        {/* Now */}
-        <AnimatedSection animation="fade-up">
-          <section id="now" className="mb-16 sm:mb-24 scroll-mt-24">
-            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-4">Now</h2>
-            <p className="text-zinc-400 leading-relaxed max-w-2xl mb-10">{now.body}</p>
-            <ol className="space-y-5 border-l border-border pl-6">
-              {now.log.map((item) => (
-                <li key={item.entry}>
-                  <span className="block text-xs uppercase tracking-wider text-zinc-500 mb-1">{item.date}</span>
-                  <span className="text-sm sm:text-base text-zinc-300 leading-relaxed">{item.entry}</span>
-                </li>
-              ))}
-            </ol>
           </section>
         </AnimatedSection>
 

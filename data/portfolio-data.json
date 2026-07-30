@@ -30,10 +30,6 @@
   },
   "navigation": [
     {
-      "label": "Now",
-      "href": "#now"
-    },
-    {
       "label": "Work",
       "href": "#work"
     },
@@ -50,27 +46,6 @@
       "href": "#press"
     }
   ],
-  "now": {
-    "body": "Suzanne turns text, a sketch, or a photo into a production-ready 3D model in minutes. Physical AI for product design, built in San Francisco, backed by Founders, Inc. and part of NVIDIA Inception.",
-    "log": [
-      {
-        "date": "Jun 2026",
-        "entry": "Launched Claude for 3D modeling: production-level models from any AI agent through the Suzanne API"
-      },
-      {
-        "date": "May 2026",
-        "entry": "First paying customers, first API contract, and a closed angel round"
-      },
-      {
-        "date": "Apr 2026",
-        "entry": "One-way ticket to SF for Canopy at Founders, Inc. Beta hit 120 users in its first 24 hours"
-      },
-      {
-        "date": "2025",
-        "entry": "Suzanne starts as a weekend hackathon project at HackPrinceton"
-      }
-    ]
-  },
   "story": [
     "I'm Samantha, co-founder & CEO of Suzanne 3D, based in the San Francisco Bay Area.",
     "Outside of Suzanne, I coach hackathons with Major League Hacking and make content about tech, startups, and college life: 22M+ views and 30k+ followers across platforms.",
