@@ -35,11 +35,11 @@ export default function Home() {
         </p>
 
         <p className="mb-4">
-          I won 7 Ivy League hackathons, became obsessed with building, and joined{" "}
+          Coaching through{" "}
           <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
             MLH
           </a>
-          , where I coach students.
+          .
         </p>
 
         <p className="text-base mb-8">
@@ -85,6 +85,11 @@ export default function Home() {
           <li>B.S. double major in Computer Science &amp; Human Computer Interaction</li>
           <li>Retired software engineer, full time building cool things</li>
           <li>
+            <Link href="/art" className={link}>
+              Artist
+            </Link>
+          </li>
+          <li>
             30k on{" "}
             <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
               socials
@@ -109,11 +114,6 @@ export default function Home() {
             Magic: The Gathering, my{" "}
             <Link href="/mtg" className={link}>
               card collection
-            </Link>
-          </li>
-          <li>
-            <Link href="/art" className={link}>
-              Art
             </Link>
           </li>
           <li>Math</li>
