@@ -34,14 +34,6 @@ export default function Home() {
         </p>
 
         <p className="mb-4">
-          Coaching through{" "}
-          <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
-            MLH
-          </a>
-          .
-        </p>
-
-        <p className="mb-4">
           Previously a software engineer @ Sicura serving the Department of State and U.S. Army. Now
           building cool things full time.
         </p>
@@ -83,6 +75,14 @@ export default function Home() {
         <h2 className="text-xl font-bold text-white mb-3">About</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
           <li>B.S. double major in Computer Science &amp; Human Computer Interaction</li>
+          <li>Fell in love with hackathons, started LakerHacks, won 7</li>
+          <li>
+            Started coaching through{" "}
+            <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
+              MLH
+            </a>
+            , where I attend hackathons across the country
+          </li>
           <li>
             <Link href="/art" className={link}>
               Artist
