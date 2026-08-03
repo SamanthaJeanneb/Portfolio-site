@@ -4,7 +4,6 @@ import { getPersonalInfo } from "@/lib/data"
 
 export default function Home() {
   const personal = getPersonalInfo()
-  const linkedin = personal.social.find((s) => s.platform === "LinkedIn")?.url
   const instagram = personal.social.find((s) => s.platform === "Instagram")?.url
   const github = personal.social.find((s) => s.platform === "GitHub")?.url
 
@@ -54,10 +53,6 @@ export default function Home() {
           <Link href="/blog" className={link}>
             blog
           </Link>
-          <span className="text-zinc-600"> · </span>
-          <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
-            LinkedIn
-          </a>
           <span className="text-zinc-600"> · </span>
           <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
             Instagram
