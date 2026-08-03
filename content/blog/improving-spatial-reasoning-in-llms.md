@@ -1,11 +1,11 @@
 ---
 title: Can LLMs learn to reason about space?
-date: 2026-08-03
+date: 2026-06-28
 ---
 
 I recently met Hokin Deng, one of the authors behind [A Very Big Video Reasoning Suite](https://video-reason.com/), and we got into one of my favorite questions: is it actually possible to improve the spatial reasoning of LLMs, or is it a fundamental limitation of models trained mostly on text?
 
-It is a question I think about constantly, because I spend my days building AI for 3D. Language models are astonishing at manipulating symbols, but space is not a symbol. It is something you occupy. When you ask a model to rotate an object in its head, pack boxes into a trunk, or track where a camera has been in a room, you are asking it to do something the training data mostly describes rather than demonstrates. Text flattens space, and models inherit the flattening.
+It is a great thought experiment. Language models are astonishing at manipulating symbols, but space is not a symbol. It is something you occupy. When you ask a model to rotate an object in its head, pack boxes into a trunk, or track where a camera has been in a room, you are asking it to do something the training data mostly describes rather than demonstrates. Text flattens space, and models inherit the flattening.
 
 The interesting thing about 2026 is that the research community stopped treating this as a fixed ceiling and started treating it as an engineering problem. Three threads stand out to me.
 
@@ -25,7 +25,7 @@ The third thread is the one Hokin works on, and I think it is the most ambitious
 
 Talking with Hokin, what struck me is that these threads are not really competing. The scratchpad work and TRACE show that representation matters: models reason about space better when they build an explicit intermediate structure instead of jumping to an answer. The video work asks whether enough of the right data can make that structure emerge on its own. My bet is that the answer looks like both. Text taught models to think in symbols. Video, and eventually interaction, will teach them what those symbols are anchored to.
 
-I do not think spatial reasoning is a wall. I think it is where language reasoning was a few years ago: waiting for the right data, the right representations, and a community that has decided to measure it honestly. Working in 3D every day, I am very glad people like Hokin are building the measuring sticks.
+I do not think spatial reasoning is a wall. I think it is where language reasoning was a few years ago: waiting for the right data, the right representations, and a community that has decided to measure it honestly. I am very glad people like Hokin are building the measuring sticks.
 
 ## References
 
