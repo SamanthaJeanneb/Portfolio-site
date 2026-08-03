@@ -22,15 +22,20 @@ export default function Home() {
           priority
           className="float-right w-56 h-auto ml-6 mb-3"
         />
-        <h2 className="text-xl font-bold text-white mb-2">Hellooo :)</h2>
-        <p className="mb-4">Welcome to my corner of the internet!</p>
-
         <p className="mb-4">
-          I'm building{" "}
+          I'm the co-founder and CEO of{" "}
           <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
             Suzanne
           </a>
           .
+        </p>
+
+        <p className="mb-4">
+          I won 7 Ivy League hackathons, became obsessed with building, and joined{" "}
+          <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
+            MLH
+          </a>
+          , where I coach students.
         </p>
 
         <p className="text-base mb-8">
@@ -71,14 +76,15 @@ export default function Home() {
           </a>
         </p>
 
-        <h2 className="text-xl font-bold text-white mb-3">A little bit about me</h2>
+        <h2 className="text-xl font-bold text-white mb-3">About</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
+          <li>B.S. double major in Computer Science &amp; Human Computer Interaction</li>
+          <li>Retired software engineer, full time building cool things</li>
           <li>
             <Link href="/art" className={link}>
               Artist
             </Link>
           </li>
-          <li>B.S. double major in Computer Science &amp; Human Computer Interaction</li>
           <li>
             30k on{" "}
             <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
@@ -86,16 +92,9 @@ export default function Home() {
             </a>{" "}
             (I make tech memes)
           </li>
-          <li>
-            Coaching students through{" "}
-            <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
-              MLH
-            </a>
-          </li>
-          <li>Retired software engineer, full time building cool things</li>
         </ul>
 
-        <h2 className="text-xl font-bold text-white mb-3">What I love</h2>
+        <h2 className="text-xl font-bold text-white mb-3">Interests</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1">
           <li>
             <Link href="/projects#work" className={link}>
@@ -108,15 +107,9 @@ export default function Home() {
           </li>
           <li>Beautiful websites</li>
           <li>
-            Magic: The Gathering player, check out my{" "}
+            Magic: The Gathering, my{" "}
             <Link href="/mtg" className={link}>
               card collection
-            </Link>
-          </li>
-          <li>
-            Art, check out my{" "}
-            <Link href="/art" className={link}>
-              work
             </Link>
           </li>
           <li>Math</li>
