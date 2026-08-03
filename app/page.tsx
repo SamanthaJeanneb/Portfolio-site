@@ -42,6 +42,10 @@ export default function Home() {
             articles
           </Link>
           <span className="text-zinc-600"> · </span>
+          <Link href="/blog" className={link}>
+            blog
+          </Link>
+          <span className="text-zinc-600"> · </span>
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
             LinkedIn
           </a>
