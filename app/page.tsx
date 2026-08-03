@@ -11,18 +11,18 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-zinc-200 flex items-center justify-center">
-      <div className="w-full max-w-2xl px-8 sm:px-10 py-16 text-lg leading-relaxed">
-        <h1 className="text-2xl font-bold text-white mb-4">Samantha J. Brown</h1>
+      <div className="w-full max-w-3xl px-8 sm:px-10 py-10 text-base leading-relaxed">
+        <h1 className="text-xl font-bold text-white mb-3">Samantha J. Brown</h1>
         <Image
           src={personal.avatar || "/placeholder.svg"}
           alt={personal.name}
           width={1179}
           height={1670}
           priority
-          className="float-right w-56 h-auto ml-6 mb-3"
+          className="float-right w-40 h-auto ml-6 mb-3"
         />
 
-        <p className="text-base mb-8">
+        <p className="text-sm mb-6">
           <Link href="/projects" className={link}>
             projects
           </Link>
@@ -61,7 +61,7 @@ export default function Home() {
           world.
         </p>
 
-        <p className="mb-8">
+        <p className="mb-6">
           Currently building{" "}
           <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
             Suzanne
@@ -69,8 +69,8 @@ export default function Home() {
           in San Francisco, where we are solving the spatial reasoning gap for AI models.
         </p>
 
-        <h2 className="text-xl font-bold text-white mb-3">Some things about me:</h2>
-        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
+        <h2 className="text-lg font-bold text-white mb-2">Some things about me:</h2>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-0.5 mb-6">
           <li>Studied Computer Science and Human Computer Interaction</li>
           <li>
             Founded{" "}
@@ -112,8 +112,8 @@ export default function Home() {
           <li>Currently obsessed with teaching AI how to understand and create in the physical world</li>
         </ul>
 
-        <h2 className="text-xl font-bold text-white mb-3">Some things I believe:</h2>
-        <div className="space-y-5 mb-8">
+        <h2 className="text-lg font-bold text-white mb-2">Some things I believe:</h2>
+        <div className="space-y-3 mb-6">
           <div>
             <p className="font-bold text-white">The best way to learn is to build</p>
             <p>
@@ -140,8 +140,8 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className="text-xl font-bold text-white mb-3">Things I love:</h2>
-        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1">
+        <h2 className="text-lg font-bold text-white mb-2">Things I love:</h2>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-0.5">
           <li>
             <Link href="/projects/vex-robotics" className={link}>
               Robotics
