@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-zinc-200 flex items-center justify-center">
       <div className="w-full max-w-xl px-6 py-16 text-lg leading-relaxed">
-        <h1 className="text-2xl font-bold text-white mb-8">Sam Brown</h1>
+        <h1 className="text-2xl font-bold text-white mb-4">Samantha J. Brown</h1>
         <Image
           src={personal.avatar || "/placeholder.svg"}
           alt={personal.name}
@@ -21,17 +21,6 @@ export default function Home() {
           priority
           className="float-right w-56 h-auto ml-6 mb-3"
         />
-        <p className="mb-4">
-          Currently building{" "}
-          <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
-            Suzanne
-          </a>{" "}
-          @{" "}
-          <a href="https://f.inc" target="_blank" rel="noopener noreferrer" className={link}>
-            Founders Inc
-          </a>{" "}
-          in San Francisco. Solving the spatial reasoning gap for AI models.
-        </p>
 
         <p className="text-base mb-8">
           <Link href="/projects" className={link}>
@@ -67,55 +56,99 @@ export default function Home() {
           </a>
         </p>
 
-        <h2 className="text-xl font-bold text-white mb-3">About</h2>
+        <p className="mb-4">
+          I build things, write code, and explore the intersection of AI, design, and the physical
+          world.
+        </p>
+
+        <p className="mb-8">
+          Currently building{" "}
+          <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
+            Suzanne
+          </a>{" "}
+          in San Francisco, where we are solving the spatial reasoning gap for AI models.
+        </p>
+
+        <h2 className="text-xl font-bold text-white mb-3">Some things about me:</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
-          <li>B.S. double major in Computer Science &amp; Human Computer Interaction</li>
-          <li>Fell in love with hackathons, started LakerHacks, won 7</li>
+          <li>Studied Computer Science and Human Computer Interaction</li>
           <li>
-            Started coaching through{" "}
+            Founded LakerHacks, my university's hackathon, which became an official{" "}
             <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
               MLH
-            </a>
-            , where I attend hackathons across the country
-          </li>
-          <li>
-            Previously a software engineer @ Sicura serving the Department of State and U.S. Army,
-            now building cool things full time
-          </li>
-          <li>
-            30k on{" "}
-            <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
-              socials
             </a>{" "}
-            (I make tech memes)
+            event
           </li>
-        </ul>
-
-        <h2 className="text-xl font-bold text-white mb-3">Interests</h2>
-        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1">
           <li>
+            Fell in love with{" "}
             <Link href="/projects#work" className={link}>
-              Hackathons
-            </Link>{" "}
-            &amp;{" "}
+              hackathons
+            </Link>
+            ,{" "}
             <Link href="/projects/vex-robotics" className={link}>
               robotics
             </Link>
+            , and building things from scratch
           </li>
+          <li>
+            Previously worked as a software engineer building systems for the U.S. Department of
+            State and U.S. Army
+          </li>
+          <li>
+            Create tech content and have grown a community of{" "}
+            <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
+              30k+ builders
+            </a>
+          </li>
+          <li>Currently obsessed with teaching AI how to understand and create in the physical world</li>
+        </ul>
+
+        <h2 className="text-xl font-bold text-white mb-3">Some things I believe:</h2>
+        <div className="space-y-5 mb-8">
+          <div>
+            <p className="font-bold text-white">The best way to learn is to build</p>
+            <p>
+              Most of the opportunities I've had came from creating something and putting it into
+              the world.
+            </p>
+          </div>
+          <div>
+            <p className="font-bold text-white">Creativity and engineering are connected</p>
+            <p>
+              The best products come from people who combine technical depth, design, and curiosity.
+            </p>
+          </div>
+          <div>
+            <p className="font-bold text-white">Speed compounds</p>
+            <p>The fastest way to understand an idea is to build it, test it, and iterate.</p>
+          </div>
+          <div>
+            <p className="font-bold text-white">The physical world is the next frontier of AI</p>
+            <p>
+              AI has changed how we interact with information. The next step is helping humans
+              design and create the world around us.
+            </p>
+          </div>
+        </div>
+
+        <h2 className="text-xl font-bold text-white mb-3">Things I love:</h2>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1">
+          <li>Robotics and 3D printing</li>
           <li>Beautiful websites</li>
           <li>
-            Magic: The Gathering, my{" "}
-            <Link href="/mtg" className={link}>
-              card collection
-            </Link>
-          </li>
-          <li>
             <Link href="/art" className={link}>
-              Artist
+              Drawing, painting, and illustration
             </Link>
           </li>
-          <li>Math</li>
-          <li>3D printing</li>
+          <li>Math and understanding how things work</li>
+          <li>
+            Magic: The Gathering and{" "}
+            <Link href="/mtg" className={link}>
+              collecting cards
+            </Link>
+          </li>
+          <li>Hiking mountains</li>
+          <li>Meeting people who are endlessly curious</li>
         </ul>
       </div>
     </main>
