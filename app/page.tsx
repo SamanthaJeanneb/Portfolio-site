@@ -78,7 +78,7 @@ export default function Home() {
               Artist
             </Link>
           </li>
-          <li>B.S. double major in Computer Science &amp; Design</li>
+          <li>B.S. double major in Computer Science &amp; Human Computer Interaction</li>
           <li>
             30k on{" "}
             <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
@@ -86,7 +86,12 @@ export default function Home() {
             </a>{" "}
             (I make tech memes)
           </li>
-          <li>Coaching students through MLH</li>
+          <li>
+            Coaching students through{" "}
+            <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
+              MLH
+            </a>
+          </li>
           <li>Retired software engineer, full time building cool things</li>
         </ul>
 
