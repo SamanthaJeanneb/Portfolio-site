@@ -23,11 +23,15 @@ export default function Home() {
           className="float-right w-56 h-auto ml-6 mb-3"
         />
         <p className="mb-4">
-          I'm the co-founder and CEO of{" "}
+          Currently building{" "}
           <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
             Suzanne
-          </a>
-          .
+          </a>{" "}
+          @{" "}
+          <a href="https://f.inc" target="_blank" rel="noopener noreferrer" className={link}>
+            Founders Inc
+          </a>{" "}
+          in San Francisco.
         </p>
 
         <p className="mb-4">
