@@ -3,29 +3,21 @@ title: Can LLMs learn to reason about space?
 date: 2026-06-28
 ---
 
-I recently met Hokin Deng, one of the authors behind [A Very Big Video Reasoning Suite](https://video-reason.com/), and we got into one of my favorite questions: is it actually possible to improve the spatial reasoning of LLMs, or is it a fundamental limitation of models trained mostly on text?
+I met Hokin Deng a few weeks ago. He is one of the authors behind [A Very Big Video Reasoning Suite](https://video-reason.com/), and we ended up stuck on a question I have not been able to put down since: can you actually make LLMs better at spatial reasoning, or is that just what happens when you train something on text?
 
-It is a great thought experiment. Language models are astonishing at manipulating symbols, but space is not a symbol. It is something you occupy. When you ask a model to rotate an object in its head, pack boxes into a trunk, or track where a camera has been in a room, you are asking it to do something the training data mostly describes rather than demonstrates. Text flattens space, and models inherit the flattening.
+Here is why I think it is such a fun thought experiment. Ask a model to rotate a shape in its head, pack boxes into a trunk, or keep track of where a camera has been in a room, and it will usually fumble. Not because it is dumb. The same model can write you a compiler. It fumbles because nearly everything it knows about space came from people describing space in words, and words are a lossy container for it. I could describe my apartment to you for ten minutes and you still would not know it the way you would after walking through it once.
 
-The interesting thing about 2026 is that the research community stopped treating this as a fixed ceiling and started treating it as an engineering problem. Three threads stand out to me.
+So, stuck or not stuck? Reading the papers coming out this year, I think not stuck. A few results changed my mind.
 
-## Give the model a scratchpad
+The first one sounds almost silly: teach the model to draw. [Huang et al.](https://arxiv.org/abs/2604.14641) noticed that models can read ASCII maps just fine but are weirdly bad at producing them from a description. They call it a read-write asymmetry. Train the model to actually draw the layout and its spatial reasoning improves. The part I love is that the improvement sticks around even when you stop asking it to draw at test time. Sketching the floor plan changes something upstream. Very human, honestly. You know a room better after you have drawn it.
 
-One line of work argues that models fail at spatial reasoning partly because they never practice constructing space, only reading about it. [Learning to Draw ASCII Improves Spatial Reasoning in Language Models](https://arxiv.org/abs/2604.14641) (Huang et al., 2026) found what the authors call a read-write asymmetry: LLMs can interpret ASCII layouts reasonably well but struggle to produce them from a text description. When they trained models to draw layouts, spatial reasoning improved, and the gains held even when the model was not asked to draw anything at inference time. Learning to construct an explicit layout seems to instill spatial understanding that outlives the format. That resonates with how humans work. You understand a floor plan better after you have sketched one.
+Second: if the model lives in text, meet it there. [TRACE](https://arxiv.org/abs/2603.23404) has multimodal models write out a description of the 3D scene, the camera path, the objects, all of it, as an intermediate step before answering questions about egocentric video. Consistent gains across model families. Which tells me a lot of the failure was never missing knowledge. The models were skipping straight to the answer without building anything to reason over first.
 
-## Translate space into language
+The third is Hokin's, and it is the ambitious one. [VBVR](https://arxiv.org/abs/2602.20159) treats video reasoning as the thing that comes after language reasoning. Two hundred tasks, over a million procedurally generated clips, roughly a thousand times bigger than anything that existed, scored with rules instead of asking another model to grade. Buried in the scaling studies is the result that got me: early signs of generalization to reasoning tasks the model never saw in training. Maybe space is learnable the same way language was. The data just has to actually contain it.
 
-A second thread accepts that these models live in text and leans into it. [TRACE](https://arxiv.org/abs/2603.23404) (Hua et al., 2026) has multimodal models generate textual representations of a 3D environment, including camera trajectories and object descriptions, as intermediate reasoning traces before answering spatial questions about egocentric video. It produced consistent gains across model families on spatial benchmarks like VSI-Bench. The lesson I take from it: the bottleneck is not only what the model knows about space, it is whether the model is given a representation it can reason over.
+What I took away from talking with Hokin is that these are not competing bets. The first two say representation matters, that models do better when they build the scene before answering instead of jumping to the answer. The video work asks whether enough of the right data makes that structure show up on its own. My guess is both. Text taught models to think in symbols. Video will teach them what the symbols are attached to.
 
-## Learn space from video, at scale
-
-The third thread is the one Hokin works on, and I think it is the most ambitious. [A Very Big Video Reasoning Suite](https://arxiv.org/abs/2602.20159) (2026) treats video reasoning as the next paradigm after language reasoning. The team built procedural data engines spanning spatiality, transformation, physics, and perception, over a million video clips, roughly three orders of magnitude larger than existing video reasoning datasets, plus a verifiable evaluation framework that does not rely on model-based judging. The finding that stuck with me: in their scaling studies they saw early signs of emergent generalization to reasoning tasks the model was never trained on. Space might be learnable the way language was, if the data actually contains it.
-
-## Where I land
-
-Talking with Hokin, what struck me is that these threads are not really competing. The scratchpad work and TRACE show that representation matters: models reason about space better when they build an explicit intermediate structure instead of jumping to an answer. The video work asks whether enough of the right data can make that structure emerge on its own. My bet is that the answer looks like both. Text taught models to think in symbols. Video, and eventually interaction, will teach them what those symbols are anchored to.
-
-I do not think spatial reasoning is a wall. I think it is where language reasoning was a few years ago: waiting for the right data, the right representations, and a community that has decided to measure it honestly. I am very glad people like Hokin are building the measuring sticks.
+I do not think spatial reasoning is a wall. It looks a lot like language reasoning did a few years ago, waiting on the right data and someone willing to measure it honestly. Glad people like Hokin are doing the measuring.
 
 ## References
 
