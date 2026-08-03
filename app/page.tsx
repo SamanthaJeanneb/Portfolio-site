@@ -30,12 +30,7 @@ export default function Home() {
           <a href="https://f.inc" target="_blank" rel="noopener noreferrer" className={link}>
             Founders Inc
           </a>{" "}
-          in San Francisco. What if you could make anything in the physical world?
-        </p>
-
-        <p className="mb-4">
-          Previously a software engineer @ Sicura serving the Department of State and U.S. Army. Now
-          building cool things full time.
+          in San Francisco. Solving the spatial reasoning gap for AI models.
         </p>
 
         <p className="text-base mb-8">
@@ -82,6 +77,10 @@ export default function Home() {
               MLH
             </a>
             , where I attend hackathons across the country
+          </li>
+          <li>
+            Previously a software engineer @ Sicura serving the Department of State and U.S. Army,
+            now building cool things full time
           </li>
           <li>
             30k on{" "}
