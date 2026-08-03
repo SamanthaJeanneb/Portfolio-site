@@ -100,8 +100,8 @@ export default function Home() {
             Coach, traveling to hackathons and helping students build
           </li>
           <li>
-            Previously worked as a software engineer building systems for the U.S. Department of
-            State and U.S. Army
+            Previously worked as a software engineer at Sicura, building systems serving the U.S.
+            Department of State and U.S. Army
           </li>
           <li>
             Create tech content and have grown a community of{" "}
