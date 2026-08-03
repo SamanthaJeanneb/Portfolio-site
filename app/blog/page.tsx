@@ -7,6 +7,21 @@ export const metadata: Metadata = {
   description: "Blog posts by Samantha J. Brown.",
 }
 
+const papers = [
+  {
+    title: "A Very Big Video Reasoning Suite",
+    url: "https://video-reason.com/",
+  },
+  {
+    title: "Learning to Draw ASCII Improves Spatial Reasoning in Language Models",
+    url: "https://arxiv.org/abs/2604.14641",
+  },
+  {
+    title: "Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning",
+    url: "https://arxiv.org/abs/2603.23404",
+  },
+]
+
 function formatDate(date: string) {
   if (!date) return ""
   return new Date(`${date}T00:00:00`).toLocaleDateString("en-US", {
@@ -28,10 +43,8 @@ export default function BlogPage() {
 
         <h1 className="text-2xl font-bold text-white mt-8 mb-8">Blog</h1>
 
-        {posts.length === 0 ? (
-          <p className="text-zinc-400 italic">Nothing here yet. Check back soon!</p>
-        ) : (
-          <ul className="space-y-6">
+        {posts.length > 0 && (
+          <ul className="space-y-6 mb-10">
             {posts.map((post) => (
               <li key={post.slug}>
                 <Link
@@ -45,6 +58,26 @@ export default function BlogPage() {
             ))}
           </ul>
         )}
+
+        <p className="text-zinc-400 italic mb-10">
+          Writing in progress. First up: can LLMs learn to reason about space?
+        </p>
+
+        <h2 className="text-xl font-bold text-white mb-3">Cool papers I&apos;ve found on this topic!</h2>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-2">
+          {papers.map((paper) => (
+            <li key={paper.url}>
+              <a
+                href={paper.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="italic text-zinc-400 underline underline-offset-4 decoration-zinc-600 hover:text-white hover:decoration-zinc-400 transition-colors"
+              >
+                {paper.title}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </main>
   )
