@@ -30,7 +30,7 @@ export default function Home() {
           <a href="https://f.inc" target="_blank" rel="noopener noreferrer" className={link}>
             Founders Inc
           </a>{" "}
-          in San Francisco.
+          in San Francisco. What if you could make anything in the physical world?
         </p>
 
         <p className="mb-4">
