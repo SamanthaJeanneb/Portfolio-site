@@ -128,10 +128,6 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <p className="font-bold text-white">Speed compounds</p>
-            <p>The fastest way to understand an idea is to build, test, and iterate.</p>
-          </div>
-          <div>
             <p className="font-bold text-white">The physical world is the next frontier of AI</p>
             <p>
               AI has changed how we interact with information. The next step is helping humans
