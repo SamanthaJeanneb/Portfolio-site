@@ -69,7 +69,11 @@ export default function Home() {
 
         <h2 className="text-xl font-bold text-white mb-3">A little bit about me</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
-          <li>I am an artist</li>
+          <li>
+            <Link href="/art" className={link}>
+              Artist
+            </Link>
+          </li>
           <li>B.S. double major in Computer Science &amp; Design</li>
           <li>
             30k on{" "}
