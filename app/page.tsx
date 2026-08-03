@@ -73,7 +73,16 @@ export default function Home() {
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
           <li>Studied Computer Science and Human Computer Interaction</li>
           <li>
-            Founded LakerHacks, my university's hackathon, which became an official{" "}
+            Founded{" "}
+            <a
+              href="https://www.oswego.edu/news/story/lakerhacks-provides-learning-opportunity-plans-future-growth-0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={link}
+            >
+              LakerHacks
+            </a>
+            , my university's hackathon, which became an official{" "}
             <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
               MLH
             </a>{" "}
@@ -133,7 +142,12 @@ export default function Home() {
 
         <h2 className="text-xl font-bold text-white mb-3">Things I love:</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1">
-          <li>Robotics and 3D printing</li>
+          <li>
+            <Link href="/projects/vex-robotics" className={link}>
+              Robotics
+            </Link>{" "}
+            and 3D printing
+          </li>
           <li>Beautiful websites</li>
           <li>
             <Link href="/art" className={link}>
