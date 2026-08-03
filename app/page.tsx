@@ -84,11 +84,6 @@ export default function Home() {
             , where I attend hackathons across the country
           </li>
           <li>
-            <Link href="/art" className={link}>
-              Artist
-            </Link>
-          </li>
-          <li>
             30k on{" "}
             <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
               socials
@@ -113,6 +108,11 @@ export default function Home() {
             Magic: The Gathering, my{" "}
             <Link href="/mtg" className={link}>
               card collection
+            </Link>
+          </li>
+          <li>
+            <Link href="/art" className={link}>
+              Artist
             </Link>
           </li>
           <li>Math</li>
