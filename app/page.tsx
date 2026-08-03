@@ -41,6 +41,11 @@ export default function Home() {
           .
         </p>
 
+        <p className="mb-4">
+          Previously a software engineer @ Sicura serving the Department of State and U.S. Army. Now
+          building cool things full time.
+        </p>
+
         <p className="text-base mb-8">
           <Link href="/projects" className={link}>
             projects
@@ -78,7 +83,6 @@ export default function Home() {
         <h2 className="text-xl font-bold text-white mb-3">About</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-8">
           <li>B.S. double major in Computer Science &amp; Human Computer Interaction</li>
-          <li>Retired software engineer, full time building cool things</li>
           <li>
             <Link href="/art" className={link}>
               Artist
