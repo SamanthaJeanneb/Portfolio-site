@@ -8,7 +8,7 @@ import { getAllArticles } from "@/lib/articles"
 
 export const metadata: Metadata = {
   title: "Projects | Samantha J. Brown",
-  description: "Selected work, creative work, and press.",
+  description: "Selected work, creative work, and articles.",
 }
 
 const WINNER_INFO: Record<string, string> = {
@@ -91,8 +91,8 @@ export default function ProjectsPage() {
         </section>
 
         {articles.length > 0 && (
-          <section id="press" className="scroll-mt-12">
-            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Press &amp; mentions</h2>
+          <section id="articles" className="scroll-mt-12">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Articles &amp; mentions</h2>
             <ul className="space-y-8">
               {articles.map((article) => (
                 <li key={article.id} className="flex flex-col sm:flex-row gap-4">

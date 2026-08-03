@@ -38,8 +38,8 @@ export default function Home() {
             projects
           </Link>
           <span className="text-zinc-600"> · </span>
-          <Link href="/projects#press" className={link}>
-            press
+          <Link href="/projects#articles" className={link}>
+            articles
           </Link>
           <span className="text-zinc-600"> · </span>
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
