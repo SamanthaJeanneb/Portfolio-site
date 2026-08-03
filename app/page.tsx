@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-zinc-200 flex items-center justify-center">
-      <div className="w-full max-w-xl px-6 py-16 text-lg leading-relaxed">
+      <div className="w-full max-w-2xl px-8 sm:px-10 py-16 text-lg leading-relaxed">
         <h1 className="text-2xl font-bold text-white mb-4">Samantha J. Brown</h1>
         <Image
           src={personal.avatar || "/placeholder.svg"}
@@ -80,15 +80,15 @@ export default function Home() {
             event
           </li>
           <li>
-            Fell in love with{" "}
+            Won 7{" "}
             <Link href="/projects#work" className={link}>
               hackathons
-            </Link>
-            ,{" "}
-            <Link href="/projects/vex-robotics" className={link}>
-              robotics
-            </Link>
-            , and building things from scratch
+            </Link>{" "}
+            and later became an{" "}
+            <a href="https://mlh.io" target="_blank" rel="noopener noreferrer" className={link}>
+              MLH
+            </a>{" "}
+            Coach, traveling to hackathons and helping students build
           </li>
           <li>
             Previously worked as a software engineer building systems for the U.S. Department of
@@ -120,7 +120,7 @@ export default function Home() {
           </div>
           <div>
             <p className="font-bold text-white">Speed compounds</p>
-            <p>The fastest way to understand an idea is to build it, test it, and iterate.</p>
+            <p>The fastest way to understand an idea is to build, test, and iterate.</p>
           </div>
           <div>
             <p className="font-bold text-white">The physical world is the next frontier of AI</p>
