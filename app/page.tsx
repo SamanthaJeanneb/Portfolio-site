@@ -66,7 +66,8 @@ export default function Home() {
           <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
             Suzanne
           </a>{" "}
-          in San Francisco, where we are solving the spatial reasoning gap for AI models.
+          in San Francisco, where we are solving the spatial reasoning gap for AI models to create
+          products faster.
         </p>
 
         <h2 className="text-lg font-bold text-white mb-2">Some things about me:</h2>
