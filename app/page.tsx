@@ -142,9 +142,9 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className="text-lg font-bold text-white mb-2">Things I love:</h2>
+        <h2 className="text-lg font-bold text-white mb-2">Currently obsessed with:</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-0.5">
-          <li>Currently obsessed with bringing people together and making cool sh*t even cooler</li>
+          <li>Bringing people together and making cool sh*t even cooler</li>
           <li>
             <Link href="/projects/vex-robotics" className={link}>
               Robotics
