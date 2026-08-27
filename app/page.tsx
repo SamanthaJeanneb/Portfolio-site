@@ -76,7 +76,7 @@ export default function Home() {
         </p>
 
         <p className="mb-6">
-          Now doing design at{" "}
+          Now doing design engineering at{" "}
           <a href="https://useimagine.ai/" target="_blank" rel="noopener noreferrer" className={link}>
             Imagine AI (YC F25)
           </a>
