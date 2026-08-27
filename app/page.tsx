@@ -5,6 +5,7 @@ import { getPersonalInfo } from "@/lib/data"
 export default function Home() {
   const personal = getPersonalInfo()
   const instagram = personal.social.find((s) => s.platform === "Instagram")?.url
+  const linkedin = personal.social.find((s) => s.platform === "LinkedIn")?.url
   const github = personal.social.find((s) => s.platform === "GitHub")?.url
 
   const link = "italic text-zinc-400 underline underline-offset-4 decoration-zinc-600 hover:text-white hover:decoration-zinc-400 transition-colors"
@@ -39,6 +40,10 @@ export default function Home() {
             Instagram
           </a>
           <span className="text-zinc-600"> · </span>
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
+            LinkedIn
+          </a>
+          <span className="text-zinc-600"> · </span>
           <a href="https://x.com/samanthajeanneb" target="_blank" rel="noopener noreferrer" className={link}>
             X
           </a>
@@ -61,13 +66,24 @@ export default function Home() {
           world.
         </p>
 
-        <p className="mb-6">
-          Currently building{" "}
+        <p className="mb-4">
+          Built{" "}
           <a href="https://suzanne3d.com" target="_blank" rel="noopener noreferrer" className={link}>
             Suzanne
           </a>{" "}
-          in San Francisco, where we are solving the spatial reasoning gap for AI models to create
-          products faster.
+          at{" "}
+          <a href="https://f.inc" target="_blank" rel="noopener noreferrer" className={link}>
+            Founders, Inc.
+          </a>
+          , a 42,000-square-foot campus and early-stage fund for ambitious builders in San Francisco.
+        </p>
+
+        <p className="mb-6">
+          Now doing design at{" "}
+          <a href="https://useimagine.ai/" target="_blank" rel="noopener noreferrer" className={link}>
+            Imagine AI (YC F25)
+          </a>
+          .
         </p>
 
         <h2 className="text-lg font-bold text-white mb-2">Some things about me:</h2>
@@ -110,7 +126,7 @@ export default function Home() {
               30k+ builders
             </a>
           </li>
-          <li>Currently obsessed with teaching AI how to understand and create in the physical world</li>
+          <li>Currently obsessed with bringing people together and making cool sh*t even cooler</li>
         </ul>
 
         <h2 className="text-lg font-bold text-white mb-2">Some things I believe:</h2>
