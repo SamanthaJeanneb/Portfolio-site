@@ -186,8 +186,8 @@ const projects: Project[] = [
       "Interactive artwork browsing interface",
     ],
     technologies: ["JavaScript", "React", "Spotify API", "Node.js", "CSS3", "Art Integration"],
-    coverImage: "/soundsketch-cover.png",
-    thumbnailImage: "/soundsketch-thumb.png",
+    coverImage: "/sound-sketch/cover.png",
+    thumbnailImage: "/sound-sketch/cover.png",
     timeline: "Personal Project (2024)",
     role: "Fullstack Developer & Artist",
     liveUrl: "https://soundsketch-six.vercel.app/",
@@ -207,11 +207,11 @@ const projects: Project[] = [
         title: "UI Screenshots",
         description: "Various screenshots showing the application interface and user experience.",
         content: [
-          "/soundsketch-cover.png",
-          "/soundsketch-thumb.png",
-          "/modern-apparel-storefront.png",
-          "/modern-finance-app.png"
-        ]
+          "/sound-sketch/classroom.png",
+          "/sound-sketch/kitchen.png",
+          "/sound-sketch/lounge.png",
+          "/sound-sketch/office.png",
+        ],
       },
     ],
     relatedProjects: [
@@ -264,7 +264,7 @@ const projects: Project[] = [
         slug: "soundsketch",
         title: "SoundSketch",
         category: "Interactive Spotify App",
-        image: "/soundsketch-thumb.png"
+        image: "/sound-sketch/cover.png"
       },
       {
         slug: "escape-utica-game",
@@ -402,7 +402,7 @@ const projects: Project[] = [
         slug: "soundsketch",
         title: "SoundSketch",
         category: "Interactive Spotify App",
-        image: "/soundsketch-thumb.png"
+        image: "/sound-sketch/cover.png"
       },
       {
         slug: "getter-done-task-manager",
