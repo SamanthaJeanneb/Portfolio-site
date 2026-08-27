@@ -57,7 +57,6 @@ function Gallery({ pieces }: { pieces: Piece[] }) {
             height={piece.height}
             className="w-full h-auto"
           />
-          <figcaption className="text-xs text-zinc-500 italic mt-1">{piece.title}</figcaption>
         </figure>
       ))}
     </div>
