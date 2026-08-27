@@ -61,10 +61,7 @@ export default function Home() {
           </a>
         </p>
 
-        <p className="mb-4">
-          I build things, write code, and explore the intersection of AI, design, and the physical
-          world.
-        </p>
+        <p className="mb-4">I build things, write code, and explore the intersection of AI and design.</p>
 
         <p className="mb-4">
           Built{" "}
@@ -126,7 +123,6 @@ export default function Home() {
               30k+ builders
             </a>
           </li>
-          <li>Currently obsessed with bringing people together and making cool sh*t even cooler</li>
         </ul>
 
         <h2 className="text-lg font-bold text-white mb-2">Some things I believe:</h2>
@@ -144,17 +140,11 @@ export default function Home() {
               The best products come from people who combine technical depth, design, and curiosity.
             </p>
           </div>
-          <div>
-            <p className="font-bold text-white">The physical world is the next frontier of AI</p>
-            <p>
-              AI has changed how we interact with information. The next step is helping humans
-              design and create the world around us.
-            </p>
-          </div>
         </div>
 
         <h2 className="text-lg font-bold text-white mb-2">Things I love:</h2>
         <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-0.5">
+          <li>Currently obsessed with bringing people together and making cool sh*t even cooler</li>
           <li>
             <Link href="/projects/vex-robotics" className={link}>
               Robotics
