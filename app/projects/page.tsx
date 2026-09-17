@@ -12,6 +12,10 @@ export const metadata: Metadata = {
 }
 
 const AWARDS: Record<string, { title: string; description: string }> = {
+  letshelp: {
+    title: "LetsHelp",
+    description: "Georgetown University Hackathon — 2nd Place Overall & Gemini Track Winner.",
+  },
   "bearly-running": {
     title: "Bear Escape",
     description: "Cornell University Hackathon — Best Design & Best Use of Gemini API.",

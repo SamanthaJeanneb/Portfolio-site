@@ -26,6 +26,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const links = [
     project.liveUrl && { label: "Live site", url: project.liveUrl },
     project.githubUrl && { label: "Source code", url: project.githubUrl },
+    project.devpostUrl && { label: "Devpost", url: project.devpostUrl },
     project.figmaUrl && { label: "Figma", url: project.figmaUrl },
   ].filter(Boolean) as { label: string; url: string }[]
 

@@ -45,6 +45,7 @@ export interface Project {
   role: string
   liveUrl?: string
   githubUrl?: string
+  devpostUrl?: string
   figmaUrl?: string
   videoUrl?: string
   accessNote?: string
@@ -54,6 +55,62 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 103,
+    slug: "letshelp",
+    title: "LetsHelp",
+    category: "Accessibility & AI",
+    shortDescription:
+      "An AI tech-support companion that sees your screen and controls your computer through natural voice commands.",
+    description: [
+      "LetsHelp provides patient, on-demand technology support for seniors and anyone who benefits from hands-free computing.",
+      "Users share their screen and speak naturally while Gemini interprets the interface, explains what is happening, and plans actions. The desktop app can click, type, and navigate on the user's behalf.",
+      "Built at Georgetown University's HoyaHacks with Eric Wei, Ben Nelson, and Elaine Chu.",
+    ],
+    features: [
+      "Real-time screen understanding with Gemini",
+      "Natural voice guidance and text-to-speech",
+      "Hands-free mouse and keyboard automation",
+      "Accessible web and Electron desktop experiences",
+    ],
+    technologies: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Gemini",
+      "ElevenLabs",
+      "Deepgram",
+      "LiveKit",
+      "Electron",
+      "Python",
+    ],
+    coverImage: "/letshelp/screenshot-252.jpg",
+    thumbnailImage: "/letshelp/screenshot-252.jpg",
+    timeline: "Georgetown University HoyaHacks (2026)",
+    role: "Voice, screen interaction & Electron integration",
+    githubUrl: "https://github.com/SamanthaJeanneb/Auralis_LetsHelp_HH26",
+    devpostUrl: "https://devpost.com/software/auralis-12p087",
+    process: [
+      {
+        id: "presentation",
+        type: "slideshow",
+        title: "Project presentation",
+        description: "The LetsHelp product, architecture, and use cases.",
+        content: [
+          "/letshelp/screenshot-252.jpg",
+          "/letshelp/screenshot-253.jpg",
+          "/letshelp/screenshot-254.jpg",
+          "/letshelp/screenshot-255.jpg",
+          "/letshelp/screenshot-256.jpg",
+          "/letshelp/screenshot-257.jpg",
+          "/letshelp/screenshot-258.jpg",
+          "/letshelp/screenshot-259.jpg",
+          "/letshelp/screenshot-260.jpg",
+        ],
+      },
+    ],
+    order: 0,
+  },
   {
     id: 102,
     slug: "atlas",
