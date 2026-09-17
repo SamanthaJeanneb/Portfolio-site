@@ -57,7 +57,7 @@ export default function ProjectsPage() {
           <div>
             <ProjectCard
               title="Suzanne"
-              description="AI-native 3D modeling for parts that work in the real world."
+              description="AI-native 3D modeling for parts that work in the real world, built at Founders, Inc."
               timeline="2025"
               href="https://suzanne3d.com"
             />
