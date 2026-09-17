@@ -68,8 +68,23 @@ export default function ProjectsPage() {
           Home
         </Link>
 
+        <section id="awards" className="mb-16 sm:mb-20 scroll-mt-12">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight mb-8">Awards</h1>
+          <div>
+            {awardedProjects.map((project) => (
+              <ProjectCard
+                key={project.slug}
+                title={AWARDS[project.slug].title}
+                description={AWARDS[project.slug].description}
+                timeline={project.timeline}
+                slug={project.slug}
+              />
+            ))}
+          </div>
+        </section>
+
         <section id="work" className="mb-16 sm:mb-20 scroll-mt-12">
-          <h1 className="text-xl sm:text-2xl font-bold tracking-tight mb-8">Projects</h1>
+          <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-8">Projects</h2>
           <div>
             <ProjectCard
               title="Suzanne"
@@ -82,21 +97,6 @@ export default function ProjectsPage() {
                 key={project.slug}
                 title={project.title}
                 description={project.shortDescription}
-                timeline={project.timeline}
-                slug={project.slug}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section id="awards" className="mb-16 sm:mb-20 scroll-mt-12">
-          <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-8">Awards</h2>
-          <div>
-            {awardedProjects.map((project) => (
-              <ProjectCard
-                key={project.slug}
-                title={AWARDS[project.slug].title}
-                description={AWARDS[project.slug].description}
                 timeline={project.timeline}
                 slug={project.slug}
               />
