@@ -8,14 +8,27 @@ import { getAllArticles } from "@/lib/articles"
 
 export const metadata: Metadata = {
   title: "Projects | Samantha J. Brown",
-  description: "Selected work, creative work, and articles.",
+  description: "Projects, awards, creative work, and articles.",
 }
 
-const WINNER_INFO: Record<string, string> = {
-  "vex-robotics": "VEX Robotics – National Champion & Innovate Award",
-  "bearly-running": "Big Red Hacks 2025 – Overall Winner",
-  "airwaves-rhythm-game": "Bitcamp 2025 – Winning Project",
-  "beat-boxing": "HopHacks 2025 – Winning Project",
+const AWARDS: Record<string, { title: string; description: string }> = {
+  "bearly-running": {
+    title: "Bear Escape",
+    description: "Cornell University Hackathon — Best Design & Best Use of Gemini API.",
+  },
+  "beat-boxing": {
+    title: "Beat Boxing",
+    description:
+      "Johns Hopkins University Hackathon — Best Overall Hack & Gaming Track: Best Use of SpacetimeDB.",
+  },
+  "airwaves-rhythm-game": {
+    title: "AirWaves",
+    description: "University of Maryland Hackathon — Best Gamification Hack.",
+  },
+  "vex-robotics": {
+    title: "VEX Robotics",
+    description: "National Champion & Innovate Award.",
+  },
 }
 
 function highlightName(text: string) {
@@ -35,6 +48,9 @@ export default function ProjectsPage() {
   const multimediaProjects = getAllMultimediaProjects()
   const brandingProjects = getAllBrandingProjects()
   const articles = getAllArticles()
+
+  const awardedProjects = projects.filter((project) => AWARDS[project.slug])
+  const otherProjects = projects.filter((project) => !AWARDS[project.slug])
 
   const creativeProjects = [
     ...brandingProjects.map((project) => ({ project, slug: `branding/${project.slug}` })),
@@ -61,14 +77,28 @@ export default function ProjectsPage() {
               timeline="2025"
               href="https://suzanne3d.com"
             />
-            {projects.map((project) => (
+            {otherProjects.map((project) => (
               <ProjectCard
                 key={project.slug}
                 title={project.title}
                 description={project.shortDescription}
                 timeline={project.timeline}
                 slug={project.slug}
-                winnerInfo={WINNER_INFO[project.slug]}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section id="awards" className="mb-16 sm:mb-20 scroll-mt-12">
+          <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-8">Awards</h2>
+          <div>
+            {awardedProjects.map((project) => (
+              <ProjectCard
+                key={project.slug}
+                title={AWARDS[project.slug].title}
+                description={AWARDS[project.slug].description}
+                timeline={project.timeline}
+                slug={project.slug}
               />
             ))}
           </div>
@@ -84,7 +114,6 @@ export default function ProjectsPage() {
                 description={project.shortDescription}
                 timeline={project.timeline}
                 slug={slug}
-                winnerInfo={WINNER_INFO[project.slug]}
               />
             ))}
           </div>

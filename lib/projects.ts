@@ -55,6 +55,51 @@ export interface Project {
 
 const projects: Project[] = [
   {
+    id: 102,
+    slug: "atlas",
+    title: "Atlas",
+    category: "Voice-Driven 3D World Generation",
+    shortDescription:
+      "Speak a world into existence, then redesign it with your voice. Built at the YC Conversational AI Hackathon.",
+    description: [
+      "Atlas generates full 3D environments from a spoken description and lets you reshape them in real time through conversation.",
+      "Voice commands can generate worlds, add objects, adjust lighting, and restyle surfaces. The resulting scene is rendered as persistent, explorable 3D geometry in the browser.",
+      "Built with Yehor Ivanenko at the Conversational AI Hackathon hosted by Moss (YC F25) at Y Combinator.",
+    ],
+    features: [
+      "Voice-to-3D world generation",
+      "Conversational scene editing and object placement",
+      "First-person browser exploration",
+      "WebXR augmented reality support",
+    ],
+    technologies: [
+      "JavaScript",
+      "Python",
+      "Three.js",
+      "WebXR",
+      "LiveKit",
+      "Qwen",
+      "Hunyuan",
+      "3D Gaussian Splatting",
+    ],
+    coverImage: "/atlas/pano-city.png",
+    thumbnailImage: "/atlas/pano-city.png",
+    timeline: "YC Conversational AI Hackathon (2026)",
+    role: "Design Engineer & Developer",
+    githubUrl: "https://github.com/SamanthaJeanneb/Atlas",
+    gallery: [
+      {
+        url: "/atlas/world-generation.jpg",
+        caption: "A generated 3D world",
+      },
+      {
+        url: "/atlas/architecture.svg",
+        caption: "Atlas system architecture",
+      },
+    ],
+    order: 1,
+  },
+  {
     id: 100,
     slug: "bearly-running",
     title: "Big Red Hacks 2025 - Bear Escape",
