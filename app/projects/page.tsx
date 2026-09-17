@@ -53,20 +53,20 @@ export default function ProjectsPage() {
         </Link>
 
         <section id="work" className="mb-16 sm:mb-20 scroll-mt-12">
-          <h1 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Selected work</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight mb-8">Projects</h1>
+          <div>
             <ProjectCard
               title="Suzanne"
-              category="AI 3D Modeling"
-              image="/suzanne/cover.jpg"
+              description="AI-native 3D modeling for parts that work in the real world."
+              timeline="2025"
               href="https://suzanne3d.com"
             />
             {projects.map((project) => (
               <ProjectCard
                 key={project.slug}
                 title={project.title}
-                category={project.category}
-                image={project.thumbnailImage}
+                description={project.shortDescription}
+                timeline={project.timeline}
                 slug={project.slug}
                 winnerInfo={WINNER_INFO[project.slug]}
               />
@@ -75,14 +75,14 @@ export default function ProjectsPage() {
         </section>
 
         <section id="creative" className="mb-16 sm:mb-20 scroll-mt-12">
-          <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-6">Creative work</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
+          <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-8">Creative work</h2>
+          <div>
             {creativeProjects.map(({ project, slug }) => (
               <ProjectCard
                 key={slug}
                 title={project.title}
-                category={project.category}
-                image={project.thumbnailImage}
+                description={project.shortDescription}
+                timeline={project.timeline}
                 slug={slug}
                 winnerInfo={WINNER_INFO[project.slug]}
               />
