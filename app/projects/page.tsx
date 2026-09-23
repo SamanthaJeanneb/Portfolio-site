@@ -29,10 +29,6 @@ const AWARDS: Record<string, { title: string; description: string }> = {
     title: "AirWaves",
     description: "University of Maryland Hackathon — Best Gamification Hack.",
   },
-  "vex-robotics": {
-    title: "VEX Robotics",
-    description: "National Champion & Innovate Award.",
-  },
 }
 
 function highlightName(text: string) {
@@ -54,7 +50,9 @@ export default function ProjectsPage() {
   const articles = getAllArticles()
 
   const awardedProjects = projects.filter((project) => AWARDS[project.slug])
-  const otherProjects = projects.filter((project) => !AWARDS[project.slug])
+  const otherProjects = projects.filter(
+    (project) => !AWARDS[project.slug] && project.slug !== "vex-robotics",
+  )
 
   const creativeProjects = [
     ...brandingProjects.map((project) => ({ project, slug: `branding/${project.slug}` })),
