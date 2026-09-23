@@ -39,10 +39,6 @@ export default function Home() {
             LinkedIn
           </a>
           <span className="text-zinc-600"> · </span>
-          <a href="https://x.com/samanthajeanneb" target="_blank" rel="noopener noreferrer" className={link}>
-            X
-          </a>
-          <span className="text-zinc-600"> · </span>
           <a href={github} target="_blank" rel="noopener noreferrer" className={link}>
             GitHub
           </a>
