@@ -35,15 +35,6 @@ export default function Home() {
             blog
           </Link>
           <span className="text-zinc-600"> · </span>
-          <a
-            href="https://design-portfolio-lake-two.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={link}
-          >
-            design engineering
-          </a>
-          <span className="text-zinc-600"> · </span>
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
             LinkedIn
           </a>
@@ -79,10 +70,23 @@ export default function Home() {
           , a 42,000-square-foot campus and early-stage fund for ambitious builders in San Francisco.
         </p>
 
-        <p className="mb-6">
+        <p className="mb-4">
           Now doing design engineering at{" "}
           <a href="https://useimagine.ai/" target="_blank" rel="noopener noreferrer" className={link}>
             Imagine AI (YC F25)
+          </a>
+          .
+        </p>
+
+        <p className="mb-6">
+          See my{" "}
+          <a
+            href="https://design-portfolio-lake-two.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={link}
+          >
+            portfolio
           </a>
           .
         </p>
