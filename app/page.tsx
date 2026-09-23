@@ -4,7 +4,6 @@ import { getPersonalInfo } from "@/lib/data"
 
 export default function Home() {
   const personal = getPersonalInfo()
-  const instagram = personal.social.find((s) => s.platform === "Instagram")?.url
   const linkedin = personal.social.find((s) => s.platform === "LinkedIn")?.url
   const github = personal.social.find((s) => s.platform === "GitHub")?.url
 
@@ -36,8 +35,13 @@ export default function Home() {
             blog
           </Link>
           <span className="text-zinc-600"> · </span>
-          <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
-            Instagram
+          <a
+            href="https://design-portfolio-lake-two.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={link}
+          >
+            design engineering
           </a>
           <span className="text-zinc-600"> · </span>
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className={link}>
@@ -118,10 +122,7 @@ export default function Home() {
             Department of State and U.S. Army
           </li>
           <li>
-            Create tech content and have grown a community of{" "}
-            <a href={instagram} target="_blank" rel="noopener noreferrer" className={link}>
-              30k+ builders
-            </a>
+            Create tech content and have grown a community of 30k+ builders
           </li>
         </ul>
 
