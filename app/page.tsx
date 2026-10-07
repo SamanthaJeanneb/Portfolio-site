@@ -77,7 +77,7 @@ export default function Home() {
         <p className="mb-6">
           See my{" "}
           <a
-            href="https://design-portfolio-lake-two.vercel.app"
+            href="https://samjeanneb.com"
             target="_blank"
             rel="noopener noreferrer"
             className={link}
