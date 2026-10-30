@@ -89,6 +89,12 @@ export default function ProjectsPage() {
           <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-8">Projects</h2>
           <div>
             <ProjectCard
+              title="Redesigning Imagine AI"
+              description="Design engineering at Imagine AI (YC F25): rethinking the product from onboarding to dashboard."
+              timeline="2026"
+              href="/projects/imagine-ai"
+            />
+            <ProjectCard
               title="Suzanne"
               description="AI-native 3D modeling for parts that work in the real world, built at Founders, Inc."
               timeline="2025"
