@@ -80,9 +80,7 @@ export default function OpenRouterPage() {
 
         <H2>What I noticed</H2>
         <p className="mb-4">
-          People come to the OpenRouter Discord for new models. #models is the busiest place in the server. The
-          &quot;Upcoming models speculation&quot; thread went from about 14,800 replies when I joined to 16,408 twelve days
-          later, and when a model drops, its thread fills up the same day.
+          People come to the OpenRouter Discord for new models. #models is the busiest place in the server.
         </p>
         <Shot src="/openrouter/models-forum.png" alt="The #models forum showing Upcoming models speculation with 16,408 replies" width={1025} height={580} wide />
         <p className="mb-4">
