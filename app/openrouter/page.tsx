@@ -133,10 +133,7 @@ export default function OpenRouterPage() {
           height={304}
         />
 
-        <List>
-          <li>2,134 messages mention &quot;cheaper,&quot; 248 say &quot;too expensive&quot; (Discord search, Nov 10)</li>
-          <li>These questions don&apos;t have a home. About 70 of the last 100 #community-help threads are billing or account issues</li>
-        </List>
+        <p className="mb-4">&quot;Too expensive&quot; comes up in 248 messages in the server.</p>
 
         <H2>Part 2: Growing it on Discord</H2>
 
