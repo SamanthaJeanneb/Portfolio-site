@@ -78,13 +78,14 @@ export default function OpenRouterPage() {
         <h1 className="text-2xl font-bold text-white mb-4">What can you build with $5?</h1>
 
         <p className="mb-4">
-          People want the best outcome for as little spend as possible. So I made a budget planner that picks the best
-          model for each part of your project, and I&apos;d grow it on Discord as a challenge: what can you build with $5?
+          Everyone building with AI wants the best outcome for as little spend as possible. So I built a budget planner
+          that picks the best model for each part of your project, and I&apos;d grow it on Discord with a challenge: what
+          can you build with $5?
         </p>
 
         <H2>Part 1: What I built</H2>
         <p className="mb-4">
-          A project budget planner.{" "}
+          I built a project budget planner.{" "}
           <a
             href="https://github.com/SamanthaJeanneb/model-budget-planner"
             target="_blank"
@@ -106,7 +107,7 @@ export default function OpenRouterPage() {
         </List>
 
         <H2>How I know people need it</H2>
-        <p className="mb-4">People in the OpenRouter Discord keep asking the same thing: what&apos;s the best model I can afford for this?</p>
+        <p className="mb-4">I kept seeing the same question in the OpenRouter Discord: what&apos;s the best model I can afford for this?</p>
 
         <Shot
           src="/openrouter/cost-to-performance.png"
@@ -133,41 +134,42 @@ export default function OpenRouterPage() {
           height={304}
         />
 
-        <p className="mb-4">&quot;Too expensive&quot; comes up in 248 messages in the server.</p>
+        <p className="mb-4">When I searched the server, &quot;too expensive&quot; came up in 248 messages.</p>
 
         <H2>Part 2: Growing it on Discord</H2>
 
         <H3>What I noticed</H3>
         <p className="mb-4">
-          People show up for new models. #models is the busiest place in the server. The &quot;Upcoming models
-          speculation&quot; thread is at 16,408 replies, and it got about 1,580 more in the 12 days since I first looked.
-          When a model drops, its thread fills up the same day.
+          The first thing I noticed is that people show up for new models. #models is the busiest place in the server.
+          The &quot;Upcoming models speculation&quot; thread was at about 14,800 replies when I joined and 16,408 twelve
+          days later. When a model drops, its thread fills up the same day.
         </p>
         <Shot src="/openrouter/models-forum.png" alt="The #models forum showing Upcoming models speculation with 16,408 replies" width={1025} height={580} wide />
         <p className="mb-4">
-          They come back for the next drop, and to argue about whether it&apos;s worth the price. &quot;Cheaper&quot; shows up
-          in 2,134 messages.
+          From what I saw, they come back for the next drop and to argue about whether it&apos;s worth the price. When I
+          searched &quot;cheaper,&quot; I got 2,134 messages.
         </p>
-        <p className="mb-2">What isn&apos;t working:</p>
+        <p className="mb-2">What I don&apos;t think is working:</p>
         <List>
-          <li>#new-models is a bot feed. Gemini 4 Carbon&apos;s post there got 8 reactions, and its #models thread got 488 replies. The announcement isn&apos;t where the conversation is</li>
-          <li>About 70 of the last 100 #community-help threads are billing or account problems. If you just want to know what model to use, there&apos;s nowhere to ask, so people ask in #general or ping the bot</li>
-          <li>At least 21 of the 68 newest #feedback-and-requests posts have no replies. If you post an idea and nobody answers, you don&apos;t post again. This is where people stop engaging</li>
-          <li>People do post what they built in #app-showcase. 10 projects went up between Nov 5 and 9, and none of them got a reaction or a reply from anyone else. It&apos;s also not on the default channel list, so most people never see it. You share your thing and hear nothing back</li>
-          <li>Events are mostly in person in SF and NYC, and #events posts get 0 to 8 reactions</li>
+          <li>#new-models is a bot feed. Gemini 4 Carbon&apos;s post there got 8 reactions while its #models thread got 488 replies. The conversation happens in #models, not where the model gets announced</li>
+          <li>I went through the last 100 #community-help threads and about 70 were billing or account problems. If you just want to know what model to use, there&apos;s nowhere to ask, so people ask in #general or ping the bot</li>
+          <li>At least 21 of the 68 newest #feedback-and-requests posts have no replies. If I posted an idea and nobody answered, I wouldn&apos;t post again. I think this is where people stop engaging</li>
+          <li>People do post what they built in #app-showcase. I scrolled through the 10 projects posted Nov 5 to 9, and none of them got a reaction or a reply from anyone else. It&apos;s not on the default channel list either, so I almost missed it myself</li>
+          <li>Most events are in person in SF and NYC, and the #events posts I looked at got 0 to 8 reactions</li>
         </List>
         <p className="mb-4">
-          What people want and aren&apos;t getting: an answer to &quot;what&apos;s the best model I can afford for this?&quot;
-          They&apos;re even asking for a way to rate which models and providers actually work.
+          What I think people want and aren&apos;t getting is an answer to &quot;what&apos;s the best model I can afford for
+          this?&quot; Someone even posted asking for a way to rate which models and providers actually work.
         </p>
         <Shot src="/openrouter/rating-idea.png" alt="Feedback post asking for community feedback and ratings for providers or provider/model combinations" width={1210} height={1340} maxClass="max-w-[520px]" />
 
         <H3>The initiative: Budget Build</H3>
         <p className="mb-4">
-          Every week there&apos;s a budget and a prompt. What can you build with $5? You plan your stack with the budget
-          planner, build it, and post what you built, which models you used, and what it cost. Best build for the least
-          money wins.
+          I&apos;d launch a weekly challenge with a budget and a prompt. What can you build with $5? You plan your stack
+          with my budget planner, build it, and post what you built, which models you used, and what it cost. Best build
+          for the least money wins.
         </p>
+        <p className="mb-2">Why I think it works here:</p>
         <List>
           <li>This server already argues about price vs performance all day. This gives that somewhere to go</li>
           <li>It gets people building with models outside Claude and OpenAI. A $5 cap pretty much forces you to try open-weight models</li>
@@ -186,21 +188,21 @@ export default function OpenRouterPage() {
           <li>Members own: the prompt list, judging, and the writeup of the winning stack</li>
           <li>If I&apos;m out for a week, the prompts are already queued, the bot runs it, and member judges pick the winner</li>
         </List>
-        <p className="mb-2">Outside the challenge, day to day:</p>
+        <p className="mb-2">Outside the challenge, here&apos;s what I&apos;d do day to day:</p>
         <List>
-          <li>I&apos;d be in the server regularly, commenting on and supporting what people are building. People keep building when they feel seen by the team behind the tool they&apos;re using</li>
+          <li>Regularly engage with the community and support what they&apos;re building with my own comments. People keep building when they feel seen by the team behind the tool they&apos;re using</li>
           <li>Hang out in #models, not just post in #announcements</li>
           <li>Reply to every feedback post, even if it&apos;s just &quot;we saw this&quot;</li>
-          <li>React and reply to every #app-showcase post, and put the channel on everyone&apos;s list</li>
+          <li>React and reply to #app-showcase posts, and get the channel on everyone&apos;s list</li>
           <li>Get billing issues to support fast so they don&apos;t take over the help channel</li>
           <li>Give regulars roles and let them run things</li>
         </List>
 
         <H3>The copy</H3>
         <p className="mb-4">
-          The posts that already do well in #announcements sound like a person, use @everyone for big stuff, and shout out
-          the community. The Stripe post got 853 reactions and welcoming a new mod got 209. I kept that and added a real
-          reward, a deadline, and a reason to reply.
+          I looked at what already does well in #announcements: posts that sound like a person, @everyone for big news,
+          and shoutouts to the community. The Stripe post got 853 reactions and welcoming a new mod got 209. I kept that
+          and added a real reward, a deadline, and a reason to reply.
         </p>
 
         <p className="mb-2 font-bold text-white">Launch announcement</p>
@@ -235,8 +237,8 @@ next week's budget: $1. think you can go lower?`}
 
         <p className="mb-2 mt-8 font-bold text-white">Event promotion</p>
         <p className="mb-4">
-          Based on their In Production post, with who it&apos;s for, demo spots for the community, and a way in if
-          you&apos;re not in SF.
+          I based this on the In Production post and added who it&apos;s for, demo spots for the community, and a way in
+          if you&apos;re not in SF.
         </p>
         <Copy>
           {`**In Production: OpenRouter x ElevenLabs**
@@ -263,11 +265,15 @@ Not in SF? Drop your questions for the builders in the thread. We'll ask the bes
         </Copy>
 
         <H3>Success</H3>
+        <p className="mb-2">What I&apos;d measure:</p>
         <List>
-          <li>Entries per week. It&apos;s working if there are 20+ by week 4</li>
-          <li>People coming back. It&apos;s working if 30% of entrants enter again</li>
+          <li>Entries per week. I&apos;d call it working at 20+ by week 4</li>
+          <li>People coming back. Working if 30% of entrants enter again</li>
           <li>Spend on open-weight models from people who entered</li>
           <li>Fewer &quot;which model should I use?&quot; questions going to the bot</li>
+        </List>
+        <p className="mb-2">What I&apos;d change if it isn&apos;t working:</p>
+        <List>
           <li>Under 10 entries: make the prompt smaller or do a free-models week</li>
           <li>People enter once and leave: add streaks and a monthly leaderboard</li>
           <li>Entries but no conversation: I comment more and post a weekly recap in #general</li>
@@ -275,9 +281,9 @@ Not in SF? Drop your questions for the builders in the thread. We'll ask the bes
 
         <H3>Bonus: X and Reddit</H3>
         <List>
-          <li>X: post the best $5 build each week with its stack and cost</li>
-          <li>Reddit: a monthly roundup of the cheapest working stacks for r/LocalLLaMA</li>
-          <li>Everything links back to Discord to enter</li>
+          <li>On X, I&apos;d post the best $5 build each week with its stack and cost</li>
+          <li>On Reddit, I&apos;d do a monthly roundup of the cheapest working stacks for r/LocalLLaMA</li>
+          <li>Everything links back to Discord so people can enter</li>
         </List>
       </div>
     </main>
