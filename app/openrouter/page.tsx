@@ -212,6 +212,11 @@ Not in SF? Drop your questions for the builders in the thread. We'll ask the bes
           add Under review, Planned, and Shipped tags, and reply with a link back to the original post when something
           ships. That way people can see their feedback actually went somewhere.
         </p>
+        <p className="mb-4">
+          I&apos;d also turn repeated questions into short guides, starting with keeping coding API costs down, picking a
+          model, and setting up a coding agent. I&apos;d write them from actual questions in #community-help, then link the
+          guide the next time someone asks.
+        </p>
       </div>
     </main>
   )
