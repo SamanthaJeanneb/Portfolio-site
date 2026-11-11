@@ -68,16 +68,14 @@ export default function OpenRouterPage() {
       <div className="mx-auto w-full max-w-3xl px-8 sm:px-10 py-12 text-base leading-relaxed">
         <p className="text-sm text-zinc-500 mb-2">OpenRouter take-home · Community Lead, Developer Relations</p>
         <h1 className="text-2xl font-bold text-white mb-4">What can you build with $5?</h1>
-        <p className="mb-4">
-          This is part 2 of my OpenRouter take-home. For part 1 I built the{" "}
+        <p className="mb-4 text-sm">
           <a href="https://github.com/SamanthaJeanneb/model-budget-planner" target="_blank" rel="noopener noreferrer" className={link}>
-            Model Budget Planner
+            Model Budget Planner repo
           </a>
-          , which plans a project and picks the best model for each part based on your budget (
+          <span className="text-zinc-600"> · </span>
           <a href="https://model-budget-planner.vercel.app" target="_blank" rel="noopener noreferrer" className={link}>
-            try it
+            Live demo
           </a>
-          ). This is how I&apos;d bring it into the OpenRouter Discord and grow the community around it.
         </p>
 
         <H2>What I noticed</H2>
