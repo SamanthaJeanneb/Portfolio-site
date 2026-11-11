@@ -153,7 +153,7 @@ export default function OpenRouterPage() {
           <li>#new-models is a bot feed. Gemini 4 Carbon&apos;s post there got 8 reactions, and its #models thread got 488 replies. The announcement isn&apos;t where the conversation is</li>
           <li>About 70 of the last 100 #community-help threads are billing or account problems. If you just want to know what model to use, there&apos;s nowhere to ask, so people ask in #general or ping the bot</li>
           <li>At least 21 of the 68 newest #feedback-and-requests posts have no replies. If you post an idea and nobody answers, you don&apos;t post again. This is where people stop engaging</li>
-          <li>The rules say to post projects in #app-showcase, but it&apos;s not in the channel list. There&apos;s no place to show what you built</li>
+          <li>People do post what they built in #app-showcase. 10 projects went up between Nov 5 and 9, and none of them got a reaction or a reply from anyone else. It&apos;s also not on the default channel list, so most people never see it. You share your thing and hear nothing back</li>
           <li>Events are mostly in person in SF and NYC, and #events posts get 0 to 8 reactions</li>
         </List>
         <p className="mb-4">
@@ -191,7 +191,7 @@ export default function OpenRouterPage() {
           <li>I&apos;d be in the server regularly, commenting on and supporting what people are building. People keep building when they feel seen by the team behind the tool they&apos;re using</li>
           <li>Hang out in #models, not just post in #announcements</li>
           <li>Reply to every feedback post, even if it&apos;s just &quot;we saw this&quot;</li>
-          <li>Bring back a place to show off projects</li>
+          <li>React and reply to every #app-showcase post, and put the channel on everyone&apos;s list</li>
           <li>Get billing issues to support fast so they don&apos;t take over the help channel</li>
           <li>Give regulars roles and let them run things</li>
         </List>
