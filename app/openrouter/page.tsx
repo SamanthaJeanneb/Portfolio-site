@@ -3,7 +3,7 @@ import type { ReactNode } from "react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "What can you build with $1? | Samantha J. Brown",
+  title: "What can you build with $5? | Samantha J. Brown",
   description: "A budget planner for building with LLMs, and a Discord challenge to grow it.",
   robots: { index: false, follow: false },
 }
@@ -78,12 +78,11 @@ export default function OpenRouterPage() {
     <main className="min-h-screen bg-black text-zinc-200">
       <div className="mx-auto w-full max-w-3xl px-8 sm:px-10 py-12 text-base leading-relaxed">
         <p className="text-sm text-zinc-500 mb-2">OpenRouter take-home · Community Lead, Developer Relations</p>
-        <h1 className="text-2xl font-bold text-white mb-4">What can you build with $1?</h1>
+        <h1 className="text-2xl font-bold text-white mb-4">What can you build with $5?</h1>
 
         <p className="mb-4">
           People want the best outcome for as little spend as possible. So I made a budget planner that picks the best
-          model for each part of your project, and I&apos;d grow it on Discord as a challenge: what can you build with $1?
-          $5?
+          model for each part of your project, and I&apos;d grow it on Discord as a challenge: what can you build with $5?
         </p>
 
         <H2>What I built</H2>
@@ -181,7 +180,7 @@ export default function OpenRouterPage() {
             simple way to start exploring open-weight models
           </li>
           <li>Set a budget challenge and get the community to build something under it and explain how</li>
-          <li>It directly grows OpenRouter usage. Demos of building an app for $1 vs $100 are the type of thing that gets attention</li>
+          <li>It directly grows OpenRouter usage. Demos of building an app for $5 vs $100 are the type of thing that gets attention</li>
           <li>
             It gets people building with models outside Claude and OpenAI. It gives them a reason to build something and see
             what&apos;s possible with open-weight
@@ -233,16 +232,16 @@ export default function OpenRouterPage() {
 
 y'all argue about price vs performance in #models every single day. time to prove it.
 
-**budget build: what can you build with $1?**
+**budget build: what can you build with $5?**
 one prompt. one budget. any model on openrouter. best build for the least money wins.
 
 **this week:** build something that saves you time every day
-**budget:** $1 in API spend
+**budget:** $5 in API spend
 **deadline:** sunday, nov 22, 11:59 PM PT
 
 **what you get:**
-- **we cover your $1.** every real entry gets $5 in credits back
-- the winner gets **$100 in credits** (100x your budget)
+- **we cover your $5.** every real entry gets $5 in credits back
+- the winner gets **$100 in credits** (20x your budget)
 - the top build gets the community demo spot at our next In Production
 - the Budget Builder role and a feature on @OpenRouter
 - your stack goes on the leaderboard so everyone can copy it
@@ -254,7 +253,7 @@ one prompt. one budget. any model on openrouter. best build for the least money 
 
 the team's builds drop in the thread tomorrow. beat us.
 
-next week's budget: $5`}
+next week's budget: $1. think you can go lower?`}
         </Copy>
 
         <p className="mb-2 mt-6 text-sm text-zinc-500">Event promotion</p>
@@ -296,7 +295,7 @@ Not in SF? Drop your questions for the builders in the thread. We'll ask the bes
 
         <H3>Other communities</H3>
         <List>
-          <li>X: post the best $1 build each week with its stack and cost</li>
+          <li>X: post the best $5 build each week with its stack and cost</li>
           <li>Reddit: a monthly roundup of the cheapest working stacks for r/LocalLLaMA</li>
           <li>Everything links back to Discord to enter</li>
         </List>
