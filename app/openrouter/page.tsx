@@ -66,7 +66,6 @@ export default function OpenRouterPage() {
   return (
     <main className="min-h-screen bg-black text-zinc-200">
       <div className="mx-auto w-full max-w-3xl px-8 sm:px-10 py-12 text-base leading-relaxed">
-        <p className="text-sm text-zinc-500 mb-2">OpenRouter take-home · Community Lead, Developer Relations</p>
         <h1 className="text-2xl font-bold text-white mb-4">What can you build with $5?</h1>
         <p className="mb-4 text-sm">
           <a href="https://github.com/SamanthaJeanneb/model-budget-planner" target="_blank" rel="noopener noreferrer" className={link}>
@@ -82,91 +81,58 @@ export default function OpenRouterPage() {
         <p className="mb-4">
           People come to the OpenRouter Discord for new models. #models is the busiest place in the server.
         </p>
-        <Shot src="/openrouter/models-forum.png" alt="The #models forum showing Upcoming models speculation with 16,408 replies" width={1025} height={580} wide />
+        <Shot src="/openrouter/models-forum.png" alt="The #models forum" width={1025} height={580} wide />
         <p className="mb-4">
-          They stay to argue about whether it&apos;s worth the price. When I searched &quot;cheaper&quot; I got 2,134
-          messages, and &quot;too expensive&quot; came up in 248. What people want and aren&apos;t getting is an answer to
-          &quot;what&apos;s the best model I can afford for this?&quot; It comes up all the time, and people even ask the
-          support bot.
+          They stay to argue about whether it&apos;s worth the price. When I searched &quot;cheaper&quot; I got 2,134 messages, and &quot;too expensive&quot; came up in 248. What people want and aren&apos;t getting is an answer to &quot;what&apos;s the best model I can afford for this?&quot; It comes up all the time, and people even ask the support bot.
         </p>
-        <Shot src="/openrouter/cost-to-performance.png" alt="Discord message: I'm trying to find the best model for building applets / gtk stuff / python scripting that's like good on cost to performance" width={394} height={172} />
-        <Shot src="/openrouter/best-and-cheapest.png" alt="Discord message asking the support bot for the best and cheapest model for one task" width={394} height={326} />
+        <Shot src="/openrouter/cost-to-performance.png" alt="Discord message asking for the best model that's good on cost to performance" width={394} height={172} />
+        <Shot src="/openrouter/best-and-cheapest.png" alt="Discord message asking the support bot for the best and cheapest model" width={394} height={326} />
         <Shot src="/openrouter/too-expensive.png" alt="Discord message: Anthropic models are still way too expensive for me to use on the regular" width={394} height={150} />
         <p className="mb-4">
-          Where people stop engaging is when nobody answers. Some questions, feedback, and help posts just don&apos;t get a
-          reply. At least 21 of the 68 newest posts in #feedback-and-requests have none, and support is mostly billing,
-          about 70 of the last 100 #community-help threads. If I posted an idea and nobody answered, I wouldn&apos;t post
-          again.
+          Where people stop engaging is when nobody answers. Some questions, feedback, and help posts just don&apos;t get a reply. At least 21 of the 68 newest posts in #feedback-and-requests have none, and support is mostly billing, about 70 of the last 100 #community-help threads. If I posted an idea and nobody answered, I probably wouldn&apos;t take the time to post again.
         </p>
         <p className="mb-4">
-          #app-showcase isn&apos;t in the default channels, so most people never see it. I scrolled through the 10
-          projects posted Nov 5 to 9, and none of them got a reaction or a reply from anyone else. I think there should be
-          more effort to grow this channel and highlight the best projects from it often. People keep building when they
-          feel seen by the team behind the tool they&apos;re using.
+          #app-showcase isn&apos;t in the default channels, so most people never see it. After I found the channel, I scrolled through the 10 projects posted Nov 5 to 9, and none of them got a reaction or a reply from anyone else. I think there should be more effort to grow this channel and highlight the best projects from it often. People keep building when they feel seen by the team behind the tool they&apos;re using, and right now there isn&apos;t much interaction from the team.
         </p>
         <p className="mb-4">
-          Someone even posted asking for a way for the community to rate which models and providers actually work,
-          which is pretty much what I want to build.
+          A few ideas posted in the Discord asked for a better way to test model and provider combinations and see how they rank. One example:
         </p>
         <Shot src="/openrouter/rating-idea.png" alt="Feedback post asking for community ratings of providers and model combinations" width={1210} height={1340} maxClass="max-w-[520px]" />
 
         <H2>What I&apos;d launch</H2>
         <p className="mb-4">
-          Everything lives in one new channel, <span className="font-bold text-white">#budget-builds</span>. It&apos;s
-          for showing off what you built and how you kept the cost down. That&apos;s the challenge entries, and also anyone
-          building on open-weight models who wants to show their project and how they optimized their token costs. The
-          budget planner is a resource for planning it efficiently before you start.
+          Everything lives in one new channel, <span className="font-bold text-white">#budget-builds</span>. It&apos;s for showing off what you built and how you kept the cost down. That&apos;s the challenge entries, and also anyone building on open-weight models who wants to show their project and how they optimized their token costs. This is a hot topic in the server, and one of the main reasons developers use OpenRouter. The budget planner is a resource for planning it efficiently before you start.
         </p>
         <p className="mb-4">
-          <span className="font-bold text-white">Budget Build</span> is the weekly challenge. Every week there&apos;s a
-          prompt and a budget, like $5. You build something under it and post what you built, which models you used, and
-          what it cost in #budget-builds. Best build for the least money wins. It&apos;s a twist on Build Day: online,
-          every week, and the limit is money instead of time.
+          <span className="font-bold text-white">Budget Build</span> is the weekly challenge. Every week there&apos;s a prompt and a budget, like $5. You build something under it and post what you built, which models you used, and what it cost in #budget-builds. Best build for the least money wins. It&apos;s a twist on Build Day: online, every week, and the limit is money instead of time.
         </p>
         <p className="mb-4">
-          <span className="font-bold text-white">Open Weight Build</span> is the same idea once a month, but you can only
-          use open-weight models. It gets people building with models outside Claude and OpenAI and shows what&apos;s
-          actually possible with open weight.
+          <span className="font-bold text-white">Open Weight Build</span> is the same idea once a month, but you can only use open-weight models. It gets people building with models outside Claude and OpenAI and shows what&apos;s actually possible with open weight.
         </p>
         <p className="mb-4">
-          This works here because the server already argues about price and performance every day, and this turns it into
-          real projects. When someone asks which model to use, there&apos;s somewhere to point them: past builds in
-          #budget-builds and the planner. It directly grows OpenRouter usage, and a $5 vs $100 build is the kind of thing
-          that gets attention. It also gets people spending on models outside Claude and OpenAI, and every build is a real
-          example of which models work for what, which is the rating people are already asking for. The best builds get
-          highlighted in #app-showcase too.
+          This works here because the server already argues about price and performance every day, and this turns it into real projects. When someone asks which model to use, there&apos;s somewhere to point them: past builds in #budget-builds and the planner. It directly grows OpenRouter usage, and a $1 vs $100 build is the kind of thing that gets attention. The best builds get highlighted in #app-showcase too.
         </p>
 
         <H2>How it runs</H2>
         <p className="mb-4">
-          In week 1 I run it by hand. I post the first Budget Build, build an entry myself, comment on every entry, and
-          pick the winner. I also post a few of my own builds in #budget-builds so people can see what a good post looks
-          like: what I built, my models, and how I cut my token costs.
+          In week 1 I run it by hand. I post the first Budget Build, build an entry myself, comment on every entry, and pick the winner. I also post a few of my own builds in #budget-builds so people can see what a good post looks like: what I built, my models, and how I cut my token costs.
         </p>
         <p className="mb-4">
-          By week 8, Budget Build runs as an automated weekly challenge. A bot posts the prompt from a list members
-          voted on, opens the thread, reminds people before the deadline, and counts votes. People post their own open-weight builds in #budget-builds between challenges, and the best ones
-          get pinned and shared on X. Past winners get a Budget
-          Builder role, judge the next rounds, and write up the winning stack.
+          By week 8, Budget Build runs as an automated weekly challenge. A bot posts the prompt from a list members voted on, opens the thread, reminds people before the deadline, and counts votes. People post their own open-weight builds in #budget-builds between challenges, and the best ones get pinned and shared on X. Past winners get a Budget Builder role, and the winner can be picked by community votes.
         </p>
         <p className="mb-4">
-          What still needs a human is picking the first prompts, breaking ties, sending credits, and featuring builds on
-          X and in #announcements. If I&apos;m out for a week, the prompts are already queued, the bots keep running, and
-          member judges pick the winner.
+          What still needs a human is picking the first prompts, breaking ties, sending credits, and featuring builds on X and in #announcements. If I&apos;m out for a week, the prompts are already queued, the bots keep running, and winners can be picked by community engagement.
         </p>
         <p className="mb-4">
-          Outside the challenges, I&apos;d regularly engage with the community and support what they&apos;re building
-          with my own comments. I&apos;d reply to feedback posts even if it&apos;s just &quot;we saw this,&quot; react to
-          #app-showcase posts, and get billing questions to support fast so the help channel stays about building.
+          Outside the challenges, I&apos;d regularly engage with the community and support what they&apos;re building with my own comments. I&apos;d reply to feedback posts even if it&apos;s just &quot;checking up on this,&quot; react to #app-showcase posts, and get billing questions to support fast so the help channel stays about building.
+        </p>
+        <p className="mb-4">
+          To make sure feedback gets seen, I&apos;d also write up a regular summary of the issues and requests the community brings up and share it with the team, so no one has to go through every single request.
         </p>
 
         <H2>The copy</H2>
         <p className="mb-4">
-          The posts that do well in #announcements sound like a real person on the team. The Stripe post got 853
-          reactions and welcoming a new mod got 209. #events posts get 0 to 8, and almost all of them are in person in SF
-          or NYC. Build Day is the closest thing they&apos;ve done, so I kept what worked about it, a clear
-          list of what you get and one link, and made this online, every week, with a deadline and a way to get help
-          picking models.
+          The posts that do well in #announcements sound like a real person on the team. The Stripe post got 853 reactions and welcoming a new mod got 209. #events posts get 0 to 8, and almost all of them are in person in SF or NYC. Budget Builds would be open to everyone online, with an optional short in-person segment.
         </p>
         <p className="mb-2 mt-6 font-bold text-white">Launch announcement</p>
         <Copy>
@@ -180,7 +146,7 @@ That's what Budget Builds is for. Every week we post a prompt and a budget. You 
 **Budget:** $5
 **Due:** Sunday, Nov 22, 11:59 PM PT
 
-Want to plan it efficiently first? The budget planner picks the best model for each part of your project within your budget: [link]
+Not sure where to start? The budget planner picks the best model for each part of your project within your budget: [link]
 
 **Prizes**
 - Everyone who enters gets $5 in credits to build with
@@ -195,10 +161,6 @@ Building on open-weight models outside the challenge? #budget-builds is for you 
 Tell us what you're building in the thread and we'll help you figure out your stack.`}
         </Copy>
         <p className="mb-2 mt-8 font-bold text-white">Event promotion</p>
-        <p className="mb-4">
-          I based this on their In Production post and added who it&apos;s for, demo spots for the community, and a way
-          in if you&apos;re not in SF.
-        </p>
         <Copy>
           {`**In Production: OpenRouter x ElevenLabs**
 **Tuesday, Nov 17 · 5:30 to 8:30 PM PT · San Francisco**
@@ -225,21 +187,23 @@ Not in SF? Drop your questions for the builders in the thread. We'll ask the bes
 
         <H2>How I&apos;d know it&apos;s working</H2>
         <p className="mb-4">
-          I&apos;d know it&apos;s working if Budget Build gets 20+ entries a week by week 4, and 30% of the people who
-          enter come back for another one. I&apos;d also watch open-weight spend from people who entered, reactions and
-          replies in #app-showcase, and whether &quot;which model should I use?&quot; questions to the bot go down.
+          I&apos;d know it&apos;s working if 30% of the people who enter come back for another one. I&apos;d also watch for:
         </p>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-4">
+          <li>Open-weight spend from people who entered</li>
+          <li>Reactions and replies in #app-showcase</li>
+          <li>Fewer &quot;which model should I use?&quot; questions to the bot</li>
+          <li>More usage of non-mainstream models</li>
+          <li>First-time posters coming back on a regular cadence</li>
+          <li>If there&apos;s a way to track it, people who got Budget Builds credits coming back to reload credits for their next project</li>
+        </ul>
         <p className="mb-4">
-          If there are fewer than 10 entries, I&apos;d make the prompt smaller or do a free models week. If people enter
-          once and leave, I&apos;d add streaks and a monthly leaderboard. If there are entries but no conversation,
-          I&apos;d comment more and post a weekly recap in #general.
+          If there are fewer than 10 entries, I&apos;d make the prompt smaller or do a free models week. If people enter once and leave, I&apos;d add streaks and tiered roles for people who regularly show up to events. If there are entries but no conversation, I&apos;d comment more and post a weekly recap in #general, shouting out the winners and honorable mentions.
         </p>
 
-        <H2>X and Reddit</H2>
+        <H2>Outside Discord</H2>
         <p className="mb-4">
-          On X I&apos;d post the best $5 build each week with its stack and what it cost. On Reddit I&apos;d do a
-          monthly roundup of the cheapest working stacks for r/LocalLLaMA, where people care about open models.
-          Everything links back to the Discord so people can enter.
+          On X I&apos;d post the best $5 build each week with its stack and what it cost. On Reddit I&apos;d do a monthly roundup of the cheapest working stacks. Everything links back to the Discord so people can enter and join the conversation.
         </p>
       </div>
     </main>
