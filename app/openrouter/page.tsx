@@ -140,25 +140,20 @@ export default function OpenRouterPage() {
 
 Building with frontier models is getting more expensive, but cheap models are also getting more powerful. So what's the right balance for your project?
 
-That's what Budget Builds is for. Every week we post a prompt and a budget. You pick your models, build the best thing you can without going over, and show us what you made, which models you used, and what it cost. Use a frontier model for the hard parts and cheaper ones for the rest, or go all open-weight. Best build for the least money wins.
+Every week we post a prompt and a budget. Build the best thing you can without going over, then show us what you made, which models you used, and what it cost. Best build for the least money wins.
 
 **This week:** something that saves you time every day
 **Budget:** $5
 **Due:** Sunday, Nov 22, 11:59 PM PT
 
-Not sure where to start? The budget planner picks the best model for each part of your project within your budget: [link]
-
 **Prizes**
-- Everyone who enters gets $5 in credits to build with
-- Best build for the least money wins $100 in credits
-- Top build gets a demo spot at our next In Production
-- Winners get the Budget Builder role and a shoutout on our X
+- $5 in credits to build with for everyone who enters
+- $100 in credits for the best build for the least money
+- A demo spot at our next In Production and the Budget Builder role
 
-Post your entry in #budget-builds with a demo, the models you used, and what it cost.
+Post your entry in #budget-builds. Building on open-weight models outside the challenge? Share it there too.
 
-Building on open-weight models outside the challenge? #budget-builds is for you too. Show us what you made and how you kept your token costs down.
-
-Tell us what you're building in the thread and we'll help you figure out your stack.`}
+Not sure where to start? The budget planner picks the best model for each part of your project within your budget: [link]`}
         </Copy>
         <p className="mb-2 mt-8 font-bold text-white">Event promotion</p>
         <Copy>
