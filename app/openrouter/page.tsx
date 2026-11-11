@@ -56,10 +56,19 @@ function List({ children }: { children: ReactNode }) {
   )
 }
 
-function Copy({ children }: { children: ReactNode }) {
+function Copy({ children }: { children: string }) {
+  const parts = children.split("**")
   return (
-    <div className="my-4 whitespace-pre-line rounded-lg border border-zinc-800 bg-zinc-950 p-5 font-sans text-sm leading-relaxed text-zinc-300">
-      {children}
+    <div className="my-4 whitespace-pre-line rounded-lg border border-zinc-800 bg-[#313338] p-5 font-sans text-sm leading-relaxed text-zinc-200">
+      {parts.map((part, i) =>
+        i % 2 === 1 ? (
+          <strong key={i} className="font-semibold text-white">
+            {part}
+          </strong>
+        ) : (
+          <span key={i}>{part}</span>
+        ),
+      )}
     </div>
   )
 }
