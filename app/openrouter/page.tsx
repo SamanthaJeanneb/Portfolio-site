@@ -3,7 +3,7 @@ import type { ReactNode } from "react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "What can you build with $5? | Samantha J. Brown",
+  title: "Take-Home Challenge, Part 2 | Samantha J. Brown",
   description: "A budget planner for building with LLMs, and a Discord challenge to grow it.",
   robots: { index: false, follow: false },
 }
@@ -66,10 +66,12 @@ export default function OpenRouterPage() {
   return (
     <main className="min-h-screen bg-black text-zinc-200">
       <div className="mx-auto w-full max-w-3xl px-8 sm:px-10 py-12 text-base leading-relaxed">
-        <h1 className="text-2xl font-bold text-white mb-4">What can you build with $5?</h1>
+        <h1 className="text-2xl font-bold text-white">Take-Home Challenge (Community Lead, Developer Relations)</h1>
+        <p className="text-xl font-bold text-white mb-4">Part 2</p>
         <p className="mb-4 text-sm">
+          Part 1:{" "}
           <a href="https://github.com/SamanthaJeanneb/model-budget-planner" target="_blank" rel="noopener noreferrer" className={link}>
-            Model Budget Planner repo
+            Model Budget Planner on GitHub
           </a>
           <span className="text-zinc-600"> · </span>
           <a href="https://model-budget-planner.vercel.app" target="_blank" rel="noopener noreferrer" className={link}>
