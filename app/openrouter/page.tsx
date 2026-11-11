@@ -130,10 +130,10 @@ export default function OpenRouterPage() {
           what&apos;s actually possible with open weight.
         </p>
         <p className="mb-4">
-          <span className="font-bold text-white">Bang for your buck</span> is a discussion thread that opens every
-          time a big model drops, with its price, its benchmarks, and a link to the planner. People post what it actually
-          cost them and whether it was worth it. That argument is already happening all over #models, this gives it one
-          place.
+          <span className="font-bold text-white">#budget-builds</span> is a channel for talking about
+          what models are worth. Every time a big model drops, a thread opens there with its price, its benchmarks, and a
+          link to the planner, and people post what it actually cost them and whether it was worth it. That argument is
+          already happening all over #models, this gives it one place. Budget Build entries go there too.
         </p>
         <p className="mb-4">
           This works here because the server already argues about price and performance every day. When someone asks
@@ -147,11 +147,11 @@ export default function OpenRouterPage() {
         <H2>How it runs</H2>
         <p className="mb-4">
           In week 1 I run it by hand. I post the first Budget Build, build an entry myself, comment on every entry, and
-          pick the winner. I open the first bang for your buck thread myself too.
+          pick the winner. I open the first #budget-builds threads myself too.
         </p>
         <p className="mb-4">
           By week 8, Budget Build runs as an automated weekly challenge. A bot posts the prompt from a list members
-          voted on, opens the thread, reminds people before the deadline, and counts votes. Bang for your buck threads
+          voted on, opens the thread, reminds people before the deadline, and counts votes. #budget-builds threads
           open on their own from the #new-models feed with the price and scores filled in. Past winners get a Budget
           Builder role, judge the next rounds, and write up the winning stack.
         </p>
@@ -195,7 +195,7 @@ one prompt. one budget. any model on openrouter. best build for the least money 
 **how to enter:**
 1. plan your stack with the budget planner: [link]
 2. build it
-3. post in #budget-build: a demo, your models, and a screenshot of what it cost
+3. post in #budget-builds: a demo, your models, and a screenshot of what it cost
 
 the team's builds drop in the thread tomorrow. beat us.
 
