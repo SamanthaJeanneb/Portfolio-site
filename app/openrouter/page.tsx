@@ -257,27 +257,33 @@ the team's builds drop in the thread tomorrow. beat us.
 next week's budget: $5`}
         </Copy>
 
-        <p className="mb-2 mt-6 text-sm text-zinc-500">Event promotion (example event)</p>
+        <p className="mb-2 mt-6 text-sm text-zinc-500">Event promotion</p>
+        <p className="mb-4">
+          Same format as their In Production posts, plus who it&apos;s for, a reason for members to reply, and a way in if
+          you&apos;re not in SF.
+        </p>
         <Copy>
-          {`**$1 vs $100: LIVE**
-the budget build finale
+          {`**In Production: OpenRouter x ElevenLabs**
+**Tuesday, Nov 17 · 5:30 to 8:30 PM PT · San Francisco**
+RSVP: https://luma.com/wvw8xwsi
 
-**thursday, dec 3 · 12 PM PT · discord stage** (+ watch party in SF)
+Founders and engineers shipping voice and audio products with ElevenLabs on OpenRouter show what they built, which models they picked, and what broke once real users showed up.
 
-two builders. same app. one gets $1, the other gets $100. 60 minutes on the clock.
+**This one's for you if:**
+- you're building voice agents, dubbing, podcasts, or anything with audio
+- you're choosing between speech models and want to see what's actually working in production
+- you want to meet people in SF building the same thing
 
-can open-weight models keep up with the frontier? you decide.
+**You'll get:**
+- live demos of real products, not slides
+- the actual model stack behind each one and what it costs to run
+- time with the ElevenLabs and OpenRouter teams
 
-**what you get:**
-- both builds live, with every model and every cent on screen
-- you vote for the winner in chat
-- everyone in the stage gets $5 in credits to try their own $1 build
-- this month's top 3 Budget Builders demo their builds before the main event
+**We're saving 2 demo spots for this community.** Building voice or audio on OpenRouter? Reply in the thread with a one-line pitch and a link by Friday, Nov 13. We'll pick 2.
 
-hit "Interested" on the event so you get pinged when we go live: [event link]
-in SF? grab a seat at the watch party: [luma link]
+When you RSVP, tell us what you're building so we can introduce you to the right people in the room.
 
-drop your pick in the thread: $1 or $100?`}
+Not in SF? Drop your questions for the builders in the thread. We'll ask the best ones on stage and share the takeaways after.`}
         </Copy>
 
         <H3>Success</H3>
