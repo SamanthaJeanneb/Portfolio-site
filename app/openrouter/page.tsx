@@ -205,6 +205,16 @@ Not in SF? Drop your questions for the builders in the thread. We'll ask the bes
         <p className="mb-4">
           On X I&apos;d post the best $5 build each week with its stack and what it cost. On Reddit I&apos;d do a monthly roundup of the cheapest working stacks. Everything links back to the Discord so people can enter and join the conversation.
         </p>
+
+        <H2>Other notes</H2>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-4">
+          <li>Have the bot tag billing posts in #community-help and route them to private tickets</li>
+          <li>Add Needs human / Solved tags so a bot reply doesn&apos;t make a thread look resolved</li>
+          <li>Add Under review / Planned / Shipped tags to feedback, and reply when something ships</li>
+          <li>Give regular helpful members a helper role</li>
+          <li>Turn repeated questions into short guides, starting with keeping coding API costs down</li>
+          <li>Fix the support link in the pinned #models rules, it shows up as an unknown channel</li>
+        </ul>
       </div>
     </main>
   )
