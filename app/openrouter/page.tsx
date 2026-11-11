@@ -202,50 +202,73 @@ export default function OpenRouterPage() {
         </List>
 
         <H3>Announcements</H3>
-        <p className="mb-4">
-          OpenRouter&apos;s event posts already have a strong hook, a &quot;you&apos;ll get&quot; list, and one link. I&apos;d
-          keep that and add a deadline, an easy way to enter, and a reason to reply in the thread.
-        </p>
+        <List>
+          <li>
+            What already works: posts that sound like a real person on the team, big news with @everyone, new tools you can
+            copy and paste, and shoutouts to the community. The Stripe news got 853 reactions, Ori Eval got 227, and
+            welcoming a new mod got 209
+          </li>
+          <li>
+            What doesn&apos;t: #events posts get 0 to 8 reactions. They&apos;re almost all in person in SF or NYC, so most of
+            the 60k members can&apos;t do anything with them
+          </li>
+          <li>
+            So every post should give people something they can do from anywhere, a real reward, a clear deadline, and a
+            thread to talk in. And the team goes first
+          </li>
+        </List>
 
-        <p className="mb-2 text-sm text-zinc-500">Launch announcement</p>
+        <p className="mb-2 mt-6 text-sm text-zinc-500">Launch announcement</p>
         <Copy>
-          {`**budget build: what can you build with $1?**
+          {`hey @everyone
 
-new every week. one budget, any models you want.
+y'all argue about price vs performance in #models every single day. time to prove it.
 
-this week: build something useful for **$1**. next week: **$5**.
+**budget build: what can you build with $1?**
+one prompt. one budget. any model on openrouter. best build for the least money wins.
 
-you'll get:
-- a reason to finally try that open-weight model you've been eyeing
-- a spot on the weekly leaderboard
+**this week:** build something that saves you time every day
+**budget:** $1 in API spend
+**deadline:** sunday, nov 22, 11:59 PM PT
+
+**what you get:**
+- **we cover your $1.** every real entry gets $5 in credits back
+- the winner gets **$100 in credits** (100x your budget)
+- the top build gets the community demo spot at our next In Production
 - the Budget Builder role and a feature on @OpenRouter
+- your stack goes on the leaderboard so everyone can copy it
 
-how to enter:
-1. plan your stack with the budget planner (or pick your own models)
+**how to enter:**
+1. plan your stack with the budget planner: [link]
 2. build it
-3. post in #budget-build: what you built, your models, and what it cost
+3. post in #budget-build: a demo, your models, and a screenshot of what it cost
 
-entries close sunday. reply with what you're building so people can follow along`}
+the team's builds drop in the thread tomorrow. beat us.
+
+next week's budget: $5`}
         </Copy>
 
-        <p className="mb-2 text-sm text-zinc-500">Event promotion (example event)</p>
+        <p className="mb-2 mt-6 text-sm text-zinc-500">Event promotion (example event)</p>
         <Copy>
-          {`**PRESENTING: $1 VS $100**
+          {`**$1 vs $100: LIVE**
+the budget build finale
 
-two builders. same app. one has $1, the other has $100.
+**thursday, dec 3 · 12 PM PT · discord stage** (+ watch party in SF)
 
-can open-weight models keep up with the frontier? we're finding out live.
+two builders. same app. one gets $1, the other gets $100. 60 minutes on the clock.
 
-thursday, 12 PM PT, live on discord stage
+can open-weight models keep up with the frontier? you decide.
 
-you'll get:
-- a live build from scratch, start to finish
-- the exact model stack and cost for each build
-- free OpenRouter credits to try your own $1 build after
+**what you get:**
+- both builds live, with every model and every cent on screen
+- you vote for the winner in chat
+- everyone in the stage gets $5 in credits to try their own $1 build
+- this month's top 3 Budget Builders demo their builds before the main event
 
-sign up here: [luma link]
+hit "Interested" on the event so you get pinged when we go live: [event link]
+in SF? grab a seat at the watch party: [luma link]
 
-drop your guess in this thread: does $1 win?`}
+drop your pick in the thread: $1 or $100?`}
         </Copy>
 
         <H3>Success</H3>
