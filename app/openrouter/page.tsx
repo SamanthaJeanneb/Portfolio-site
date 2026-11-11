@@ -170,36 +170,36 @@ export default function OpenRouterPage() {
         <p className="mb-4">
           The posts that do well in #announcements sound like a real person on the team. The Stripe post got 853
           reactions and welcoming a new mod got 209. #events posts get 0 to 8, and almost all of them are in person in SF
-          or NYC. So I kept the casual tone and added a real reward, a deadline, and a reason to reply.
+          or NYC. I based the launch on their Build Day post since it&apos;s the closest thing they&apos;ve done, and made it
+          online, every week, with a deadline and a way to get help picking models.
         </p>
         <p className="mb-2 mt-6 font-bold text-white">Launch announcement</p>
         <Copy>
-          {`hey @everyone
+          {`We're doing something new in the Discord: **Budget Builds**
 
-y'all argue about price vs performance in #models every single day. time to prove it.
+The concept is simple:
 
-**budget build: what can you build with $5?**
-one prompt. one budget. any model on openrouter. best build for the least money wins.
+One prompt.
+One budget.
+One week to build the best thing you can for the least money.
 
-**this week:** build something that saves you time every day
-**budget:** $5 in API spend
-**deadline:** sunday, nov 22, 11:59 PM PT
+**This week's prompt:** build something that saves you time every day
+**Budget:** $5
+**Deadline:** Sunday, Nov 22, 11:59 PM PT
 
-**what you get:**
-- **we cover your $5.** every real entry gets $5 in credits back
-- the winner gets **$100 in credits** (20x your budget)
-- the top build gets the community demo spot at our next In Production
-- the Budget Builder role and a feature on @OpenRouter
-- your stack goes on the leaderboard so everyone can copy it
+First, plan it. Use the budget planner to pick the best model for each part of your project: [link]
 
-**how to enter:**
-1. plan your stack with the budget planner: [link]
-2. build it
-3. post in #budget-builds: a demo, your models, and a screenshot of what it cost
+Then, build.
 
-the team's builds drop in the thread tomorrow. beat us.
+You'll get:
+- $5 in free OpenRouter credits to build with
+- $100 in credits for the best build for the least money
+- A chance to demo your project at our next In Production
+- The Budget Builder role and a feature on our X
 
-next week's budget: $1. think you can go lower?`}
+To enter, post in #budget-builds with what you built, the models you used, and what it cost.
+
+Not sure where to start? Drop your idea in the thread and we'll help you pick your models.`}
         </Copy>
         <p className="mb-2 mt-8 font-bold text-white">Event promotion</p>
         <p className="mb-4">
