@@ -116,43 +116,41 @@ export default function OpenRouterPage() {
 
         <H2>What I&apos;d launch</H2>
         <p className="mb-4">
-          Three things, all about getting the most out of your money.
+          Everything lives in one new channel, <span className="font-bold text-white">#budget-builds</span>. It&apos;s
+          for showing off what you built and how you kept the cost down. That&apos;s the challenge entries, and also anyone
+          building on open-weight models who wants to show their project and how they optimized their token costs. The
+          budget planner is a resource for planning it efficiently before you start.
         </p>
         <p className="mb-4">
-          <span className="font-bold text-white">Budget Build</span> is a weekly project competition. Every week
-          there&apos;s a prompt and a budget, like $5. You plan your build with the budget planner, build it, and post what
-          you built, which models you used, and what it cost. Best build for the least money wins. It&apos;s a twist on
-          Build Day: online, every week, and the limit is money instead of time.
+          <span className="font-bold text-white">Budget Build</span> is the weekly challenge. Every week there&apos;s a
+          prompt and a budget, like $5. You build something under it and post what you built, which models you used, and
+          what it cost in #budget-builds. Best build for the least money wins. It&apos;s a twist on Build Day: online,
+          every week, and the limit is money instead of time.
         </p>
         <p className="mb-4">
-          <span className="font-bold text-white">Open Weight Build</span> is the same idea once a month, but you
-          can only use open-weight models. It gets people building with models outside Claude and OpenAI and shows
-          what&apos;s actually possible with open weight.
+          <span className="font-bold text-white">Open Weight Build</span> is the same idea once a month, but you can only
+          use open-weight models. It gets people building with models outside Claude and OpenAI and shows what&apos;s
+          actually possible with open weight.
         </p>
         <p className="mb-4">
-          <span className="font-bold text-white">#budget-builds</span> is a channel for talking about
-          what models are worth. Every time a big model drops, a thread opens there with its price, its benchmarks, and a
-          link to the planner, and people post what it actually cost them and whether it was worth it. That argument is
-          already happening all over #models, this gives it one place. Budget Build entries go there too.
-        </p>
-        <p className="mb-4">
-          This works here because the server already argues about price and performance every day. When someone asks
-          which model to use, there&apos;s finally an answer: try the planner and look at past entries. It directly grows
-          OpenRouter usage, and a $5 vs $100 build is the kind of thing that gets attention. It also gets people spending
-          on models outside Claude and OpenAI, and every entry is a real example of which models work for what, which is
-          the rating people are already asking for. The best builds get highlighted in #app-showcase, so that channel
-          grows too.
+          This works here because the server already argues about price and performance every day, and this turns it into
+          real projects. When someone asks which model to use, there&apos;s somewhere to point them: past builds in
+          #budget-builds and the planner. It directly grows OpenRouter usage, and a $5 vs $100 build is the kind of thing
+          that gets attention. It also gets people spending on models outside Claude and OpenAI, and every build is a real
+          example of which models work for what, which is the rating people are already asking for. The best builds get
+          highlighted in #app-showcase too.
         </p>
 
         <H2>How it runs</H2>
         <p className="mb-4">
           In week 1 I run it by hand. I post the first Budget Build, build an entry myself, comment on every entry, and
-          pick the winner. I open the first #budget-builds threads myself too.
+          pick the winner. I also post a few of my own builds in #budget-builds so people can see what a good post looks
+          like: what I built, my models, and how I cut my token costs.
         </p>
         <p className="mb-4">
           By week 8, Budget Build runs as an automated weekly challenge. A bot posts the prompt from a list members
-          voted on, opens the thread, reminds people before the deadline, and counts votes. #budget-builds threads
-          open on their own from the #new-models feed with the price and scores filled in. Past winners get a Budget
+          voted on, opens the thread, reminds people before the deadline, and counts votes. People post their own open-weight builds in #budget-builds between challenges, and the best ones
+          get pinned and shared on X. Past winners get a Budget
           Builder role, judge the next rounds, and write up the winning stack.
         </p>
         <p className="mb-4">
@@ -184,7 +182,7 @@ Every week we'll post a prompt and a budget. Build the best thing you can withou
 **Budget:** $5
 **Due:** Sunday, Nov 22, 11:59 PM PT
 
-Not sure which models to use? Plan it in the budget planner first. It picks the best model for each part of your project within your budget: [link]
+Want to plan it efficiently first? The budget planner picks the best model for each part of your project within your budget: [link]
 
 **Prizes**
 - Everyone who enters gets $5 in credits to build with
@@ -193,6 +191,8 @@ Not sure which models to use? Plan it in the budget planner first. It picks the 
 - Winners get the Budget Builder role and a shoutout on our X
 
 Post your entry in #budget-builds with a demo, the models you used, and what it cost.
+
+Building on open-weight models outside the challenge? #budget-builds is for you too. Show us what you made and how you kept your token costs down.
 
 Tell us what you're building in the thread and we'll help you figure out your stack.`}
         </Copy>
