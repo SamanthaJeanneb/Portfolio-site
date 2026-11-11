@@ -176,7 +176,9 @@ export default function OpenRouterPage() {
         <Copy>
           {`**Budget Builds: what can you build with $5?**
 
-Every week we'll post a prompt and a budget. Build the best thing you can without going over, then show us what you made and what it cost.
+Building with frontier models is getting more expensive, but cheap models are also getting more powerful. So what's the right balance for your project?
+
+That's what Budget Builds is for. Every week we post a prompt and a budget. You pick your models, build the best thing you can without going over, and show us what you made, which models you used, and what it cost. Use a frontier model for the hard parts and cheaper ones for the rest, or go all open-weight. Best build for the least money wins.
 
 **This week:** something that saves you time every day
 **Budget:** $5
