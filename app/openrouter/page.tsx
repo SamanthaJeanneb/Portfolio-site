@@ -207,13 +207,15 @@ Not in SF? Drop your questions for the builders in the thread. We'll ask the bes
         </p>
 
         <H2>Other notes</H2>
-        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-1 mb-4">
-          <li>Have the bot tag billing posts in #community-help and route them to private tickets</li>
-          <li>Add Needs human / Solved tags so a bot reply doesn&apos;t make a thread look resolved</li>
-          <li>Add Under review / Planned / Shipped tags to feedback, and reply when something ships</li>
-          <li>Give regular helpful members a helper role</li>
-          <li>Turn repeated questions into short guides, starting with keeping coding API costs down</li>
-          <li>Fix the support link in the pinned #models rules, it shows up as an unknown channel</li>
+        <ul className="list-disc list-outside pl-5 marker:text-zinc-600 space-y-2 mb-4">
+          <li>Keep billing posts in #community-help, but have the bot tag them and move the details into private tickets. I&apos;d track who owns each follow-up and how long it&apos;s been waiting, and send support a weekly list of open and aging issues. Support follow-ups are already spilling into #feedback-and-requests, with people asking how to get stalled tickets picked back up</li>
+          <li>Make it clear when someone still needs a person. Right now a bot reply can make a thread look resolved, so Needs human / Solved tags would help</li>
+          <li>Feedback tags are just Feedback and Request, so it&apos;s hard to tell what the team has seen. I&apos;d add Under review / Planned / Shipped, and reply with a link back to the original request when something ships</li>
+          <li>Give a helper role to the people already answering questions and finding useful models</li>
+          <li>Turn repeated questions into short guides, starting with keeping coding API costs down, picking a model, and setting up a coding agent. Then link the guide the next time someone asks</li>
+          <li>Run more things inside Discord that people can join from anywhere, like launch-day AMAs, model testing sessions where everyone brings the same task and compares models, and short coding demos</li>
+          <li>Feature a community build regularly: what they built, the models they used, and one thing they learned</li>
+          <li>Check what a new member sees by default. Some useful channels weren&apos;t obvious when I joined, and the support link in the pinned #models rules shows up as an unknown channel</li>
         </ul>
       </div>
     </main>
