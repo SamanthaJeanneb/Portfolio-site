@@ -83,7 +83,7 @@ export default function OpenRouterPage() {
         </p>
         <Shot src="/openrouter/models-forum.png" alt="The #models forum" width={1025} height={580} wide />
         <p className="mb-4">
-          They stay to argue about whether it&apos;s worth the price. When I searched &quot;cheaper&quot; I got 2,134 messages, and &quot;too expensive&quot; came up in 248. What people want and aren&apos;t getting is an answer to &quot;what&apos;s the best model I can afford for this?&quot; It comes up all the time, and people even ask the support bot.
+          For the problem I picked, cost comes up a lot. When I searched &quot;cheaper&quot; I got 2,134 messages, and &quot;too expensive&quot; came up in 248. People keep asking some version of &quot;what&apos;s the best model I can afford for this?&quot;, and some even ask the support bot.
         </p>
         <Shot src="/openrouter/cost-to-performance.png" alt="Discord message asking for the best model that's good on cost to performance" width={394} height={172} />
         <Shot src="/openrouter/best-and-cheapest.png" alt="Discord message asking the support bot for the best and cheapest model" width={394} height={326} />
@@ -110,7 +110,7 @@ export default function OpenRouterPage() {
           <span className="font-bold text-white">Open Weight Build</span> is the same idea once a month, but you can only use open-weight models. It gets people building with models outside Claude and OpenAI and shows what&apos;s actually possible with open weight.
         </p>
         <p className="mb-4">
-          This works here because the server already argues about price and performance every day, and this turns it into real projects. When someone asks which model to use, there&apos;s somewhere to point them: past builds in #budget-builds and the planner. It directly grows OpenRouter usage, and a $1 vs $100 build is the kind of thing that gets attention. The best builds get highlighted in #app-showcase too.
+          This works here because cost already comes up a lot in the server, and this turns it into real projects. When someone asks which model to use, there&apos;s somewhere to point them: past builds in #budget-builds and the planner. It directly grows OpenRouter usage, and a $1 vs $100 build is the kind of thing that gets attention. The best builds get highlighted in #app-showcase too.
         </p>
 
         <H2>How it runs</H2>
